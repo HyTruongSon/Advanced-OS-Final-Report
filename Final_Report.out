@@ -1,0 +1,37 @@
+\BOOKMARK [1][-]{section.1}{ Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{ Related works}{}% 2
+\BOOKMARK [1][-]{section.3}{ Methods}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{ Graph Kernel}{section.3}% 4
+\BOOKMARK [3][-]{subsubsection.3.1.1}{ Positive Semi-definite Kernel}{subsection.3.1}% 5
+\BOOKMARK [3][-]{subsubsection.3.1.2}{ Weisfeiler-Lehman Graph Feature}{subsection.3.1}% 6
+\BOOKMARK [3][-]{subsubsection.3.1.3}{ Histogram-Alignment Graph Feature}{subsection.3.1}% 7
+\BOOKMARK [2][-]{subsection.3.2}{ Graph Neural Networks}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.1}{ Neural Graph Fingerprint Duvenaud}{subsection.3.2}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.2}{ Learning Convolutional Neural Networks Niepert}{subsection.3.2}% 10
+\BOOKMARK [2][-]{subsection.3.3}{ Covariant Compositional Networks}{section.3}% 11
+\BOOKMARK [3][-]{subsubsection.3.3.1}{ Generic Algorithm}{subsection.3.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.3.2}{ Tensor Stacking}{subsection.3.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.3.3}{ Tensor Product}{subsection.3.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.3.4}{ Virtual Indexing System}{subsection.3.3}% 15
+\BOOKMARK [3][-]{subsubsection.3.3.5}{ Tensor Contraction}{subsection.3.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.3.6}{ Gated Recurrent Unit / Long Short-Term Memory}{subsection.3.3}% 17
+\BOOKMARK [1][-]{section.4}{ GraphFlow Deep Learning Framework}{}% 18
+\BOOKMARK [2][-]{subsection.4.1}{ Motivation}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.2}{ Overview}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.3}{ Parallelization}{section.4}% 21
+\BOOKMARK [3][-]{subsubsection.4.3.1}{ Efficient Matrix Multiplication In GPU}{subsection.4.3}% 22
+\BOOKMARK [3][-]{subsubsection.4.3.2}{ Efficient Tensor Contraction In CPU}{subsection.4.3}% 23
+\BOOKMARK [3][-]{subsubsection.4.3.3}{ Efficient Tensor Contraction In GPU}{subsection.4.3}% 24
+\BOOKMARK [3][-]{subsubsection.4.3.4}{ CPU Multi-threading In Gradient Computation}{subsection.4.3}% 25
+\BOOKMARK [1][-]{section.5}{ Experiments and Results}{}% 26
+\BOOKMARK [2][-]{subsection.5.1}{ Matrix Multiplication}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.2}{ Tensor Contraction}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.3}{ Putting all operations together}{section.5}% 29
+\BOOKMARK [2][-]{subsection.5.4}{ Small Molecular Dataset}{section.5}% 30
+\BOOKMARK [2][-]{subsection.5.5}{ HCEP Dataset}{section.5}% 31
+\BOOKMARK [3][-]{subsubsection.5.5.1}{ Visualization}{subsection.5.5}% 32
+\BOOKMARK [3][-]{subsubsection.5.5.2}{ Regression tasks}{subsection.5.5}% 33
+\BOOKMARK [1][-]{section.6}{ Conclusion and Future Research}{}% 34
+\BOOKMARK [1][-]{section.7}{ Acknowledgements}{}% 35
+\BOOKMARK [1][-]{section.8}{ References}{}% 36
+\BOOKMARK [1][-]{section.9}{ Appendix}{}% 37

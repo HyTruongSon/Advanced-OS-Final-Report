@@ -1,0 +1,6182 @@
+Train graph file: HCEP/50K_NIPS/50K_NIPS.train.graph
+Train atoms file: HCEP/50K_NIPS/50K_NIPS.train.atoms
+Train target file: HCEP/50K_NIPS/50K_NIPS.train.pce
+
+Validation graph file: HCEP/50K_NIPS/50K_NIPS.val.graph
+Validation atoms file: HCEP/50K_NIPS/50K_NIPS.val.atoms
+Validation target file: HCEP/50K_NIPS/50K_NIPS.val.pce
+
+Test graph file: HCEP/50K_NIPS/50K_NIPS.test.graph
+Test atoms file: HCEP/50K_NIPS/50K_NIPS.test.atoms
+Test target file: HCEP/50K_NIPS/50K_NIPS.test.pce
+
+Basics file: HCEP/50K_NIPS/50K_NIPS.basics
+
+Model: models/50K_NIPS/50K_NIPS.SMP_beta.nLevels.1.nChanels.10.nDepth.10.model
+Predict on validation set: predictions/50K_NIPS/50K_NIPS.SMP_beta.nLevels.1.nChanels.10.nDepth.10.predict_val
+Predict on test set: predictions/50K_NIPS/50K_NIPS.SMP_beta.nLevels.1.nChanels.10.nDepth.10.predict_test
+Report: reports/50K_NIPS/50K_NIPS.SMP_beta.nLevels.1.nChanels.10.nDepth.10.report
+
+Number of threads: 16
+Batch size: 64
+
+Number of levels: 1
+Number of chanels: 10
+Number of Weisfeiler-Lehman depth: 10
+
+Number of training epochs: 1024
+Initial learning rate: 0.001
+Final learning rate: 1e-06
+Tau: 1e+07
+
+Epoch 1 results:
+Validation MAE: 0.938181
+Validation RMSE: 1.2179
+Test MAE: 0.949729
+Test RMSE: 1.22668
+
+Epoch 2 results:
+Validation MAE: 0.824378
+Validation RMSE: 1.07013
+Test MAE: 0.831999
+Test RMSE: 1.0724
+
+Epoch 3 results:
+Validation MAE: 0.771661
+Validation RMSE: 1.00335
+Test MAE: 0.773067
+Test RMSE: 1.00006
+
+Epoch 4 results:
+Validation MAE: 0.737825
+Validation RMSE: 0.965306
+Test MAE: 0.738937
+Test RMSE: 0.960573
+
+Epoch 5 results:
+Validation MAE: 0.711158
+Validation RMSE: 0.956472
+Test MAE: 0.71291
+Test RMSE: 0.933363
+
+Epoch 6 results:
+Validation MAE: 0.707674
+Validation RMSE: 0.936424
+Test MAE: 0.713021
+Test RMSE: 0.933439
+
+Epoch 7 results:
+Validation MAE: 0.695359
+Validation RMSE: 0.920456
+Test MAE: 0.702707
+Test RMSE: 0.921742
+
+Epoch 8 results:
+Validation MAE: 0.686511
+Validation RMSE: 0.910647
+Test MAE: 0.694859
+Test RMSE: 0.913338
+
+Epoch 9 results:
+Validation MAE: 0.694437
+Validation RMSE: 0.920009
+Test MAE: 0.702976
+Test RMSE: 0.923081
+
+Epoch 10 results:
+Validation MAE: 0.694521
+Validation RMSE: 0.920745
+Test MAE: 0.703236
+Test RMSE: 0.923977
+
+Epoch 11 results:
+Validation MAE: 0.700956
+Validation RMSE: 0.929595
+Test MAE: 0.711076
+Test RMSE: 0.9351
+
+Epoch 12 results:
+Validation MAE: 0.703936
+Validation RMSE: 0.933305
+Test MAE: 0.714156
+Test RMSE: 0.93971
+
+Epoch 13 results:
+Validation MAE: 0.704327
+Validation RMSE: 0.933761
+Test MAE: 0.714499
+Test RMSE: 0.940883
+
+Epoch 14 results:
+Validation MAE: 0.699934
+Validation RMSE: 0.924359
+Test MAE: 0.707621
+Test RMSE: 0.930246
+
+Epoch 15 results:
+Validation MAE: 0.693964
+Validation RMSE: 0.915296
+Test MAE: 0.703576
+Test RMSE: 0.924266
+
+Epoch 16 results:
+Validation MAE: 0.705862
+Validation RMSE: 0.923087
+Test MAE: 0.713738
+Test RMSE: 0.932246
+
+Epoch 17 results:
+Validation MAE: 0.687578
+Validation RMSE: 0.901584
+Test MAE: 0.69522
+Test RMSE: 0.910695
+
+Epoch 18 results:
+Validation MAE: 0.680437
+Validation RMSE: 0.892802
+Test MAE: 0.687064
+Test RMSE: 0.900725
+
+Epoch 19 results:
+Validation MAE: 0.667862
+Validation RMSE: 0.87656
+Test MAE: 0.67385
+Test RMSE: 0.883698
+
+Epoch 20 results:
+Validation MAE: 0.660152
+Validation RMSE: 0.866655
+Test MAE: 0.666117
+Test RMSE: 0.873449
+
+Epoch 21 results:
+Validation MAE: 0.653845
+Validation RMSE: 0.859265
+Test MAE: 0.659734
+Test RMSE: 0.865478
+
+Epoch 22 results:
+Validation MAE: 0.648196
+Validation RMSE: 0.85238
+Test MAE: 0.65395
+Test RMSE: 0.857904
+
+Epoch 23 results:
+Validation MAE: 0.650945
+Validation RMSE: 0.854088
+Test MAE: 0.65585
+Test RMSE: 0.858717
+
+Epoch 24 results:
+Validation MAE: 0.642461
+Validation RMSE: 0.84332
+Test MAE: 0.645806
+Test RMSE: 0.846401
+
+Epoch 25 results:
+Validation MAE: 0.636775
+Validation RMSE: 0.836269
+Test MAE: 0.639718
+Test RMSE: 0.837926
+
+Epoch 26 results:
+Validation MAE: 0.633238
+Validation RMSE: 0.831291
+Test MAE: 0.636325
+Test RMSE: 0.834049
+
+Epoch 27 results:
+Validation MAE: 0.624582
+Validation RMSE: 0.817516
+Test MAE: 0.627379
+Test RMSE: 0.82059
+
+Epoch 28 results:
+Validation MAE: 0.628053
+Validation RMSE: 0.820164
+Test MAE: 0.632357
+Test RMSE: 0.825608
+
+Epoch 29 results:
+Validation MAE: 0.615437
+Validation RMSE: 0.801758
+Test MAE: 0.618921
+Test RMSE: 0.806711
+
+Epoch 30 results:
+Validation MAE: 0.606083
+Validation RMSE: 0.787769
+Test MAE: 0.607039
+Test RMSE: 0.791292
+
+Epoch 31 results:
+Validation MAE: 0.5987
+Validation RMSE: 0.777549
+Test MAE: 0.598957
+Test RMSE: 0.781356
+
+Epoch 32 results:
+Validation MAE: 0.584906
+Validation RMSE: 0.757106
+Test MAE: 0.584612
+Test RMSE: 0.76119
+
+Epoch 33 results:
+Validation MAE: 0.582794
+Validation RMSE: 0.752883
+Test MAE: 0.582871
+Test RMSE: 0.758103
+
+Epoch 34 results:
+Validation MAE: 0.584432
+Validation RMSE: 0.754982
+Test MAE: 0.585619
+Test RMSE: 0.761765
+
+Epoch 35 results:
+Validation MAE: 0.591966
+Validation RMSE: 0.763416
+Test MAE: 0.592375
+Test RMSE: 0.768021
+
+Epoch 36 results:
+Validation MAE: 0.586667
+Validation RMSE: 0.755586
+Test MAE: 0.587395
+Test RMSE: 0.761254
+
+Epoch 37 results:
+Validation MAE: 0.570775
+Validation RMSE: 0.733666
+Test MAE: 0.572458
+Test RMSE: 0.740059
+
+Epoch 38 results:
+Validation MAE: 0.571517
+Validation RMSE: 0.733422
+Test MAE: 0.57482
+Test RMSE: 0.740697
+
+Epoch 39 results:
+Validation MAE: 0.571387
+Validation RMSE: 0.732653
+Test MAE: 0.575839
+Test RMSE: 0.740415
+
+Epoch 40 results:
+Validation MAE: 0.585401
+Validation RMSE: 0.7437
+Test MAE: 0.588952
+Test RMSE: 0.750562
+
+Epoch 41 results:
+Validation MAE: 0.569996
+Validation RMSE: 0.727075
+Test MAE: 0.574599
+Test RMSE: 0.735026
+
+Epoch 42 results:
+Validation MAE: 0.560059
+Validation RMSE: 0.714457
+Test MAE: 0.564278
+Test RMSE: 0.722493
+
+Epoch 43 results:
+Validation MAE: 0.573432
+Validation RMSE: 0.727428
+Test MAE: 0.580279
+Test RMSE: 0.737028
+
+Epoch 44 results:
+Validation MAE: 0.56077
+Validation RMSE: 0.713134
+Test MAE: 0.568208
+Test RMSE: 0.722572
+
+Epoch 45 results:
+Validation MAE: 0.556212
+Validation RMSE: 0.708504
+Test MAE: 0.563027
+Test RMSE: 0.716402
+
+Epoch 46 results:
+Validation MAE: 0.561322
+Validation RMSE: 0.712705
+Test MAE: 0.566809
+Test RMSE: 0.720397
+
+Epoch 47 results:
+Validation MAE: 0.515808
+Validation RMSE: 0.663816
+Test MAE: 0.521415
+Test RMSE: 0.67071
+
+Epoch 48 results:
+Validation MAE: 0.523003
+Validation RMSE: 0.671993
+Test MAE: 0.529045
+Test RMSE: 0.67951
+
+Epoch 49 results:
+Validation MAE: 0.523519
+Validation RMSE: 0.670096
+Test MAE: 0.530297
+Test RMSE: 0.678396
+
+Epoch 50 results:
+Validation MAE: 0.504822
+Validation RMSE: 0.651086
+Test MAE: 0.511638
+Test RMSE: 0.660368
+
+Epoch 51 results:
+Validation MAE: 0.499127
+Validation RMSE: 0.646307
+Test MAE: 0.505653
+Test RMSE: 0.655631
+
+Epoch 52 results:
+Validation MAE: 0.489849
+Validation RMSE: 0.635507
+Test MAE: 0.495843
+Test RMSE: 0.643992
+
+Epoch 53 results:
+Validation MAE: 0.499945
+Validation RMSE: 0.646011
+Test MAE: 0.506359
+Test RMSE: 0.656553
+
+Epoch 54 results:
+Validation MAE: 0.49682
+Validation RMSE: 0.644043
+Test MAE: 0.503386
+Test RMSE: 0.653426
+
+Epoch 55 results:
+Validation MAE: 0.493231
+Validation RMSE: 0.638783
+Test MAE: 0.499567
+Test RMSE: 0.647868
+
+Epoch 56 results:
+Validation MAE: 0.498992
+Validation RMSE: 0.644451
+Test MAE: 0.504582
+Test RMSE: 0.652827
+
+Epoch 57 results:
+Validation MAE: 0.489769
+Validation RMSE: 0.635429
+Test MAE: 0.495107
+Test RMSE: 0.643749
+
+Epoch 58 results:
+Validation MAE: 0.493682
+Validation RMSE: 0.638281
+Test MAE: 0.499229
+Test RMSE: 0.647003
+
+Epoch 59 results:
+Validation MAE: 0.496914
+Validation RMSE: 0.642256
+Test MAE: 0.503018
+Test RMSE: 0.651168
+
+Epoch 60 results:
+Validation MAE: 0.499192
+Validation RMSE: 0.642873
+Test MAE: 0.50553
+Test RMSE: 0.651468
+
+Epoch 61 results:
+Validation MAE: 0.485683
+Validation RMSE: 0.629758
+Test MAE: 0.491363
+Test RMSE: 0.638474
+
+Epoch 62 results:
+Validation MAE: 0.492357
+Validation RMSE: 0.63565
+Test MAE: 0.498385
+Test RMSE: 0.644792
+
+Epoch 63 results:
+Validation MAE: 0.49724
+Validation RMSE: 0.640545
+Test MAE: 0.503984
+Test RMSE: 0.650089
+
+Epoch 64 results:
+Validation MAE: 0.48085
+Validation RMSE: 0.622292
+Test MAE: 0.486843
+Test RMSE: 0.631097
+
+Epoch 65 results:
+Validation MAE: 0.477655
+Validation RMSE: 0.619078
+Test MAE: 0.483959
+Test RMSE: 0.627522
+
+Epoch 66 results:
+Validation MAE: 0.473003
+Validation RMSE: 0.61593
+Test MAE: 0.479237
+Test RMSE: 0.625445
+
+Epoch 67 results:
+Validation MAE: 0.469535
+Validation RMSE: 0.610994
+Test MAE: 0.47647
+Test RMSE: 0.620317
+
+Epoch 68 results:
+Validation MAE: 0.47336
+Validation RMSE: 0.615806
+Test MAE: 0.480402
+Test RMSE: 0.625289
+
+Epoch 69 results:
+Validation MAE: 0.474187
+Validation RMSE: 0.617451
+Test MAE: 0.481003
+Test RMSE: 0.626633
+
+Epoch 70 results:
+Validation MAE: 0.466012
+Validation RMSE: 0.608686
+Test MAE: 0.472659
+Test RMSE: 0.617601
+
+Epoch 71 results:
+Validation MAE: 0.475695
+Validation RMSE: 0.616569
+Test MAE: 0.48197
+Test RMSE: 0.624841
+
+Epoch 72 results:
+Validation MAE: 0.470832
+Validation RMSE: 0.612924
+Test MAE: 0.477184
+Test RMSE: 0.621151
+
+Epoch 73 results:
+Validation MAE: 0.464753
+Validation RMSE: 0.606372
+Test MAE: 0.470269
+Test RMSE: 0.614728
+
+Epoch 74 results:
+Validation MAE: 0.449126
+Validation RMSE: 0.58987
+Test MAE: 0.454058
+Test RMSE: 0.597789
+
+Epoch 75 results:
+Validation MAE: 0.451533
+Validation RMSE: 0.591043
+Test MAE: 0.457926
+Test RMSE: 0.600364
+
+Epoch 76 results:
+Validation MAE: 0.446404
+Validation RMSE: 0.585022
+Test MAE: 0.452325
+Test RMSE: 0.594385
+
+Epoch 77 results:
+Validation MAE: 0.442429
+Validation RMSE: 0.580446
+Test MAE: 0.446487
+Test RMSE: 0.588254
+
+Epoch 78 results:
+Validation MAE: 0.440352
+Validation RMSE: 0.578429
+Test MAE: 0.445945
+Test RMSE: 0.58719
+
+Epoch 79 results:
+Validation MAE: 0.437306
+Validation RMSE: 0.575565
+Test MAE: 0.441905
+Test RMSE: 0.582186
+
+Epoch 80 results:
+Validation MAE: 0.445963
+Validation RMSE: 0.584673
+Test MAE: 0.450787
+Test RMSE: 0.591835
+
+Epoch 81 results:
+Validation MAE: 0.439377
+Validation RMSE: 0.576906
+Test MAE: 0.443406
+Test RMSE: 0.583031
+
+Epoch 82 results:
+Validation MAE: 0.428828
+Validation RMSE: 0.566802
+Test MAE: 0.433011
+Test RMSE: 0.571953
+
+Epoch 83 results:
+Validation MAE: 0.427664
+Validation RMSE: 0.56454
+Test MAE: 0.43107
+Test RMSE: 0.570179
+
+Epoch 84 results:
+Validation MAE: 0.425562
+Validation RMSE: 0.56283
+Test MAE: 0.429642
+Test RMSE: 0.568683
+
+Epoch 85 results:
+Validation MAE: 0.428327
+Validation RMSE: 0.565514
+Test MAE: 0.431405
+Test RMSE: 0.569773
+
+Epoch 86 results:
+Validation MAE: 0.429722
+Validation RMSE: 0.567707
+Test MAE: 0.434134
+Test RMSE: 0.573686
+
+Epoch 87 results:
+Validation MAE: 0.4241
+Validation RMSE: 0.561501
+Test MAE: 0.427117
+Test RMSE: 0.564628
+
+Epoch 88 results:
+Validation MAE: 0.432427
+Validation RMSE: 0.568511
+Test MAE: 0.436044
+Test RMSE: 0.574096
+
+Epoch 89 results:
+Validation MAE: 0.431441
+Validation RMSE: 0.56825
+Test MAE: 0.434944
+Test RMSE: 0.574118
+
+Epoch 90 results:
+Validation MAE: 0.42406
+Validation RMSE: 0.560637
+Test MAE: 0.4271
+Test RMSE: 0.564698
+
+Epoch 91 results:
+Validation MAE: 0.428704
+Validation RMSE: 0.565611
+Test MAE: 0.433715
+Test RMSE: 0.572882
+
+Epoch 92 results:
+Validation MAE: 0.411324
+Validation RMSE: 0.546292
+Test MAE: 0.414518
+Test RMSE: 0.550356
+
+Epoch 93 results:
+Validation MAE: 0.40937
+Validation RMSE: 0.544507
+Test MAE: 0.412008
+Test RMSE: 0.547589
+
+Epoch 94 results:
+Validation MAE: 0.414838
+Validation RMSE: 0.55082
+Test MAE: 0.418335
+Test RMSE: 0.554926
+
+Epoch 95 results:
+Validation MAE: 0.423342
+Validation RMSE: 0.559954
+Test MAE: 0.427409
+Test RMSE: 0.566183
+
+Epoch 96 results:
+Validation MAE: 0.413917
+Validation RMSE: 0.548584
+Test MAE: 0.417478
+Test RMSE: 0.55428
+
+Epoch 97 results:
+Validation MAE: 0.410884
+Validation RMSE: 0.5441
+Test MAE: 0.414823
+Test RMSE: 0.550528
+
+Epoch 98 results:
+Validation MAE: 0.428465
+Validation RMSE: 0.562061
+Test MAE: 0.431723
+Test RMSE: 0.568829
+
+Epoch 99 results:
+Validation MAE: 0.423588
+Validation RMSE: 0.556281
+Test MAE: 0.427906
+Test RMSE: 0.56367
+
+Epoch 100 results:
+Validation MAE: 0.409353
+Validation RMSE: 0.541686
+Test MAE: 0.412975
+Test RMSE: 0.54782
+
+Epoch 101 results:
+Validation MAE: 0.414751
+Validation RMSE: 0.547713
+Test MAE: 0.418973
+Test RMSE: 0.55355
+
+Epoch 102 results:
+Validation MAE: 0.41029
+Validation RMSE: 0.542598
+Test MAE: 0.415253
+Test RMSE: 0.550541
+
+Epoch 103 results:
+Validation MAE: 0.409485
+Validation RMSE: 0.542473
+Test MAE: 0.414251
+Test RMSE: 0.549472
+
+Epoch 104 results:
+Validation MAE: 0.414788
+Validation RMSE: 0.547953
+Test MAE: 0.419784
+Test RMSE: 0.55531
+
+Epoch 105 results:
+Validation MAE: 0.416437
+Validation RMSE: 0.5492
+Test MAE: 0.422068
+Test RMSE: 0.557247
+
+Epoch 106 results:
+Validation MAE: 0.406009
+Validation RMSE: 0.53993
+Test MAE: 0.411281
+Test RMSE: 0.546061
+
+Epoch 107 results:
+Validation MAE: 0.418234
+Validation RMSE: 0.552537
+Test MAE: 0.422224
+Test RMSE: 0.558298
+
+Epoch 108 results:
+Validation MAE: 0.403823
+Validation RMSE: 0.535908
+Test MAE: 0.408829
+Test RMSE: 0.542161
+
+Epoch 109 results:
+Validation MAE: 0.426003
+Validation RMSE: 0.559475
+Test MAE: 0.429373
+Test RMSE: 0.566021
+
+Epoch 110 results:
+Validation MAE: 0.411425
+Validation RMSE: 0.544253
+Test MAE: 0.416008
+Test RMSE: 0.550189
+
+Epoch 111 results:
+Validation MAE: 0.408312
+Validation RMSE: 0.544681
+Test MAE: 0.41215
+Test RMSE: 0.547319
+
+Epoch 112 results:
+Validation MAE: 0.398308
+Validation RMSE: 0.529608
+Test MAE: 0.403906
+Test RMSE: 0.536309
+
+Epoch 113 results:
+Validation MAE: 0.405585
+Validation RMSE: 0.537856
+Test MAE: 0.409023
+Test RMSE: 0.542146
+
+Epoch 114 results:
+Validation MAE: 0.402161
+Validation RMSE: 0.536877
+Test MAE: 0.40622
+Test RMSE: 0.539725
+
+Epoch 115 results:
+Validation MAE: 0.404864
+Validation RMSE: 0.537829
+Test MAE: 0.409605
+Test RMSE: 0.544491
+
+Epoch 116 results:
+Validation MAE: 0.406863
+Validation RMSE: 0.53746
+Test MAE: 0.411509
+Test RMSE: 0.544972
+
+Epoch 117 results:
+Validation MAE: 0.403665
+Validation RMSE: 0.534477
+Test MAE: 0.408272
+Test RMSE: 0.541403
+
+Epoch 118 results:
+Validation MAE: 0.398235
+Validation RMSE: 0.528215
+Test MAE: 0.402511
+Test RMSE: 0.534543
+
+Epoch 119 results:
+Validation MAE: 0.400386
+Validation RMSE: 0.532894
+Test MAE: 0.404994
+Test RMSE: 0.538247
+
+Epoch 120 results:
+Validation MAE: 0.400518
+Validation RMSE: 0.533644
+Test MAE: 0.405044
+Test RMSE: 0.538315
+
+Epoch 121 results:
+Validation MAE: 0.402197
+Validation RMSE: 0.533887
+Test MAE: 0.407113
+Test RMSE: 0.539963
+
+Epoch 122 results:
+Validation MAE: 0.41182
+Validation RMSE: 0.543276
+Test MAE: 0.415424
+Test RMSE: 0.549203
+
+Epoch 123 results:
+Validation MAE: 0.400823
+Validation RMSE: 0.532602
+Test MAE: 0.404873
+Test RMSE: 0.539042
+
+Epoch 124 results:
+Validation MAE: 0.391568
+Validation RMSE: 0.523736
+Test MAE: 0.397077
+Test RMSE: 0.528503
+
+Epoch 125 results:
+Validation MAE: 0.401731
+Validation RMSE: 0.53473
+Test MAE: 0.407636
+Test RMSE: 0.542868
+
+Epoch 126 results:
+Validation MAE: 0.392659
+Validation RMSE: 0.523723
+Test MAE: 0.395449
+Test RMSE: 0.527103
+
+Epoch 127 results:
+Validation MAE: 0.388467
+Validation RMSE: 0.519769
+Test MAE: 0.392428
+Test RMSE: 0.524692
+
+Epoch 128 results:
+Validation MAE: 0.388752
+Validation RMSE: 0.520464
+Test MAE: 0.393367
+Test RMSE: 0.52523
+
+Epoch 129 results:
+Validation MAE: 0.390471
+Validation RMSE: 0.522508
+Test MAE: 0.394946
+Test RMSE: 0.527035
+
+Epoch 130 results:
+Validation MAE: 0.388092
+Validation RMSE: 0.520494
+Test MAE: 0.392214
+Test RMSE: 0.523561
+
+Epoch 131 results:
+Validation MAE: 0.391986
+Validation RMSE: 0.522723
+Test MAE: 0.397223
+Test RMSE: 0.528621
+
+Epoch 132 results:
+Validation MAE: 0.387201
+Validation RMSE: 0.515932
+Test MAE: 0.391844
+Test RMSE: 0.521298
+
+Epoch 133 results:
+Validation MAE: 0.390725
+Validation RMSE: 0.517856
+Test MAE: 0.394011
+Test RMSE: 0.521807
+
+Epoch 134 results:
+Validation MAE: 0.387221
+Validation RMSE: 0.515088
+Test MAE: 0.392218
+Test RMSE: 0.522325
+
+Epoch 135 results:
+Validation MAE: 0.388783
+Validation RMSE: 0.518171
+Test MAE: 0.392894
+Test RMSE: 0.52515
+
+Epoch 136 results:
+Validation MAE: 0.390444
+Validation RMSE: 0.519514
+Test MAE: 0.394907
+Test RMSE: 0.526221
+
+Epoch 137 results:
+Validation MAE: 0.390572
+Validation RMSE: 0.517469
+Test MAE: 0.39495
+Test RMSE: 0.524589
+
+Epoch 138 results:
+Validation MAE: 0.392117
+Validation RMSE: 0.520411
+Test MAE: 0.396739
+Test RMSE: 0.527547
+
+Epoch 139 results:
+Validation MAE: 0.388285
+Validation RMSE: 0.51806
+Test MAE: 0.393801
+Test RMSE: 0.524853
+
+Epoch 140 results:
+Validation MAE: 0.38594
+Validation RMSE: 0.514685
+Test MAE: 0.391214
+Test RMSE: 0.521393
+
+Epoch 141 results:
+Validation MAE: 0.387734
+Validation RMSE: 0.520924
+Test MAE: 0.392431
+Test RMSE: 0.525789
+
+Epoch 142 results:
+Validation MAE: 0.386113
+Validation RMSE: 0.516146
+Test MAE: 0.391492
+Test RMSE: 0.523237
+
+Epoch 143 results:
+Validation MAE: 0.388038
+Validation RMSE: 0.518604
+Test MAE: 0.391865
+Test RMSE: 0.523248
+
+Epoch 144 results:
+Validation MAE: 0.384415
+Validation RMSE: 0.511772
+Test MAE: 0.387769
+Test RMSE: 0.51785
+
+Epoch 145 results:
+Validation MAE: 0.383909
+Validation RMSE: 0.512284
+Test MAE: 0.3901
+Test RMSE: 0.519362
+
+Epoch 146 results:
+Validation MAE: 0.383963
+Validation RMSE: 0.513195
+Test MAE: 0.387642
+Test RMSE: 0.516698
+
+Epoch 147 results:
+Validation MAE: 0.380785
+Validation RMSE: 0.512685
+Test MAE: 0.386637
+Test RMSE: 0.516675
+
+Epoch 148 results:
+Validation MAE: 0.384267
+Validation RMSE: 0.513944
+Test MAE: 0.389837
+Test RMSE: 0.521472
+
+Epoch 149 results:
+Validation MAE: 0.386594
+Validation RMSE: 0.516174
+Test MAE: 0.392747
+Test RMSE: 0.524023
+
+Epoch 150 results:
+Validation MAE: 0.379939
+Validation RMSE: 0.507379
+Test MAE: 0.385882
+Test RMSE: 0.515374
+
+Epoch 151 results:
+Validation MAE: 0.37931
+Validation RMSE: 0.50723
+Test MAE: 0.385181
+Test RMSE: 0.514408
+
+Epoch 152 results:
+Validation MAE: 0.382943
+Validation RMSE: 0.512389
+Test MAE: 0.388821
+Test RMSE: 0.519818
+
+Epoch 153 results:
+Validation MAE: 0.379112
+Validation RMSE: 0.507305
+Test MAE: 0.384339
+Test RMSE: 0.514526
+
+Epoch 154 results:
+Validation MAE: 0.38382
+Validation RMSE: 0.512622
+Test MAE: 0.389858
+Test RMSE: 0.519115
+
+Epoch 155 results:
+Validation MAE: 0.385434
+Validation RMSE: 0.514017
+Test MAE: 0.394237
+Test RMSE: 0.523438
+
+Epoch 156 results:
+Validation MAE: 0.382185
+Validation RMSE: 0.510729
+Test MAE: 0.3899
+Test RMSE: 0.519934
+
+Epoch 157 results:
+Validation MAE: 0.389803
+Validation RMSE: 0.518485
+Test MAE: 0.39773
+Test RMSE: 0.528055
+
+Epoch 158 results:
+Validation MAE: 0.380657
+Validation RMSE: 0.507968
+Test MAE: 0.389127
+Test RMSE: 0.518397
+
+Epoch 159 results:
+Validation MAE: 0.37912
+Validation RMSE: 0.505876
+Test MAE: 0.385758
+Test RMSE: 0.513504
+
+Epoch 160 results:
+Validation MAE: 0.382102
+Validation RMSE: 0.511745
+Test MAE: 0.389871
+Test RMSE: 0.521284
+
+Epoch 161 results:
+Validation MAE: 0.38916
+Validation RMSE: 0.518851
+Test MAE: 0.398342
+Test RMSE: 0.529858
+
+Epoch 162 results:
+Validation MAE: 0.38026
+Validation RMSE: 0.507642
+Test MAE: 0.386231
+Test RMSE: 0.515637
+
+Epoch 163 results:
+Validation MAE: 0.381167
+Validation RMSE: 0.51161
+Test MAE: 0.389688
+Test RMSE: 0.521686
+
+Epoch 164 results:
+Validation MAE: 0.381273
+Validation RMSE: 0.510559
+Test MAE: 0.389273
+Test RMSE: 0.521636
+
+Epoch 165 results:
+Validation MAE: 0.382047
+Validation RMSE: 0.510401
+Test MAE: 0.389934
+Test RMSE: 0.519872
+
+Epoch 166 results:
+Validation MAE: 0.383846
+Validation RMSE: 0.512471
+Test MAE: 0.391806
+Test RMSE: 0.523031
+
+Epoch 167 results:
+Validation MAE: 0.379853
+Validation RMSE: 0.507158
+Test MAE: 0.387152
+Test RMSE: 0.517394
+
+Epoch 168 results:
+Validation MAE: 0.389323
+Validation RMSE: 0.517119
+Test MAE: 0.398003
+Test RMSE: 0.527923
+
+Epoch 169 results:
+Validation MAE: 0.380693
+Validation RMSE: 0.508607
+Test MAE: 0.388715
+Test RMSE: 0.518727
+
+Epoch 170 results:
+Validation MAE: 0.38118
+Validation RMSE: 0.509335
+Test MAE: 0.389426
+Test RMSE: 0.520817
+
+Epoch 171 results:
+Validation MAE: 0.378236
+Validation RMSE: 0.505482
+Test MAE: 0.386175
+Test RMSE: 0.514897
+
+Epoch 172 results:
+Validation MAE: 0.384567
+Validation RMSE: 0.513076
+Test MAE: 0.391876
+Test RMSE: 0.522801
+
+Epoch 173 results:
+Validation MAE: 0.379553
+Validation RMSE: 0.506747
+Test MAE: 0.38713
+Test RMSE: 0.516268
+
+Epoch 174 results:
+Validation MAE: 0.377688
+Validation RMSE: 0.504594
+Test MAE: 0.385791
+Test RMSE: 0.515209
+
+Epoch 175 results:
+Validation MAE: 0.38362
+Validation RMSE: 0.511539
+Test MAE: 0.391803
+Test RMSE: 0.52232
+
+Epoch 176 results:
+Validation MAE: 0.379058
+Validation RMSE: 0.505457
+Test MAE: 0.387831
+Test RMSE: 0.516587
+
+Epoch 177 results:
+Validation MAE: 0.381236
+Validation RMSE: 0.509566
+Test MAE: 0.388884
+Test RMSE: 0.520288
+
+Epoch 178 results:
+Validation MAE: 0.378414
+Validation RMSE: 0.505899
+Test MAE: 0.386112
+Test RMSE: 0.515675
+
+Epoch 179 results:
+Validation MAE: 0.373731
+Validation RMSE: 0.502523
+Test MAE: 0.379685
+Test RMSE: 0.51026
+
+Epoch 180 results:
+Validation MAE: 0.37444
+Validation RMSE: 0.501572
+Test MAE: 0.381941
+Test RMSE: 0.510725
+
+Epoch 181 results:
+Validation MAE: 0.377889
+Validation RMSE: 0.504865
+Test MAE: 0.385983
+Test RMSE: 0.513805
+
+Epoch 182 results:
+Validation MAE: 0.381266
+Validation RMSE: 0.510405
+Test MAE: 0.38901
+Test RMSE: 0.519026
+
+Epoch 183 results:
+Validation MAE: 0.376416
+Validation RMSE: 0.506636
+Test MAE: 0.384002
+Test RMSE: 0.515164
+
+Epoch 184 results:
+Validation MAE: 0.383717
+Validation RMSE: 0.510778
+Test MAE: 0.391971
+Test RMSE: 0.520633
+
+Epoch 185 results:
+Validation MAE: 0.375263
+Validation RMSE: 0.501172
+Test MAE: 0.383689
+Test RMSE: 0.51013
+
+Epoch 186 results:
+Validation MAE: 0.37365
+Validation RMSE: 0.498967
+Test MAE: 0.381495
+Test RMSE: 0.50806
+
+Epoch 187 results:
+Validation MAE: 0.381164
+Validation RMSE: 0.50995
+Test MAE: 0.39026
+Test RMSE: 0.52069
+
+Epoch 188 results:
+Validation MAE: 0.387312
+Validation RMSE: 0.514722
+Test MAE: 0.395981
+Test RMSE: 0.524482
+
+Epoch 189 results:
+Validation MAE: 0.382023
+Validation RMSE: 0.507754
+Test MAE: 0.390344
+Test RMSE: 0.518084
+
+Epoch 190 results:
+Validation MAE: 0.378062
+Validation RMSE: 0.504971
+Test MAE: 0.388203
+Test RMSE: 0.516073
+
+Epoch 191 results:
+Validation MAE: 0.378712
+Validation RMSE: 0.504723
+Test MAE: 0.387097
+Test RMSE: 0.514916
+
+Epoch 192 results:
+Validation MAE: 0.380292
+Validation RMSE: 0.505348
+Test MAE: 0.389485
+Test RMSE: 0.516123
+
+Epoch 193 results:
+Validation MAE: 0.379482
+Validation RMSE: 0.505719
+Test MAE: 0.390027
+Test RMSE: 0.516821
+
+Epoch 194 results:
+Validation MAE: 0.376163
+Validation RMSE: 0.501778
+Test MAE: 0.385972
+Test RMSE: 0.513595
+
+Epoch 195 results:
+Validation MAE: 0.37678
+Validation RMSE: 0.502713
+Test MAE: 0.386221
+Test RMSE: 0.514433
+
+Epoch 196 results:
+Validation MAE: 0.381946
+Validation RMSE: 0.507002
+Test MAE: 0.39197
+Test RMSE: 0.518776
+
+Epoch 197 results:
+Validation MAE: 0.384273
+Validation RMSE: 0.508323
+Test MAE: 0.394462
+Test RMSE: 0.520847
+
+Epoch 198 results:
+Validation MAE: 0.383118
+Validation RMSE: 0.509251
+Test MAE: 0.394368
+Test RMSE: 0.522522
+
+Epoch 199 results:
+Validation MAE: 0.381114
+Validation RMSE: 0.506457
+Test MAE: 0.391724
+Test RMSE: 0.519041
+
+Epoch 200 results:
+Validation MAE: 0.3754
+Validation RMSE: 0.501732
+Test MAE: 0.385924
+Test RMSE: 0.514873
+
+Epoch 201 results:
+Validation MAE: 0.376481
+Validation RMSE: 0.502949
+Test MAE: 0.387433
+Test RMSE: 0.515151
+
+Epoch 202 results:
+Validation MAE: 0.379905
+Validation RMSE: 0.505536
+Test MAE: 0.390099
+Test RMSE: 0.517947
+
+Epoch 203 results:
+Validation MAE: 0.381532
+Validation RMSE: 0.506041
+Test MAE: 0.393028
+Test RMSE: 0.520788
+
+Epoch 204 results:
+Validation MAE: 0.37774
+Validation RMSE: 0.503325
+Test MAE: 0.388836
+Test RMSE: 0.516862
+
+Epoch 205 results:
+Validation MAE: 0.381663
+Validation RMSE: 0.510278
+Test MAE: 0.392522
+Test RMSE: 0.522811
+
+Epoch 206 results:
+Validation MAE: 0.380211
+Validation RMSE: 0.506907
+Test MAE: 0.390828
+Test RMSE: 0.519072
+
+Epoch 207 results:
+Validation MAE: 0.378642
+Validation RMSE: 0.505183
+Test MAE: 0.389205
+Test RMSE: 0.517265
+
+Epoch 208 results:
+Validation MAE: 0.376221
+Validation RMSE: 0.503831
+Test MAE: 0.387958
+Test RMSE: 0.516136
+
+Epoch 209 results:
+Validation MAE: 0.381496
+Validation RMSE: 0.510557
+Test MAE: 0.392295
+Test RMSE: 0.522239
+
+Epoch 210 results:
+Validation MAE: 0.379179
+Validation RMSE: 0.505488
+Test MAE: 0.38941
+Test RMSE: 0.517182
+
+Epoch 211 results:
+Validation MAE: 0.381563
+Validation RMSE: 0.507992
+Test MAE: 0.392197
+Test RMSE: 0.520137
+
+Epoch 212 results:
+Validation MAE: 0.378479
+Validation RMSE: 0.505764
+Test MAE: 0.388093
+Test RMSE: 0.516206
+
+Epoch 213 results:
+Validation MAE: 0.379768
+Validation RMSE: 0.506809
+Test MAE: 0.389707
+Test RMSE: 0.518098
+
+Epoch 214 results:
+Validation MAE: 0.371356
+Validation RMSE: 0.496794
+Test MAE: 0.380424
+Test RMSE: 0.506792
+
+Epoch 215 results:
+Validation MAE: 0.376286
+Validation RMSE: 0.503574
+Test MAE: 0.386038
+Test RMSE: 0.514683
+
+Epoch 216 results:
+Validation MAE: 0.378802
+Validation RMSE: 0.505141
+Test MAE: 0.390207
+Test RMSE: 0.518604
+
+Epoch 217 results:
+Validation MAE: 0.374827
+Validation RMSE: 0.501932
+Test MAE: 0.384714
+Test RMSE: 0.511813
+
+Epoch 218 results:
+Validation MAE: 0.37867
+Validation RMSE: 0.504276
+Test MAE: 0.389227
+Test RMSE: 0.51697
+
+Epoch 219 results:
+Validation MAE: 0.378225
+Validation RMSE: 0.504016
+Test MAE: 0.389213
+Test RMSE: 0.517269
+
+Epoch 220 results:
+Validation MAE: 0.372971
+Validation RMSE: 0.498485
+Test MAE: 0.383386
+Test RMSE: 0.510232
+
+Epoch 221 results:
+Validation MAE: 0.377674
+Validation RMSE: 0.502897
+Test MAE: 0.388965
+Test RMSE: 0.515202
+
+Epoch 222 results:
+Validation MAE: 0.372552
+Validation RMSE: 0.498019
+Test MAE: 0.384409
+Test RMSE: 0.510761
+
+Epoch 223 results:
+Validation MAE: 0.371227
+Validation RMSE: 0.496929
+Test MAE: 0.382633
+Test RMSE: 0.509467
+
+Epoch 224 results:
+Validation MAE: 0.369245
+Validation RMSE: 0.493903
+Test MAE: 0.379887
+Test RMSE: 0.504959
+
+Epoch 225 results:
+Validation MAE: 0.370659
+Validation RMSE: 0.495279
+Test MAE: 0.381061
+Test RMSE: 0.508174
+
+Epoch 226 results:
+Validation MAE: 0.368262
+Validation RMSE: 0.49351
+Test MAE: 0.378926
+Test RMSE: 0.505034
+
+Epoch 227 results:
+Validation MAE: 0.370645
+Validation RMSE: 0.496213
+Test MAE: 0.38158
+Test RMSE: 0.508557
+
+Epoch 228 results:
+Validation MAE: 0.372697
+Validation RMSE: 0.498906
+Test MAE: 0.383753
+Test RMSE: 0.511205
+
+Epoch 229 results:
+Validation MAE: 0.367385
+Validation RMSE: 0.492865
+Test MAE: 0.37879
+Test RMSE: 0.505662
+
+Epoch 230 results:
+Validation MAE: 0.367972
+Validation RMSE: 0.493496
+Test MAE: 0.378791
+Test RMSE: 0.505277
+
+Epoch 231 results:
+Validation MAE: 0.369035
+Validation RMSE: 0.494876
+Test MAE: 0.3795
+Test RMSE: 0.506024
+
+Epoch 232 results:
+Validation MAE: 0.366568
+Validation RMSE: 0.491151
+Test MAE: 0.377072
+Test RMSE: 0.502802
+
+Epoch 233 results:
+Validation MAE: 0.366187
+Validation RMSE: 0.492853
+Test MAE: 0.376737
+Test RMSE: 0.503728
+
+Epoch 234 results:
+Validation MAE: 0.367821
+Validation RMSE: 0.493275
+Test MAE: 0.37836
+Test RMSE: 0.504336
+
+Epoch 235 results:
+Validation MAE: 0.366808
+Validation RMSE: 0.491645
+Test MAE: 0.377729
+Test RMSE: 0.503589
+
+Epoch 236 results:
+Validation MAE: 0.365325
+Validation RMSE: 0.49077
+Test MAE: 0.376369
+Test RMSE: 0.501631
+
+Epoch 237 results:
+Validation MAE: 0.366205
+Validation RMSE: 0.491801
+Test MAE: 0.37748
+Test RMSE: 0.504211
+
+Epoch 238 results:
+Validation MAE: 0.363363
+Validation RMSE: 0.48926
+Test MAE: 0.37473
+Test RMSE: 0.500553
+
+Epoch 239 results:
+Validation MAE: 0.366902
+Validation RMSE: 0.493586
+Test MAE: 0.378525
+Test RMSE: 0.505932
+
+Epoch 240 results:
+Validation MAE: 0.368491
+Validation RMSE: 0.495489
+Test MAE: 0.379827
+Test RMSE: 0.505844
+
+Epoch 241 results:
+Validation MAE: 0.366671
+Validation RMSE: 0.493416
+Test MAE: 0.377258
+Test RMSE: 0.504336
+
+Epoch 242 results:
+Validation MAE: 0.36524
+Validation RMSE: 0.491235
+Test MAE: 0.37699
+Test RMSE: 0.503253
+
+Epoch 243 results:
+Validation MAE: 0.364341
+Validation RMSE: 0.491568
+Test MAE: 0.374096
+Test RMSE: 0.500564
+
+Epoch 244 results:
+Validation MAE: 0.367011
+Validation RMSE: 0.494242
+Test MAE: 0.377628
+Test RMSE: 0.504277
+
+Epoch 245 results:
+Validation MAE: 0.36438
+Validation RMSE: 0.48998
+Test MAE: 0.374713
+Test RMSE: 0.499676
+
+Epoch 246 results:
+Validation MAE: 0.363166
+Validation RMSE: 0.489786
+Test MAE: 0.374036
+Test RMSE: 0.498616
+
+Epoch 247 results:
+Validation MAE: 0.364637
+Validation RMSE: 0.493098
+Test MAE: 0.375176
+Test RMSE: 0.502971
+
+Epoch 248 results:
+Validation MAE: 0.362116
+Validation RMSE: 0.488147
+Test MAE: 0.373306
+Test RMSE: 0.498742
+
+Epoch 249 results:
+Validation MAE: 0.363286
+Validation RMSE: 0.488477
+Test MAE: 0.374666
+Test RMSE: 0.501526
+
+Epoch 250 results:
+Validation MAE: 0.363226
+Validation RMSE: 0.488811
+Test MAE: 0.374947
+Test RMSE: 0.500069
+
+Epoch 251 results:
+Validation MAE: 0.36217
+Validation RMSE: 0.485706
+Test MAE: 0.373681
+Test RMSE: 0.498172
+
+Epoch 252 results:
+Validation MAE: 0.361955
+Validation RMSE: 0.488154
+Test MAE: 0.372965
+Test RMSE: 0.497991
+
+Epoch 253 results:
+Validation MAE: 0.36307
+Validation RMSE: 0.488419
+Test MAE: 0.373792
+Test RMSE: 0.497679
+
+Epoch 254 results:
+Validation MAE: 0.362041
+Validation RMSE: 0.488405
+Test MAE: 0.373276
+Test RMSE: 0.498663
+
+Epoch 255 results:
+Validation MAE: 0.35975
+Validation RMSE: 0.484789
+Test MAE: 0.370731
+Test RMSE: 0.494993
+
+Epoch 256 results:
+Validation MAE: 0.359611
+Validation RMSE: 0.485702
+Test MAE: 0.369988
+Test RMSE: 0.494076
+
+Epoch 257 results:
+Validation MAE: 0.361362
+Validation RMSE: 0.486295
+Test MAE: 0.371734
+Test RMSE: 0.495442
+
+Epoch 258 results:
+Validation MAE: 0.359661
+Validation RMSE: 0.48611
+Test MAE: 0.370782
+Test RMSE: 0.495776
+
+Epoch 259 results:
+Validation MAE: 0.359685
+Validation RMSE: 0.487185
+Test MAE: 0.370353
+Test RMSE: 0.494881
+
+Epoch 260 results:
+Validation MAE: 0.358915
+Validation RMSE: 0.484544
+Test MAE: 0.370372
+Test RMSE: 0.493784
+
+Epoch 261 results:
+Validation MAE: 0.359863
+Validation RMSE: 0.485591
+Test MAE: 0.370079
+Test RMSE: 0.494343
+
+Epoch 262 results:
+Validation MAE: 0.361412
+Validation RMSE: 0.485961
+Test MAE: 0.370989
+Test RMSE: 0.493141
+
+Epoch 263 results:
+Validation MAE: 0.358835
+Validation RMSE: 0.485047
+Test MAE: 0.368682
+Test RMSE: 0.492049
+
+Epoch 264 results:
+Validation MAE: 0.359784
+Validation RMSE: 0.484152
+Test MAE: 0.370391
+Test RMSE: 0.492297
+
+Epoch 265 results:
+Validation MAE: 0.358186
+Validation RMSE: 0.483137
+Test MAE: 0.369166
+Test RMSE: 0.491733
+
+Epoch 266 results:
+Validation MAE: 0.357727
+Validation RMSE: 0.483894
+Test MAE: 0.368185
+Test RMSE: 0.491673
+
+Epoch 267 results:
+Validation MAE: 0.360921
+Validation RMSE: 0.489668
+Test MAE: 0.371901
+Test RMSE: 0.496147
+
+Epoch 268 results:
+Validation MAE: 0.359765
+Validation RMSE: 0.486532
+Test MAE: 0.371442
+Test RMSE: 0.494175
+
+Epoch 269 results:
+Validation MAE: 0.357459
+Validation RMSE: 0.484796
+Test MAE: 0.368696
+Test RMSE: 0.491514
+
+Epoch 270 results:
+Validation MAE: 0.357696
+Validation RMSE: 0.485298
+Test MAE: 0.368447
+Test RMSE: 0.492401
+
+Epoch 271 results:
+Validation MAE: 0.358722
+Validation RMSE: 0.485455
+Test MAE: 0.369569
+Test RMSE: 0.492162
+
+Epoch 272 results:
+Validation MAE: 0.364219
+Validation RMSE: 0.493369
+Test MAE: 0.374078
+Test RMSE: 0.498768
+
+Epoch 273 results:
+Validation MAE: 0.357551
+Validation RMSE: 0.484147
+Test MAE: 0.367713
+Test RMSE: 0.490482
+
+Epoch 274 results:
+Validation MAE: 0.35716
+Validation RMSE: 0.484381
+Test MAE: 0.367555
+Test RMSE: 0.489504
+
+Epoch 275 results:
+Validation MAE: 0.359209
+Validation RMSE: 0.487765
+Test MAE: 0.369709
+Test RMSE: 0.4933
+
+Epoch 276 results:
+Validation MAE: 0.357339
+Validation RMSE: 0.484637
+Test MAE: 0.367663
+Test RMSE: 0.49073
+
+Epoch 277 results:
+Validation MAE: 0.358037
+Validation RMSE: 0.485409
+Test MAE: 0.368159
+Test RMSE: 0.490361
+
+Epoch 278 results:
+Validation MAE: 0.358327
+Validation RMSE: 0.485756
+Test MAE: 0.368942
+Test RMSE: 0.491291
+
+Epoch 279 results:
+Validation MAE: 0.359411
+Validation RMSE: 0.486338
+Test MAE: 0.369553
+Test RMSE: 0.49121
+
+Epoch 280 results:
+Validation MAE: 0.357259
+Validation RMSE: 0.484027
+Test MAE: 0.368062
+Test RMSE: 0.489241
+
+Epoch 281 results:
+Validation MAE: 0.35828
+Validation RMSE: 0.485975
+Test MAE: 0.368511
+Test RMSE: 0.49029
+
+Epoch 282 results:
+Validation MAE: 0.356965
+Validation RMSE: 0.484247
+Test MAE: 0.367453
+Test RMSE: 0.489317
+
+Epoch 283 results:
+Validation MAE: 0.35773
+Validation RMSE: 0.485602
+Test MAE: 0.36874
+Test RMSE: 0.490494
+
+Epoch 284 results:
+Validation MAE: 0.360899
+Validation RMSE: 0.489812
+Test MAE: 0.372238
+Test RMSE: 0.495127
+
+Epoch 285 results:
+Validation MAE: 0.356352
+Validation RMSE: 0.48343
+Test MAE: 0.367899
+Test RMSE: 0.489473
+
+Epoch 286 results:
+Validation MAE: 0.357476
+Validation RMSE: 0.484386
+Test MAE: 0.369573
+Test RMSE: 0.492725
+
+Epoch 287 results:
+Validation MAE: 0.357338
+Validation RMSE: 0.484637
+Test MAE: 0.368543
+Test RMSE: 0.491486
+
+Epoch 288 results:
+Validation MAE: 0.355908
+Validation RMSE: 0.48252
+Test MAE: 0.367327
+Test RMSE: 0.489973
+
+Epoch 289 results:
+Validation MAE: 0.355319
+Validation RMSE: 0.479992
+Test MAE: 0.366747
+Test RMSE: 0.489199
+
+Epoch 290 results:
+Validation MAE: 0.356348
+Validation RMSE: 0.483653
+Test MAE: 0.367424
+Test RMSE: 0.490088
+
+Epoch 291 results:
+Validation MAE: 0.356536
+Validation RMSE: 0.481956
+Test MAE: 0.367561
+Test RMSE: 0.489007
+
+Epoch 292 results:
+Validation MAE: 0.357294
+Validation RMSE: 0.483959
+Test MAE: 0.367407
+Test RMSE: 0.489098
+
+Epoch 293 results:
+Validation MAE: 0.357551
+Validation RMSE: 0.482662
+Test MAE: 0.367328
+Test RMSE: 0.488953
+
+Epoch 294 results:
+Validation MAE: 0.355059
+Validation RMSE: 0.480737
+Test MAE: 0.365424
+Test RMSE: 0.486097
+
+Epoch 295 results:
+Validation MAE: 0.355386
+Validation RMSE: 0.481371
+Test MAE: 0.365702
+Test RMSE: 0.486849
+
+Epoch 296 results:
+Validation MAE: 0.355472
+Validation RMSE: 0.480084
+Test MAE: 0.365724
+Test RMSE: 0.486416
+
+Epoch 297 results:
+Validation MAE: 0.3519
+Validation RMSE: 0.475187
+Test MAE: 0.362887
+Test RMSE: 0.483444
+
+Epoch 298 results:
+Validation MAE: 0.354824
+Validation RMSE: 0.479311
+Test MAE: 0.364499
+Test RMSE: 0.485017
+
+Epoch 299 results:
+Validation MAE: 0.35403
+Validation RMSE: 0.479113
+Test MAE: 0.364356
+Test RMSE: 0.484963
+
+Epoch 300 results:
+Validation MAE: 0.354162
+Validation RMSE: 0.479046
+Test MAE: 0.365278
+Test RMSE: 0.486037
+
+Epoch 301 results:
+Validation MAE: 0.354778
+Validation RMSE: 0.480721
+Test MAE: 0.364774
+Test RMSE: 0.48502
+
+Epoch 302 results:
+Validation MAE: 0.353968
+Validation RMSE: 0.478322
+Test MAE: 0.365235
+Test RMSE: 0.485877
+
+Epoch 303 results:
+Validation MAE: 0.354279
+Validation RMSE: 0.478908
+Test MAE: 0.364841
+Test RMSE: 0.484158
+
+Epoch 304 results:
+Validation MAE: 0.357255
+Validation RMSE: 0.484625
+Test MAE: 0.368473
+Test RMSE: 0.489968
+
+Epoch 305 results:
+Validation MAE: 0.358037
+Validation RMSE: 0.485151
+Test MAE: 0.369516
+Test RMSE: 0.491261
+
+Epoch 306 results:
+Validation MAE: 0.355417
+Validation RMSE: 0.480125
+Test MAE: 0.366507
+Test RMSE: 0.486915
+
+Epoch 307 results:
+Validation MAE: 0.355058
+Validation RMSE: 0.481122
+Test MAE: 0.366107
+Test RMSE: 0.487492
+
+Epoch 308 results:
+Validation MAE: 0.353458
+Validation RMSE: 0.479197
+Test MAE: 0.364975
+Test RMSE: 0.486331
+
+Epoch 309 results:
+Validation MAE: 0.353083
+Validation RMSE: 0.477996
+Test MAE: 0.364416
+Test RMSE: 0.484938
+
+Epoch 310 results:
+Validation MAE: 0.351696
+Validation RMSE: 0.475423
+Test MAE: 0.361933
+Test RMSE: 0.481546
+
+Epoch 311 results:
+Validation MAE: 0.354457
+Validation RMSE: 0.479705
+Test MAE: 0.365279
+Test RMSE: 0.485982
+
+Epoch 312 results:
+Validation MAE: 0.352471
+Validation RMSE: 0.476456
+Test MAE: 0.364261
+Test RMSE: 0.482786
+
+Epoch 313 results:
+Validation MAE: 0.352852
+Validation RMSE: 0.476863
+Test MAE: 0.364282
+Test RMSE: 0.483971
+
+Epoch 314 results:
+Validation MAE: 0.351294
+Validation RMSE: 0.476696
+Test MAE: 0.363205
+Test RMSE: 0.483703
+
+Epoch 315 results:
+Validation MAE: 0.353904
+Validation RMSE: 0.479769
+Test MAE: 0.364677
+Test RMSE: 0.485369
+
+Epoch 316 results:
+Validation MAE: 0.354096
+Validation RMSE: 0.481199
+Test MAE: 0.364855
+Test RMSE: 0.486619
+
+Epoch 317 results:
+Validation MAE: 0.351932
+Validation RMSE: 0.476702
+Test MAE: 0.362958
+Test RMSE: 0.484596
+
+Epoch 318 results:
+Validation MAE: 0.353504
+Validation RMSE: 0.479791
+Test MAE: 0.365253
+Test RMSE: 0.486886
+
+Epoch 319 results:
+Validation MAE: 0.354543
+Validation RMSE: 0.482139
+Test MAE: 0.36574
+Test RMSE: 0.487853
+
+Epoch 320 results:
+Validation MAE: 0.355505
+Validation RMSE: 0.482345
+Test MAE: 0.367459
+Test RMSE: 0.489345
+
+Epoch 321 results:
+Validation MAE: 0.355415
+Validation RMSE: 0.481919
+Test MAE: 0.367134
+Test RMSE: 0.489642
+
+Epoch 322 results:
+Validation MAE: 0.353507
+Validation RMSE: 0.480459
+Test MAE: 0.364159
+Test RMSE: 0.486496
+
+Epoch 323 results:
+Validation MAE: 0.351357
+Validation RMSE: 0.47605
+Test MAE: 0.361973
+Test RMSE: 0.481553
+
+Epoch 324 results:
+Validation MAE: 0.350077
+Validation RMSE: 0.475012
+Test MAE: 0.361839
+Test RMSE: 0.481775
+
+Epoch 325 results:
+Validation MAE: 0.351759
+Validation RMSE: 0.477373
+Test MAE: 0.362698
+Test RMSE: 0.483252
+
+Epoch 326 results:
+Validation MAE: 0.353742
+Validation RMSE: 0.480534
+Test MAE: 0.364849
+Test RMSE: 0.486228
+
+Epoch 327 results:
+Validation MAE: 0.354602
+Validation RMSE: 0.481198
+Test MAE: 0.366483
+Test RMSE: 0.487075
+
+Epoch 328 results:
+Validation MAE: 0.351896
+Validation RMSE: 0.478404
+Test MAE: 0.364838
+Test RMSE: 0.48751
+
+Epoch 329 results:
+Validation MAE: 0.34955
+Validation RMSE: 0.474121
+Test MAE: 0.361719
+Test RMSE: 0.481934
+
+Epoch 330 results:
+Validation MAE: 0.353344
+Validation RMSE: 0.478253
+Test MAE: 0.364324
+Test RMSE: 0.485929
+
+Epoch 331 results:
+Validation MAE: 0.349877
+Validation RMSE: 0.474066
+Test MAE: 0.36079
+Test RMSE: 0.481481
+
+Epoch 332 results:
+Validation MAE: 0.352004
+Validation RMSE: 0.477986
+Test MAE: 0.362627
+Test RMSE: 0.483768
+
+Epoch 333 results:
+Validation MAE: 0.353313
+Validation RMSE: 0.478185
+Test MAE: 0.36442
+Test RMSE: 0.485022
+
+Epoch 334 results:
+Validation MAE: 0.35255
+Validation RMSE: 0.478416
+Test MAE: 0.363331
+Test RMSE: 0.484685
+
+Epoch 335 results:
+Validation MAE: 0.35191
+Validation RMSE: 0.478099
+Test MAE: 0.361462
+Test RMSE: 0.481763
+
+Epoch 336 results:
+Validation MAE: 0.352677
+Validation RMSE: 0.478007
+Test MAE: 0.363954
+Test RMSE: 0.483977
+
+Epoch 337 results:
+Validation MAE: 0.352557
+Validation RMSE: 0.479391
+Test MAE: 0.36334
+Test RMSE: 0.484466
+
+Epoch 338 results:
+Validation MAE: 0.351772
+Validation RMSE: 0.478739
+Test MAE: 0.362234
+Test RMSE: 0.481828
+
+Epoch 339 results:
+Validation MAE: 0.353071
+Validation RMSE: 0.479309
+Test MAE: 0.363546
+Test RMSE: 0.483332
+
+Epoch 340 results:
+Validation MAE: 0.356657
+Validation RMSE: 0.484095
+Test MAE: 0.366444
+Test RMSE: 0.487256
+
+Epoch 341 results:
+Validation MAE: 0.352756
+Validation RMSE: 0.478588
+Test MAE: 0.363669
+Test RMSE: 0.483725
+
+Epoch 342 results:
+Validation MAE: 0.350601
+Validation RMSE: 0.475617
+Test MAE: 0.361623
+Test RMSE: 0.481742
+
+Epoch 343 results:
+Validation MAE: 0.349587
+Validation RMSE: 0.473996
+Test MAE: 0.360145
+Test RMSE: 0.47887
+
+Epoch 344 results:
+Validation MAE: 0.35196
+Validation RMSE: 0.476528
+Test MAE: 0.36321
+Test RMSE: 0.484243
+
+Epoch 345 results:
+Validation MAE: 0.349915
+Validation RMSE: 0.477022
+Test MAE: 0.36201
+Test RMSE: 0.487224
+
+Epoch 346 results:
+Validation MAE: 0.350732
+Validation RMSE: 0.475769
+Test MAE: 0.362025
+Test RMSE: 0.482546
+
+Epoch 347 results:
+Validation MAE: 0.352886
+Validation RMSE: 0.479629
+Test MAE: 0.362946
+Test RMSE: 0.48587
+
+Epoch 348 results:
+Validation MAE: 0.348646
+Validation RMSE: 0.474291
+Test MAE: 0.358097
+Test RMSE: 0.477527
+
+Epoch 349 results:
+Validation MAE: 0.348088
+Validation RMSE: 0.472806
+Test MAE: 0.358514
+Test RMSE: 0.478233
+
+Epoch 350 results:
+Validation MAE: 0.350855
+Validation RMSE: 0.477915
+Test MAE: 0.361742
+Test RMSE: 0.483395
+
+Epoch 351 results:
+Validation MAE: 0.349186
+Validation RMSE: 0.475466
+Test MAE: 0.360031
+Test RMSE: 0.482095
+
+Epoch 352 results:
+Validation MAE: 0.349922
+Validation RMSE: 0.476673
+Test MAE: 0.358907
+Test RMSE: 0.480262
+
+Epoch 353 results:
+Validation MAE: 0.351167
+Validation RMSE: 0.479305
+Test MAE: 0.361412
+Test RMSE: 0.484395
+
+Epoch 354 results:
+Validation MAE: 0.351123
+Validation RMSE: 0.479436
+Test MAE: 0.361434
+Test RMSE: 0.484682
+
+Epoch 355 results:
+Validation MAE: 0.352727
+Validation RMSE: 0.48103
+Test MAE: 0.362708
+Test RMSE: 0.489975
+
+Epoch 356 results:
+Validation MAE: 0.348787
+Validation RMSE: 0.472036
+Test MAE: 0.360912
+Test RMSE: 0.481251
+
+Epoch 357 results:
+Validation MAE: 0.34862
+Validation RMSE: 0.471257
+Test MAE: 0.358292
+Test RMSE: 0.476464
+
+Epoch 358 results:
+Validation MAE: 0.349166
+Validation RMSE: 0.474362
+Test MAE: 0.359789
+Test RMSE: 0.481291
+
+Epoch 359 results:
+Validation MAE: 0.349637
+Validation RMSE: 0.475552
+Test MAE: 0.359822
+Test RMSE: 0.481659
+
+Epoch 360 results:
+Validation MAE: 0.35046
+Validation RMSE: 0.477187
+Test MAE: 0.360797
+Test RMSE: 0.484558
+
+Epoch 361 results:
+Validation MAE: 0.351186
+Validation RMSE: 0.477916
+Test MAE: 0.36104
+Test RMSE: 0.483572
+
+Epoch 362 results:
+Validation MAE: 0.349293
+Validation RMSE: 0.473709
+Test MAE: 0.36081
+Test RMSE: 0.482674
+
+Epoch 363 results:
+Validation MAE: 0.349824
+Validation RMSE: 0.474781
+Test MAE: 0.359696
+Test RMSE: 0.480563
+
+Epoch 364 results:
+Validation MAE: 0.349792
+Validation RMSE: 0.476969
+Test MAE: 0.361353
+Test RMSE: 0.485386
+
+Epoch 365 results:
+Validation MAE: 0.350164
+Validation RMSE: 0.474488
+Test MAE: 0.359682
+Test RMSE: 0.481115
+
+Epoch 366 results:
+Validation MAE: 0.349823
+Validation RMSE: 0.473614
+Test MAE: 0.360391
+Test RMSE: 0.483254
+
+Epoch 367 results:
+Validation MAE: 0.350874
+Validation RMSE: 0.477753
+Test MAE: 0.360355
+Test RMSE: 0.484086
+
+Epoch 368 results:
+Validation MAE: 0.348342
+Validation RMSE: 0.474598
+Test MAE: 0.359994
+Test RMSE: 0.483067
+
+Epoch 369 results:
+Validation MAE: 0.349314
+Validation RMSE: 0.47664
+Test MAE: 0.36002
+Test RMSE: 0.482741
+
+Epoch 370 results:
+Validation MAE: 0.350416
+Validation RMSE: 0.479552
+Test MAE: 0.361133
+Test RMSE: 0.485056
+
+Epoch 371 results:
+Validation MAE: 0.347518
+Validation RMSE: 0.474713
+Test MAE: 0.35765
+Test RMSE: 0.477385
+
+Epoch 372 results:
+Validation MAE: 0.348576
+Validation RMSE: 0.477235
+Test MAE: 0.358803
+Test RMSE: 0.479685
+
+Epoch 373 results:
+Validation MAE: 0.348756
+Validation RMSE: 0.477247
+Test MAE: 0.359485
+Test RMSE: 0.482319
+
+Epoch 374 results:
+Validation MAE: 0.350107
+Validation RMSE: 0.476554
+Test MAE: 0.359497
+Test RMSE: 0.481439
+
+Epoch 375 results:
+Validation MAE: 0.350682
+Validation RMSE: 0.479412
+Test MAE: 0.361705
+Test RMSE: 0.486594
+
+Epoch 376 results:
+Validation MAE: 0.35009
+Validation RMSE: 0.476504
+Test MAE: 0.36109
+Test RMSE: 0.483194
+
+Epoch 377 results:
+Validation MAE: 0.352534
+Validation RMSE: 0.479457
+Test MAE: 0.362145
+Test RMSE: 0.483712
+
+Epoch 378 results:
+Validation MAE: 0.349641
+Validation RMSE: 0.476348
+Test MAE: 0.359999
+Test RMSE: 0.481573
+
+Epoch 379 results:
+Validation MAE: 0.349534
+Validation RMSE: 0.477179
+Test MAE: 0.358973
+Test RMSE: 0.480176
+
+Epoch 380 results:
+Validation MAE: 0.352114
+Validation RMSE: 0.481178
+Test MAE: 0.361567
+Test RMSE: 0.485268
+
+Epoch 381 results:
+Validation MAE: 0.351193
+Validation RMSE: 0.478724
+Test MAE: 0.360613
+Test RMSE: 0.483076
+
+Epoch 382 results:
+Validation MAE: 0.351828
+Validation RMSE: 0.478914
+Test MAE: 0.36238
+Test RMSE: 0.486645
+
+Epoch 383 results:
+Validation MAE: 0.351931
+Validation RMSE: 0.480186
+Test MAE: 0.361708
+Test RMSE: 0.485071
+
+Epoch 384 results:
+Validation MAE: 0.350407
+Validation RMSE: 0.478737
+Test MAE: 0.360833
+Test RMSE: 0.483277
+
+Epoch 385 results:
+Validation MAE: 0.350337
+Validation RMSE: 0.480129
+Test MAE: 0.359835
+Test RMSE: 0.483176
+
+Epoch 386 results:
+Validation MAE: 0.348103
+Validation RMSE: 0.475878
+Test MAE: 0.358729
+Test RMSE: 0.480123
+
+Epoch 387 results:
+Validation MAE: 0.350014
+Validation RMSE: 0.477467
+Test MAE: 0.360332
+Test RMSE: 0.481329
+
+Epoch 388 results:
+Validation MAE: 0.348241
+Validation RMSE: 0.475125
+Test MAE: 0.35882
+Test RMSE: 0.479059
+
+Epoch 389 results:
+Validation MAE: 0.349561
+Validation RMSE: 0.475795
+Test MAE: 0.35877
+Test RMSE: 0.478676
+
+Epoch 390 results:
+Validation MAE: 0.351355
+Validation RMSE: 0.478539
+Test MAE: 0.360575
+Test RMSE: 0.48018
+
+Epoch 391 results:
+Validation MAE: 0.35246
+Validation RMSE: 0.47826
+Test MAE: 0.361586
+Test RMSE: 0.48207
+
+Epoch 392 results:
+Validation MAE: 0.350299
+Validation RMSE: 0.47498
+Test MAE: 0.359397
+Test RMSE: 0.479135
+
+Epoch 393 results:
+Validation MAE: 0.347248
+Validation RMSE: 0.471324
+Test MAE: 0.356763
+Test RMSE: 0.474087
+
+Epoch 394 results:
+Validation MAE: 0.350539
+Validation RMSE: 0.476554
+Test MAE: 0.360199
+Test RMSE: 0.479166
+
+Epoch 395 results:
+Validation MAE: 0.35053
+Validation RMSE: 0.474024
+Test MAE: 0.359232
+Test RMSE: 0.477354
+
+Epoch 396 results:
+Validation MAE: 0.354189
+Validation RMSE: 0.477379
+Test MAE: 0.364487
+Test RMSE: 0.483646
+
+Epoch 397 results:
+Validation MAE: 0.348522
+Validation RMSE: 0.472451
+Test MAE: 0.358085
+Test RMSE: 0.475204
+
+Epoch 398 results:
+Validation MAE: 0.351431
+Validation RMSE: 0.477305
+Test MAE: 0.359927
+Test RMSE: 0.478821
+
+Epoch 399 results:
+Validation MAE: 0.349872
+Validation RMSE: 0.473367
+Test MAE: 0.359981
+Test RMSE: 0.478659
+
+Epoch 400 results:
+Validation MAE: 0.35359
+Validation RMSE: 0.479921
+Test MAE: 0.363346
+Test RMSE: 0.483456
+
+Epoch 401 results:
+Validation MAE: 0.349991
+Validation RMSE: 0.47565
+Test MAE: 0.359197
+Test RMSE: 0.477723
+
+Epoch 402 results:
+Validation MAE: 0.348674
+Validation RMSE: 0.472675
+Test MAE: 0.358909
+Test RMSE: 0.478421
+
+Epoch 403 results:
+Validation MAE: 0.349807
+Validation RMSE: 0.475069
+Test MAE: 0.359364
+Test RMSE: 0.479277
+
+Epoch 404 results:
+Validation MAE: 0.35092
+Validation RMSE: 0.474261
+Test MAE: 0.3609
+Test RMSE: 0.47995
+
+Epoch 405 results:
+Validation MAE: 0.351407
+Validation RMSE: 0.475564
+Test MAE: 0.361064
+Test RMSE: 0.480353
+
+Epoch 406 results:
+Validation MAE: 0.352375
+Validation RMSE: 0.478928
+Test MAE: 0.361671
+Test RMSE: 0.483448
+
+Epoch 407 results:
+Validation MAE: 0.352443
+Validation RMSE: 0.478771
+Test MAE: 0.361477
+Test RMSE: 0.483854
+
+Epoch 408 results:
+Validation MAE: 0.351192
+Validation RMSE: 0.475395
+Test MAE: 0.360903
+Test RMSE: 0.481958
+
+Epoch 409 results:
+Validation MAE: 0.349559
+Validation RMSE: 0.474638
+Test MAE: 0.35917
+Test RMSE: 0.480083
+
+Epoch 410 results:
+Validation MAE: 0.348885
+Validation RMSE: 0.471801
+Test MAE: 0.358391
+Test RMSE: 0.476199
+
+Epoch 411 results:
+Validation MAE: 0.349661
+Validation RMSE: 0.475374
+Test MAE: 0.358764
+Test RMSE: 0.477962
+
+Epoch 412 results:
+Validation MAE: 0.349188
+Validation RMSE: 0.474721
+Test MAE: 0.358261
+Test RMSE: 0.476953
+
+Epoch 413 results:
+Validation MAE: 0.350705
+Validation RMSE: 0.475563
+Test MAE: 0.360669
+Test RMSE: 0.480081
+
+Epoch 414 results:
+Validation MAE: 0.352039
+Validation RMSE: 0.477267
+Test MAE: 0.362496
+Test RMSE: 0.482344
+
+Epoch 415 results:
+Validation MAE: 0.349054
+Validation RMSE: 0.472783
+Test MAE: 0.35921
+Test RMSE: 0.476971
+
+Epoch 416 results:
+Validation MAE: 0.351948
+Validation RMSE: 0.478072
+Test MAE: 0.35967
+Test RMSE: 0.478118
+
+Epoch 417 results:
+Validation MAE: 0.350535
+Validation RMSE: 0.474813
+Test MAE: 0.360308
+Test RMSE: 0.480038
+
+Epoch 418 results:
+Validation MAE: 0.348756
+Validation RMSE: 0.471873
+Test MAE: 0.358614
+Test RMSE: 0.476749
+
+Epoch 419 results:
+Validation MAE: 0.350408
+Validation RMSE: 0.475428
+Test MAE: 0.360292
+Test RMSE: 0.479741
+
+Epoch 420 results:
+Validation MAE: 0.349368
+Validation RMSE: 0.473115
+Test MAE: 0.359474
+Test RMSE: 0.479572
+
+Epoch 421 results:
+Validation MAE: 0.350637
+Validation RMSE: 0.474666
+Test MAE: 0.360409
+Test RMSE: 0.478947
+
+Epoch 422 results:
+Validation MAE: 0.349841
+Validation RMSE: 0.472936
+Test MAE: 0.358872
+Test RMSE: 0.47616
+
+Epoch 423 results:
+Validation MAE: 0.349776
+Validation RMSE: 0.473288
+Test MAE: 0.359345
+Test RMSE: 0.477631
+
+Epoch 424 results:
+Validation MAE: 0.34812
+Validation RMSE: 0.470883
+Test MAE: 0.358064
+Test RMSE: 0.476214
+
+Epoch 425 results:
+Validation MAE: 0.348901
+Validation RMSE: 0.471313
+Test MAE: 0.357567
+Test RMSE: 0.47435
+
+Epoch 426 results:
+Validation MAE: 0.350658
+Validation RMSE: 0.473546
+Test MAE: 0.360718
+Test RMSE: 0.478888
+
+Epoch 427 results:
+Validation MAE: 0.349608
+Validation RMSE: 0.474461
+Test MAE: 0.359763
+Test RMSE: 0.478902
+
+Epoch 428 results:
+Validation MAE: 0.346386
+Validation RMSE: 0.468884
+Test MAE: 0.357169
+Test RMSE: 0.47484
+
+Epoch 429 results:
+Validation MAE: 0.348808
+Validation RMSE: 0.471396
+Test MAE: 0.358688
+Test RMSE: 0.477319
+
+Epoch 430 results:
+Validation MAE: 0.346761
+Validation RMSE: 0.469103
+Test MAE: 0.357831
+Test RMSE: 0.475208
+
+Epoch 431 results:
+Validation MAE: 0.350203
+Validation RMSE: 0.472915
+Test MAE: 0.359942
+Test RMSE: 0.478188
+
+Epoch 432 results:
+Validation MAE: 0.348132
+Validation RMSE: 0.470406
+Test MAE: 0.35929
+Test RMSE: 0.476853
+
+Epoch 433 results:
+Validation MAE: 0.348005
+Validation RMSE: 0.469489
+Test MAE: 0.35865
+Test RMSE: 0.475545
+
+Epoch 434 results:
+Validation MAE: 0.349393
+Validation RMSE: 0.474417
+Test MAE: 0.360451
+Test RMSE: 0.481655
+
+Epoch 435 results:
+Validation MAE: 0.348394
+Validation RMSE: 0.470951
+Test MAE: 0.359621
+Test RMSE: 0.478458
+
+Epoch 436 results:
+Validation MAE: 0.348181
+Validation RMSE: 0.470423
+Test MAE: 0.359207
+Test RMSE: 0.475876
+
+Epoch 437 results:
+Validation MAE: 0.349324
+Validation RMSE: 0.472182
+Test MAE: 0.359681
+Test RMSE: 0.477558
+
+Epoch 438 results:
+Validation MAE: 0.347191
+Validation RMSE: 0.46999
+Test MAE: 0.357197
+Test RMSE: 0.474184
+
+Epoch 439 results:
+Validation MAE: 0.349429
+Validation RMSE: 0.47206
+Test MAE: 0.359746
+Test RMSE: 0.478279
+
+Epoch 440 results:
+Validation MAE: 0.3473
+Validation RMSE: 0.469663
+Test MAE: 0.357434
+Test RMSE: 0.473842
+
+Epoch 441 results:
+Validation MAE: 0.346486
+Validation RMSE: 0.467328
+Test MAE: 0.357765
+Test RMSE: 0.474254
+
+Epoch 442 results:
+Validation MAE: 0.345975
+Validation RMSE: 0.465005
+Test MAE: 0.356569
+Test RMSE: 0.47193
+
+Epoch 443 results:
+Validation MAE: 0.348651
+Validation RMSE: 0.468381
+Test MAE: 0.358532
+Test RMSE: 0.47348
+
+Epoch 444 results:
+Validation MAE: 0.347514
+Validation RMSE: 0.471408
+Test MAE: 0.35887
+Test RMSE: 0.476709
+
+Epoch 445 results:
+Validation MAE: 0.346683
+Validation RMSE: 0.464602
+Test MAE: 0.358242
+Test RMSE: 0.474254
+
+Epoch 446 results:
+Validation MAE: 0.345435
+Validation RMSE: 0.462791
+Test MAE: 0.356975
+Test RMSE: 0.472378
+
+Epoch 447 results:
+Validation MAE: 0.348155
+Validation RMSE: 0.466305
+Test MAE: 0.359338
+Test RMSE: 0.475547
+
+Epoch 448 results:
+Validation MAE: 0.346904
+Validation RMSE: 0.46602
+Test MAE: 0.358499
+Test RMSE: 0.475288
+
+Epoch 449 results:
+Validation MAE: 0.343812
+Validation RMSE: 0.460878
+Test MAE: 0.355202
+Test RMSE: 0.470402
+
+Epoch 450 results:
+Validation MAE: 0.345429
+Validation RMSE: 0.463842
+Test MAE: 0.355668
+Test RMSE: 0.470661
+
+Epoch 451 results:
+Validation MAE: 0.344378
+Validation RMSE: 0.462581
+Test MAE: 0.355089
+Test RMSE: 0.469942
+
+Epoch 452 results:
+Validation MAE: 0.343912
+Validation RMSE: 0.464179
+Test MAE: 0.353735
+Test RMSE: 0.46886
+
+Epoch 453 results:
+Validation MAE: 0.345171
+Validation RMSE: 0.464584
+Test MAE: 0.355481
+Test RMSE: 0.470695
+
+Epoch 454 results:
+Validation MAE: 0.344256
+Validation RMSE: 0.462531
+Test MAE: 0.355532
+Test RMSE: 0.470093
+
+Epoch 455 results:
+Validation MAE: 0.345408
+Validation RMSE: 0.464219
+Test MAE: 0.356745
+Test RMSE: 0.472727
+
+Epoch 456 results:
+Validation MAE: 0.344387
+Validation RMSE: 0.46258
+Test MAE: 0.355102
+Test RMSE: 0.469993
+
+Epoch 457 results:
+Validation MAE: 0.346282
+Validation RMSE: 0.464207
+Test MAE: 0.357659
+Test RMSE: 0.473013
+
+Epoch 458 results:
+Validation MAE: 0.345369
+Validation RMSE: 0.464421
+Test MAE: 0.355924
+Test RMSE: 0.471091
+
+Epoch 459 results:
+Validation MAE: 0.346571
+Validation RMSE: 0.464434
+Test MAE: 0.357093
+Test RMSE: 0.472605
+
+Epoch 460 results:
+Validation MAE: 0.345551
+Validation RMSE: 0.463453
+Test MAE: 0.356607
+Test RMSE: 0.471287
+
+Epoch 461 results:
+Validation MAE: 0.346606
+Validation RMSE: 0.464617
+Test MAE: 0.357132
+Test RMSE: 0.471582
+
+Epoch 462 results:
+Validation MAE: 0.345459
+Validation RMSE: 0.46518
+Test MAE: 0.355876
+Test RMSE: 0.470159
+
+Epoch 463 results:
+Validation MAE: 0.3505
+Validation RMSE: 0.46915
+Test MAE: 0.359005
+Test RMSE: 0.47398
+
+Epoch 464 results:
+Validation MAE: 0.34453
+Validation RMSE: 0.46194
+Test MAE: 0.354939
+Test RMSE: 0.468112
+
+Epoch 465 results:
+Validation MAE: 0.346777
+Validation RMSE: 0.464889
+Test MAE: 0.356807
+Test RMSE: 0.470712
+
+Epoch 466 results:
+Validation MAE: 0.34374
+Validation RMSE: 0.462053
+Test MAE: 0.354127
+Test RMSE: 0.467935
+
+Epoch 467 results:
+Validation MAE: 0.343308
+Validation RMSE: 0.461902
+Test MAE: 0.354385
+Test RMSE: 0.46833
+
+Epoch 468 results:
+Validation MAE: 0.345725
+Validation RMSE: 0.463499
+Test MAE: 0.355856
+Test RMSE: 0.469434
+
+Epoch 469 results:
+Validation MAE: 0.343562
+Validation RMSE: 0.462655
+Test MAE: 0.354429
+Test RMSE: 0.468249
+
+Epoch 470 results:
+Validation MAE: 0.34482
+Validation RMSE: 0.461636
+Test MAE: 0.357223
+Test RMSE: 0.471203
+
+Epoch 471 results:
+Validation MAE: 0.345737
+Validation RMSE: 0.463295
+Test MAE: 0.356365
+Test RMSE: 0.470358
+
+Epoch 472 results:
+Validation MAE: 0.343768
+Validation RMSE: 0.461864
+Test MAE: 0.354622
+Test RMSE: 0.4683
+
+Epoch 473 results:
+Validation MAE: 0.345183
+Validation RMSE: 0.463544
+Test MAE: 0.356115
+Test RMSE: 0.471048
+
+Epoch 474 results:
+Validation MAE: 0.345532
+Validation RMSE: 0.463502
+Test MAE: 0.356247
+Test RMSE: 0.470785
+
+Epoch 475 results:
+Validation MAE: 0.346139
+Validation RMSE: 0.46472
+Test MAE: 0.355889
+Test RMSE: 0.470805
+
+Epoch 476 results:
+Validation MAE: 0.3434
+Validation RMSE: 0.463301
+Test MAE: 0.355062
+Test RMSE: 0.47002
+
+Epoch 477 results:
+Validation MAE: 0.345641
+Validation RMSE: 0.464565
+Test MAE: 0.357136
+Test RMSE: 0.471557
+
+Epoch 478 results:
+Validation MAE: 0.344936
+Validation RMSE: 0.463674
+Test MAE: 0.355952
+Test RMSE: 0.469328
+
+Epoch 479 results:
+Validation MAE: 0.3412
+Validation RMSE: 0.459167
+Test MAE: 0.353347
+Test RMSE: 0.466226
+
+Epoch 480 results:
+Validation MAE: 0.343281
+Validation RMSE: 0.461654
+Test MAE: 0.354978
+Test RMSE: 0.469066
+
+Epoch 481 results:
+Validation MAE: 0.343457
+Validation RMSE: 0.460686
+Test MAE: 0.355881
+Test RMSE: 0.469366
+
+Epoch 482 results:
+Validation MAE: 0.344493
+Validation RMSE: 0.463961
+Test MAE: 0.356427
+Test RMSE: 0.470668
+
+Epoch 483 results:
+Validation MAE: 0.344297
+Validation RMSE: 0.463255
+Test MAE: 0.355501
+Test RMSE: 0.470688
+
+Epoch 484 results:
+Validation MAE: 0.342572
+Validation RMSE: 0.461348
+Test MAE: 0.353482
+Test RMSE: 0.466889
+
+Epoch 485 results:
+Validation MAE: 0.343019
+Validation RMSE: 0.461448
+Test MAE: 0.353684
+Test RMSE: 0.467387
+
+Epoch 486 results:
+Validation MAE: 0.342641
+Validation RMSE: 0.460292
+Test MAE: 0.353514
+Test RMSE: 0.466867
+
+Epoch 487 results:
+Validation MAE: 0.343286
+Validation RMSE: 0.460746
+Test MAE: 0.354044
+Test RMSE: 0.466855
+
+Epoch 488 results:
+Validation MAE: 0.343721
+Validation RMSE: 0.461026
+Test MAE: 0.353928
+Test RMSE: 0.466641
+
+Epoch 489 results:
+Validation MAE: 0.34441
+Validation RMSE: 0.463558
+Test MAE: 0.356312
+Test RMSE: 0.471298
+
+Epoch 490 results:
+Validation MAE: 0.344062
+Validation RMSE: 0.461869
+Test MAE: 0.355054
+Test RMSE: 0.467842
+
+Epoch 491 results:
+Validation MAE: 0.343693
+Validation RMSE: 0.46102
+Test MAE: 0.35517
+Test RMSE: 0.468619
+
+Epoch 492 results:
+Validation MAE: 0.342262
+Validation RMSE: 0.460797
+Test MAE: 0.353675
+Test RMSE: 0.467128
+
+Epoch 493 results:
+Validation MAE: 0.3436
+Validation RMSE: 0.462274
+Test MAE: 0.354856
+Test RMSE: 0.468863
+
+Epoch 494 results:
+Validation MAE: 0.341842
+Validation RMSE: 0.459736
+Test MAE: 0.353222
+Test RMSE: 0.466225
+
+Epoch 495 results:
+Validation MAE: 0.341938
+Validation RMSE: 0.459197
+Test MAE: 0.35317
+Test RMSE: 0.466522
+
+Epoch 496 results:
+Validation MAE: 0.343104
+Validation RMSE: 0.461136
+Test MAE: 0.354862
+Test RMSE: 0.467963
+
+Epoch 497 results:
+Validation MAE: 0.343239
+Validation RMSE: 0.462036
+Test MAE: 0.353715
+Test RMSE: 0.467551
+
+Epoch 498 results:
+Validation MAE: 0.341234
+Validation RMSE: 0.459419
+Test MAE: 0.352415
+Test RMSE: 0.466241
+
+Epoch 499 results:
+Validation MAE: 0.342443
+Validation RMSE: 0.459473
+Test MAE: 0.353282
+Test RMSE: 0.465762
+
+Epoch 500 results:
+Validation MAE: 0.340711
+Validation RMSE: 0.459286
+Test MAE: 0.351803
+Test RMSE: 0.465095
+
+Epoch 501 results:
+Validation MAE: 0.343509
+Validation RMSE: 0.461687
+Test MAE: 0.355352
+Test RMSE: 0.46888
+
+Epoch 502 results:
+Validation MAE: 0.342803
+Validation RMSE: 0.460453
+Test MAE: 0.35576
+Test RMSE: 0.469681
+
+Epoch 503 results:
+Validation MAE: 0.34378
+Validation RMSE: 0.463386
+Test MAE: 0.354934
+Test RMSE: 0.470375
+
+Epoch 504 results:
+Validation MAE: 0.343197
+Validation RMSE: 0.461571
+Test MAE: 0.354791
+Test RMSE: 0.468522
+
+Epoch 505 results:
+Validation MAE: 0.343038
+Validation RMSE: 0.461338
+Test MAE: 0.354465
+Test RMSE: 0.467273
+
+Epoch 506 results:
+Validation MAE: 0.343185
+Validation RMSE: 0.460876
+Test MAE: 0.354855
+Test RMSE: 0.468331
+
+Epoch 507 results:
+Validation MAE: 0.343063
+Validation RMSE: 0.460293
+Test MAE: 0.354048
+Test RMSE: 0.466871
+
+Epoch 508 results:
+Validation MAE: 0.343643
+Validation RMSE: 0.461159
+Test MAE: 0.354808
+Test RMSE: 0.468863
+
+Epoch 509 results:
+Validation MAE: 0.342051
+Validation RMSE: 0.458774
+Test MAE: 0.352957
+Test RMSE: 0.465677
+
+Epoch 510 results:
+Validation MAE: 0.343151
+Validation RMSE: 0.461804
+Test MAE: 0.353629
+Test RMSE: 0.46703
+
+Epoch 511 results:
+Validation MAE: 0.341817
+Validation RMSE: 0.458232
+Test MAE: 0.352755
+Test RMSE: 0.464729
+
+Epoch 512 results:
+Validation MAE: 0.343225
+Validation RMSE: 0.460901
+Test MAE: 0.35357
+Test RMSE: 0.466494
+
+Epoch 513 results:
+Validation MAE: 0.343105
+Validation RMSE: 0.460846
+Test MAE: 0.354194
+Test RMSE: 0.467473
+
+Epoch 514 results:
+Validation MAE: 0.341603
+Validation RMSE: 0.459393
+Test MAE: 0.352295
+Test RMSE: 0.465246
+
+Epoch 515 results:
+Validation MAE: 0.342383
+Validation RMSE: 0.459767
+Test MAE: 0.352953
+Test RMSE: 0.465765
+
+Epoch 516 results:
+Validation MAE: 0.342708
+Validation RMSE: 0.460846
+Test MAE: 0.354134
+Test RMSE: 0.46747
+
+Epoch 517 results:
+Validation MAE: 0.347103
+Validation RMSE: 0.464976
+Test MAE: 0.356334
+Test RMSE: 0.469864
+
+Epoch 518 results:
+Validation MAE: 0.341857
+Validation RMSE: 0.459839
+Test MAE: 0.353564
+Test RMSE: 0.467568
+
+Epoch 519 results:
+Validation MAE: 0.341999
+Validation RMSE: 0.459161
+Test MAE: 0.35251
+Test RMSE: 0.465956
+
+Epoch 520 results:
+Validation MAE: 0.344399
+Validation RMSE: 0.46284
+Test MAE: 0.355036
+Test RMSE: 0.468782
+
+Epoch 521 results:
+Validation MAE: 0.341985
+Validation RMSE: 0.460193
+Test MAE: 0.35211
+Test RMSE: 0.465138
+
+Epoch 522 results:
+Validation MAE: 0.344929
+Validation RMSE: 0.462869
+Test MAE: 0.355365
+Test RMSE: 0.468323
+
+Epoch 523 results:
+Validation MAE: 0.345353
+Validation RMSE: 0.462692
+Test MAE: 0.356093
+Test RMSE: 0.470484
+
+Epoch 524 results:
+Validation MAE: 0.343954
+Validation RMSE: 0.461206
+Test MAE: 0.354394
+Test RMSE: 0.467581
+
+Epoch 525 results:
+Validation MAE: 0.343011
+Validation RMSE: 0.460381
+Test MAE: 0.353838
+Test RMSE: 0.467304
+
+Epoch 526 results:
+Validation MAE: 0.34229
+Validation RMSE: 0.45861
+Test MAE: 0.352337
+Test RMSE: 0.465879
+
+Epoch 527 results:
+Validation MAE: 0.343456
+Validation RMSE: 0.461552
+Test MAE: 0.353421
+Test RMSE: 0.467845
+
+Epoch 528 results:
+Validation MAE: 0.342686
+Validation RMSE: 0.459793
+Test MAE: 0.352289
+Test RMSE: 0.465825
+
+Epoch 529 results:
+Validation MAE: 0.342987
+Validation RMSE: 0.461319
+Test MAE: 0.351614
+Test RMSE: 0.464908
+
+Epoch 530 results:
+Validation MAE: 0.341144
+Validation RMSE: 0.457797
+Test MAE: 0.351298
+Test RMSE: 0.46404
+
+Epoch 531 results:
+Validation MAE: 0.34246
+Validation RMSE: 0.461087
+Test MAE: 0.35304
+Test RMSE: 0.466342
+
+Epoch 532 results:
+Validation MAE: 0.34388
+Validation RMSE: 0.463332
+Test MAE: 0.352764
+Test RMSE: 0.467226
+
+Epoch 533 results:
+Validation MAE: 0.340335
+Validation RMSE: 0.45825
+Test MAE: 0.350984
+Test RMSE: 0.463646
+
+Epoch 534 results:
+Validation MAE: 0.340371
+Validation RMSE: 0.45822
+Test MAE: 0.350434
+Test RMSE: 0.463429
+
+Epoch 535 results:
+Validation MAE: 0.343112
+Validation RMSE: 0.460362
+Test MAE: 0.352581
+Test RMSE: 0.466135
+
+Epoch 536 results:
+Validation MAE: 0.342925
+Validation RMSE: 0.461757
+Test MAE: 0.352763
+Test RMSE: 0.466644
+
+Epoch 537 results:
+Validation MAE: 0.342446
+Validation RMSE: 0.459986
+Test MAE: 0.352747
+Test RMSE: 0.467093
+
+Epoch 538 results:
+Validation MAE: 0.344032
+Validation RMSE: 0.462716
+Test MAE: 0.353676
+Test RMSE: 0.46771
+
+Epoch 539 results:
+Validation MAE: 0.344143
+Validation RMSE: 0.463071
+Test MAE: 0.354572
+Test RMSE: 0.467924
+
+Epoch 540 results:
+Validation MAE: 0.341407
+Validation RMSE: 0.46082
+Test MAE: 0.350012
+Test RMSE: 0.463055
+
+Epoch 541 results:
+Validation MAE: 0.339793
+Validation RMSE: 0.456658
+Test MAE: 0.349357
+Test RMSE: 0.462738
+
+Epoch 542 results:
+Validation MAE: 0.342351
+Validation RMSE: 0.459927
+Test MAE: 0.351677
+Test RMSE: 0.465914
+
+Epoch 543 results:
+Validation MAE: 0.340541
+Validation RMSE: 0.457388
+Test MAE: 0.349775
+Test RMSE: 0.462495
+
+Epoch 544 results:
+Validation MAE: 0.341794
+Validation RMSE: 0.458544
+Test MAE: 0.352012
+Test RMSE: 0.465081
+
+Epoch 545 results:
+Validation MAE: 0.340642
+Validation RMSE: 0.459968
+Test MAE: 0.349321
+Test RMSE: 0.46227
+
+Epoch 546 results:
+Validation MAE: 0.340737
+Validation RMSE: 0.459235
+Test MAE: 0.352139
+Test RMSE: 0.465885
+
+Epoch 547 results:
+Validation MAE: 0.339114
+Validation RMSE: 0.4563
+Test MAE: 0.350195
+Test RMSE: 0.463256
+
+Epoch 548 results:
+Validation MAE: 0.339913
+Validation RMSE: 0.456268
+Test MAE: 0.35146
+Test RMSE: 0.46443
+
+Epoch 549 results:
+Validation MAE: 0.340122
+Validation RMSE: 0.457777
+Test MAE: 0.350345
+Test RMSE: 0.464479
+
+Epoch 550 results:
+Validation MAE: 0.340301
+Validation RMSE: 0.456149
+Test MAE: 0.350348
+Test RMSE: 0.463519
+
+Epoch 551 results:
+Validation MAE: 0.341587
+Validation RMSE: 0.459105
+Test MAE: 0.351085
+Test RMSE: 0.464039
+
+Epoch 552 results:
+Validation MAE: 0.340973
+Validation RMSE: 0.457575
+Test MAE: 0.3518
+Test RMSE: 0.464538
+
+Epoch 553 results:
+Validation MAE: 0.342177
+Validation RMSE: 0.459127
+Test MAE: 0.352149
+Test RMSE: 0.465471
+
+Epoch 554 results:
+Validation MAE: 0.342758
+Validation RMSE: 0.460431
+Test MAE: 0.352961
+Test RMSE: 0.466779
+
+Epoch 555 results:
+Validation MAE: 0.341577
+Validation RMSE: 0.459534
+Test MAE: 0.352633
+Test RMSE: 0.466436
+
+Epoch 556 results:
+Validation MAE: 0.341552
+Validation RMSE: 0.459029
+Test MAE: 0.35191
+Test RMSE: 0.465306
+
+Epoch 557 results:
+Validation MAE: 0.339192
+Validation RMSE: 0.455502
+Test MAE: 0.350308
+Test RMSE: 0.462079
+
+Epoch 558 results:
+Validation MAE: 0.338495
+Validation RMSE: 0.45477
+Test MAE: 0.348636
+Test RMSE: 0.461048
+
+Epoch 559 results:
+Validation MAE: 0.338478
+Validation RMSE: 0.454551
+Test MAE: 0.348411
+Test RMSE: 0.46097
+
+Epoch 560 results:
+Validation MAE: 0.338268
+Validation RMSE: 0.453803
+Test MAE: 0.348764
+Test RMSE: 0.461684
+
+Epoch 561 results:
+Validation MAE: 0.339661
+Validation RMSE: 0.45675
+Test MAE: 0.351113
+Test RMSE: 0.46526
+
+Epoch 562 results:
+Validation MAE: 0.339894
+Validation RMSE: 0.456773
+Test MAE: 0.351628
+Test RMSE: 0.465776
+
+Epoch 563 results:
+Validation MAE: 0.341444
+Validation RMSE: 0.459238
+Test MAE: 0.352398
+Test RMSE: 0.466634
+
+Epoch 564 results:
+Validation MAE: 0.339352
+Validation RMSE: 0.457018
+Test MAE: 0.349613
+Test RMSE: 0.463163
+
+Epoch 565 results:
+Validation MAE: 0.339628
+Validation RMSE: 0.456717
+Test MAE: 0.350468
+Test RMSE: 0.46395
+
+Epoch 566 results:
+Validation MAE: 0.338088
+Validation RMSE: 0.4545
+Test MAE: 0.34893
+Test RMSE: 0.462309
+
+Epoch 567 results:
+Validation MAE: 0.339687
+Validation RMSE: 0.456132
+Test MAE: 0.350118
+Test RMSE: 0.463022
+
+Epoch 568 results:
+Validation MAE: 0.34083
+Validation RMSE: 0.457704
+Test MAE: 0.351441
+Test RMSE: 0.465467
+
+Epoch 569 results:
+Validation MAE: 0.340833
+Validation RMSE: 0.458298
+Test MAE: 0.350598
+Test RMSE: 0.463368
+
+Epoch 570 results:
+Validation MAE: 0.341255
+Validation RMSE: 0.458854
+Test MAE: 0.351985
+Test RMSE: 0.465412
+
+Epoch 571 results:
+Validation MAE: 0.340006
+Validation RMSE: 0.458483
+Test MAE: 0.34948
+Test RMSE: 0.464021
+
+Epoch 572 results:
+Validation MAE: 0.341116
+Validation RMSE: 0.458583
+Test MAE: 0.350792
+Test RMSE: 0.464524
+
+Epoch 573 results:
+Validation MAE: 0.338792
+Validation RMSE: 0.455655
+Test MAE: 0.348609
+Test RMSE: 0.461502
+
+Epoch 574 results:
+Validation MAE: 0.34018
+Validation RMSE: 0.45945
+Test MAE: 0.349961
+Test RMSE: 0.463969
+
+Epoch 575 results:
+Validation MAE: 0.339439
+Validation RMSE: 0.456742
+Test MAE: 0.350003
+Test RMSE: 0.463064
+
+Epoch 576 results:
+Validation MAE: 0.339192
+Validation RMSE: 0.457074
+Test MAE: 0.348941
+Test RMSE: 0.462012
+
+Epoch 577 results:
+Validation MAE: 0.341307
+Validation RMSE: 0.462062
+Test MAE: 0.350884
+Test RMSE: 0.46434
+
+Epoch 578 results:
+Validation MAE: 0.338483
+Validation RMSE: 0.455613
+Test MAE: 0.348621
+Test RMSE: 0.461189
+
+Epoch 579 results:
+Validation MAE: 0.339925
+Validation RMSE: 0.456008
+Test MAE: 0.350305
+Test RMSE: 0.462946
+
+Epoch 580 results:
+Validation MAE: 0.338495
+Validation RMSE: 0.454099
+Test MAE: 0.349026
+Test RMSE: 0.460654
+
+Epoch 581 results:
+Validation MAE: 0.340547
+Validation RMSE: 0.45687
+Test MAE: 0.350514
+Test RMSE: 0.462796
+
+Epoch 582 results:
+Validation MAE: 0.338732
+Validation RMSE: 0.455046
+Test MAE: 0.349506
+Test RMSE: 0.462123
+
+Epoch 583 results:
+Validation MAE: 0.338817
+Validation RMSE: 0.455846
+Test MAE: 0.349853
+Test RMSE: 0.463114
+
+Epoch 584 results:
+Validation MAE: 0.338283
+Validation RMSE: 0.455237
+Test MAE: 0.34945
+Test RMSE: 0.462566
+
+Epoch 585 results:
+Validation MAE: 0.339698
+Validation RMSE: 0.455688
+Test MAE: 0.3502
+Test RMSE: 0.462375
+
+Epoch 586 results:
+Validation MAE: 0.337544
+Validation RMSE: 0.453708
+Test MAE: 0.347725
+Test RMSE: 0.460069
+
+Epoch 587 results:
+Validation MAE: 0.338163
+Validation RMSE: 0.454992
+Test MAE: 0.347777
+Test RMSE: 0.460927
+
+Epoch 588 results:
+Validation MAE: 0.338084
+Validation RMSE: 0.454215
+Test MAE: 0.348186
+Test RMSE: 0.460693
+
+Epoch 589 results:
+Validation MAE: 0.339514
+Validation RMSE: 0.456128
+Test MAE: 0.348826
+Test RMSE: 0.461046
+
+Epoch 590 results:
+Validation MAE: 0.339295
+Validation RMSE: 0.455638
+Test MAE: 0.349489
+Test RMSE: 0.461657
+
+Epoch 591 results:
+Validation MAE: 0.338018
+Validation RMSE: 0.454016
+Test MAE: 0.347811
+Test RMSE: 0.460139
+
+Epoch 592 results:
+Validation MAE: 0.338281
+Validation RMSE: 0.454127
+Test MAE: 0.348311
+Test RMSE: 0.460012
+
+Epoch 593 results:
+Validation MAE: 0.337986
+Validation RMSE: 0.455226
+Test MAE: 0.348296
+Test RMSE: 0.461127
+
+Epoch 594 results:
+Validation MAE: 0.339247
+Validation RMSE: 0.455335
+Test MAE: 0.349158
+Test RMSE: 0.461277
+
+Epoch 595 results:
+Validation MAE: 0.337198
+Validation RMSE: 0.452408
+Test MAE: 0.346404
+Test RMSE: 0.45792
+
+Epoch 596 results:
+Validation MAE: 0.337379
+Validation RMSE: 0.452237
+Test MAE: 0.347124
+Test RMSE: 0.457649
+
+Epoch 597 results:
+Validation MAE: 0.340708
+Validation RMSE: 0.456225
+Test MAE: 0.350506
+Test RMSE: 0.462446
+
+Epoch 598 results:
+Validation MAE: 0.336847
+Validation RMSE: 0.451751
+Test MAE: 0.346987
+Test RMSE: 0.458892
+
+Epoch 599 results:
+Validation MAE: 0.337801
+Validation RMSE: 0.453317
+Test MAE: 0.34851
+Test RMSE: 0.460832
+
+Epoch 600 results:
+Validation MAE: 0.337816
+Validation RMSE: 0.453543
+Test MAE: 0.347776
+Test RMSE: 0.459938
+
+Epoch 601 results:
+Validation MAE: 0.338406
+Validation RMSE: 0.453346
+Test MAE: 0.348101
+Test RMSE: 0.459752
+
+Epoch 602 results:
+Validation MAE: 0.343393
+Validation RMSE: 0.460465
+Test MAE: 0.355708
+Test RMSE: 0.469602
+
+Epoch 603 results:
+Validation MAE: 0.338455
+Validation RMSE: 0.454543
+Test MAE: 0.349144
+Test RMSE: 0.461888
+
+Epoch 604 results:
+Validation MAE: 0.335871
+Validation RMSE: 0.451518
+Test MAE: 0.345888
+Test RMSE: 0.458661
+
+Epoch 605 results:
+Validation MAE: 0.336609
+Validation RMSE: 0.451891
+Test MAE: 0.346412
+Test RMSE: 0.458163
+
+Epoch 606 results:
+Validation MAE: 0.335901
+Validation RMSE: 0.450551
+Test MAE: 0.345908
+Test RMSE: 0.457854
+
+Epoch 607 results:
+Validation MAE: 0.337323
+Validation RMSE: 0.454135
+Test MAE: 0.346988
+Test RMSE: 0.459681
+
+Epoch 608 results:
+Validation MAE: 0.337216
+Validation RMSE: 0.453194
+Test MAE: 0.347078
+Test RMSE: 0.459717
+
+Epoch 609 results:
+Validation MAE: 0.336514
+Validation RMSE: 0.45211
+Test MAE: 0.345982
+Test RMSE: 0.457599
+
+Epoch 610 results:
+Validation MAE: 0.335822
+Validation RMSE: 0.451616
+Test MAE: 0.346851
+Test RMSE: 0.458691
+
+Epoch 611 results:
+Validation MAE: 0.336394
+Validation RMSE: 0.450891
+Test MAE: 0.345991
+Test RMSE: 0.457904
+
+Epoch 612 results:
+Validation MAE: 0.337834
+Validation RMSE: 0.455262
+Test MAE: 0.346896
+Test RMSE: 0.459849
+
+Epoch 613 results:
+Validation MAE: 0.337383
+Validation RMSE: 0.452501
+Test MAE: 0.347072
+Test RMSE: 0.459004
+
+Epoch 614 results:
+Validation MAE: 0.337708
+Validation RMSE: 0.454807
+Test MAE: 0.3475
+Test RMSE: 0.460553
+
+Epoch 615 results:
+Validation MAE: 0.337746
+Validation RMSE: 0.455575
+Test MAE: 0.347085
+Test RMSE: 0.459993
+
+Epoch 616 results:
+Validation MAE: 0.338325
+Validation RMSE: 0.455203
+Test MAE: 0.348759
+Test RMSE: 0.462237
+
+Epoch 617 results:
+Validation MAE: 0.338734
+Validation RMSE: 0.454392
+Test MAE: 0.348809
+Test RMSE: 0.4618
+
+Epoch 618 results:
+Validation MAE: 0.336494
+Validation RMSE: 0.452013
+Test MAE: 0.346145
+Test RMSE: 0.458538
+
+Epoch 619 results:
+Validation MAE: 0.336332
+Validation RMSE: 0.453124
+Test MAE: 0.346187
+Test RMSE: 0.458401
+
+Epoch 620 results:
+Validation MAE: 0.337238
+Validation RMSE: 0.454018
+Test MAE: 0.347013
+Test RMSE: 0.459974
+
+Epoch 621 results:
+Validation MAE: 0.336983
+Validation RMSE: 0.452857
+Test MAE: 0.347242
+Test RMSE: 0.45992
+
+Epoch 622 results:
+Validation MAE: 0.337086
+Validation RMSE: 0.452844
+Test MAE: 0.347134
+Test RMSE: 0.459458
+
+Epoch 623 results:
+Validation MAE: 0.336891
+Validation RMSE: 0.453161
+Test MAE: 0.345888
+Test RMSE: 0.45844
+
+Epoch 624 results:
+Validation MAE: 0.337548
+Validation RMSE: 0.453744
+Test MAE: 0.347009
+Test RMSE: 0.459329
+
+Epoch 625 results:
+Validation MAE: 0.341096
+Validation RMSE: 0.456304
+Test MAE: 0.350412
+Test RMSE: 0.463271
+
+Epoch 626 results:
+Validation MAE: 0.337741
+Validation RMSE: 0.456119
+Test MAE: 0.346531
+Test RMSE: 0.459764
+
+Epoch 627 results:
+Validation MAE: 0.337953
+Validation RMSE: 0.452769
+Test MAE: 0.347882
+Test RMSE: 0.46041
+
+Epoch 628 results:
+Validation MAE: 0.33706
+Validation RMSE: 0.452115
+Test MAE: 0.3475
+Test RMSE: 0.460114
+
+Epoch 629 results:
+Validation MAE: 0.336958
+Validation RMSE: 0.452227
+Test MAE: 0.347619
+Test RMSE: 0.459292
+
+Epoch 630 results:
+Validation MAE: 0.337433
+Validation RMSE: 0.453171
+Test MAE: 0.348177
+Test RMSE: 0.461292
+
+Epoch 631 results:
+Validation MAE: 0.335307
+Validation RMSE: 0.450201
+Test MAE: 0.34524
+Test RMSE: 0.457642
+
+Epoch 632 results:
+Validation MAE: 0.335418
+Validation RMSE: 0.450783
+Test MAE: 0.345912
+Test RMSE: 0.45857
+
+Epoch 633 results:
+Validation MAE: 0.336509
+Validation RMSE: 0.452476
+Test MAE: 0.346632
+Test RMSE: 0.460023
+
+Epoch 634 results:
+Validation MAE: 0.334521
+Validation RMSE: 0.448409
+Test MAE: 0.345077
+Test RMSE: 0.456782
+
+Epoch 635 results:
+Validation MAE: 0.336869
+Validation RMSE: 0.453789
+Test MAE: 0.347251
+Test RMSE: 0.461234
+
+Epoch 636 results:
+Validation MAE: 0.33635
+Validation RMSE: 0.451891
+Test MAE: 0.347143
+Test RMSE: 0.459522
+
+Epoch 637 results:
+Validation MAE: 0.335446
+Validation RMSE: 0.450377
+Test MAE: 0.345862
+Test RMSE: 0.458179
+
+Epoch 638 results:
+Validation MAE: 0.336938
+Validation RMSE: 0.451412
+Test MAE: 0.347477
+Test RMSE: 0.459733
+
+Epoch 639 results:
+Validation MAE: 0.336551
+Validation RMSE: 0.451683
+Test MAE: 0.346785
+Test RMSE: 0.458656
+
+Epoch 640 results:
+Validation MAE: 0.335747
+Validation RMSE: 0.45002
+Test MAE: 0.346434
+Test RMSE: 0.458292
+
+Epoch 641 results:
+Validation MAE: 0.336564
+Validation RMSE: 0.450953
+Test MAE: 0.346237
+Test RMSE: 0.458532
+
+Epoch 642 results:
+Validation MAE: 0.335402
+Validation RMSE: 0.450026
+Test MAE: 0.345452
+Test RMSE: 0.457434
+
+Epoch 643 results:
+Validation MAE: 0.335318
+Validation RMSE: 0.450137
+Test MAE: 0.346244
+Test RMSE: 0.458449
+
+Epoch 644 results:
+Validation MAE: 0.33591
+Validation RMSE: 0.449843
+Test MAE: 0.346744
+Test RMSE: 0.45856
+
+Epoch 645 results:
+Validation MAE: 0.33619
+Validation RMSE: 0.450963
+Test MAE: 0.347034
+Test RMSE: 0.459024
+
+Epoch 646 results:
+Validation MAE: 0.337238
+Validation RMSE: 0.452811
+Test MAE: 0.348313
+Test RMSE: 0.460727
+
+Epoch 647 results:
+Validation MAE: 0.335295
+Validation RMSE: 0.448494
+Test MAE: 0.346585
+Test RMSE: 0.458076
+
+Epoch 648 results:
+Validation MAE: 0.33727
+Validation RMSE: 0.453157
+Test MAE: 0.34888
+Test RMSE: 0.461681
+
+Epoch 649 results:
+Validation MAE: 0.335366
+Validation RMSE: 0.449547
+Test MAE: 0.34681
+Test RMSE: 0.458351
+
+Epoch 650 results:
+Validation MAE: 0.336005
+Validation RMSE: 0.451614
+Test MAE: 0.346306
+Test RMSE: 0.458278
+
+Epoch 651 results:
+Validation MAE: 0.335591
+Validation RMSE: 0.450085
+Test MAE: 0.346002
+Test RMSE: 0.457939
+
+Epoch 652 results:
+Validation MAE: 0.3363
+Validation RMSE: 0.450919
+Test MAE: 0.346837
+Test RMSE: 0.458796
+
+Epoch 653 results:
+Validation MAE: 0.336115
+Validation RMSE: 0.450418
+Test MAE: 0.346754
+Test RMSE: 0.458594
+
+Epoch 654 results:
+Validation MAE: 0.335724
+Validation RMSE: 0.450865
+Test MAE: 0.346212
+Test RMSE: 0.458284
+
+Epoch 655 results:
+Validation MAE: 0.335433
+Validation RMSE: 0.450412
+Test MAE: 0.345468
+Test RMSE: 0.457318
+
+Epoch 656 results:
+Validation MAE: 0.335019
+Validation RMSE: 0.450444
+Test MAE: 0.344525
+Test RMSE: 0.456861
+
+Epoch 657 results:
+Validation MAE: 0.336252
+Validation RMSE: 0.451138
+Test MAE: 0.347097
+Test RMSE: 0.459636
+
+Epoch 658 results:
+Validation MAE: 0.335402
+Validation RMSE: 0.450334
+Test MAE: 0.344996
+Test RMSE: 0.45715
+
+Epoch 659 results:
+Validation MAE: 0.334801
+Validation RMSE: 0.450105
+Test MAE: 0.344782
+Test RMSE: 0.457369
+
+Epoch 660 results:
+Validation MAE: 0.336318
+Validation RMSE: 0.451371
+Test MAE: 0.34638
+Test RMSE: 0.458032
+
+Epoch 661 results:
+Validation MAE: 0.336758
+Validation RMSE: 0.451145
+Test MAE: 0.346863
+Test RMSE: 0.458446
+
+Epoch 662 results:
+Validation MAE: 0.335517
+Validation RMSE: 0.448452
+Test MAE: 0.345087
+Test RMSE: 0.456489
+
+Epoch 663 results:
+Validation MAE: 0.334519
+Validation RMSE: 0.450046
+Test MAE: 0.344419
+Test RMSE: 0.45642
+
+Epoch 664 results:
+Validation MAE: 0.335755
+Validation RMSE: 0.450972
+Test MAE: 0.346408
+Test RMSE: 0.459282
+
+Epoch 665 results:
+Validation MAE: 0.336638
+Validation RMSE: 0.452503
+Test MAE: 0.346586
+Test RMSE: 0.458792
+
+Epoch 666 results:
+Validation MAE: 0.336382
+Validation RMSE: 0.450153
+Test MAE: 0.346707
+Test RMSE: 0.458112
+
+Epoch 667 results:
+Validation MAE: 0.335164
+Validation RMSE: 0.450527
+Test MAE: 0.344792
+Test RMSE: 0.457131
+
+Epoch 668 results:
+Validation MAE: 0.334392
+Validation RMSE: 0.447784
+Test MAE: 0.344884
+Test RMSE: 0.456324
+
+Epoch 669 results:
+Validation MAE: 0.336911
+Validation RMSE: 0.452062
+Test MAE: 0.347157
+Test RMSE: 0.459315
+
+Epoch 670 results:
+Validation MAE: 0.337544
+Validation RMSE: 0.452453
+Test MAE: 0.347708
+Test RMSE: 0.459769
+
+Epoch 671 results:
+Validation MAE: 0.335357
+Validation RMSE: 0.45018
+Test MAE: 0.345251
+Test RMSE: 0.456922
+
+Epoch 672 results:
+Validation MAE: 0.335636
+Validation RMSE: 0.44949
+Test MAE: 0.346191
+Test RMSE: 0.457901
+
+Epoch 673 results:
+Validation MAE: 0.336343
+Validation RMSE: 0.44911
+Test MAE: 0.347016
+Test RMSE: 0.45774
+
+Epoch 674 results:
+Validation MAE: 0.335233
+Validation RMSE: 0.449466
+Test MAE: 0.345697
+Test RMSE: 0.456587
+
+Epoch 675 results:
+Validation MAE: 0.336544
+Validation RMSE: 0.451638
+Test MAE: 0.346504
+Test RMSE: 0.457115
+
+Epoch 676 results:
+Validation MAE: 0.338064
+Validation RMSE: 0.452328
+Test MAE: 0.348334
+Test RMSE: 0.459923
+
+Epoch 677 results:
+Validation MAE: 0.336824
+Validation RMSE: 0.450906
+Test MAE: 0.347344
+Test RMSE: 0.459196
+
+Epoch 678 results:
+Validation MAE: 0.337413
+Validation RMSE: 0.453129
+Test MAE: 0.347545
+Test RMSE: 0.459494
+
+Epoch 679 results:
+Validation MAE: 0.336119
+Validation RMSE: 0.451739
+Test MAE: 0.346032
+Test RMSE: 0.457212
+
+Epoch 680 results:
+Validation MAE: 0.334908
+Validation RMSE: 0.448022
+Test MAE: 0.345129
+Test RMSE: 0.455709
+
+Epoch 681 results:
+Validation MAE: 0.334868
+Validation RMSE: 0.450389
+Test MAE: 0.344231
+Test RMSE: 0.455701
+
+Epoch 682 results:
+Validation MAE: 0.335423
+Validation RMSE: 0.450866
+Test MAE: 0.345013
+Test RMSE: 0.456477
+
+Epoch 683 results:
+Validation MAE: 0.33446
+Validation RMSE: 0.448745
+Test MAE: 0.344332
+Test RMSE: 0.45546
+
+Epoch 684 results:
+Validation MAE: 0.335826
+Validation RMSE: 0.449729
+Test MAE: 0.34595
+Test RMSE: 0.456796
+
+Epoch 685 results:
+Validation MAE: 0.336089
+Validation RMSE: 0.449485
+Test MAE: 0.345197
+Test RMSE: 0.455941
+
+Epoch 686 results:
+Validation MAE: 0.354023
+Validation RMSE: 0.469897
+Test MAE: 0.364969
+Test RMSE: 0.478785
+
+Epoch 687 results:
+Validation MAE: 0.334964
+Validation RMSE: 0.448655
+Test MAE: 0.345179
+Test RMSE: 0.456348
+
+Epoch 688 results:
+Validation MAE: 0.335646
+Validation RMSE: 0.449807
+Test MAE: 0.34596
+Test RMSE: 0.457399
+
+Epoch 689 results:
+Validation MAE: 0.334344
+Validation RMSE: 0.448608
+Test MAE: 0.344017
+Test RMSE: 0.454763
+
+Epoch 690 results:
+Validation MAE: 0.336685
+Validation RMSE: 0.450962
+Test MAE: 0.347012
+Test RMSE: 0.458696
+
+Epoch 691 results:
+Validation MAE: 0.335341
+Validation RMSE: 0.449621
+Test MAE: 0.344954
+Test RMSE: 0.455644
+
+Epoch 692 results:
+Validation MAE: 0.335175
+Validation RMSE: 0.449982
+Test MAE: 0.345299
+Test RMSE: 0.455763
+
+Epoch 693 results:
+Validation MAE: 0.334346
+Validation RMSE: 0.448598
+Test MAE: 0.343929
+Test RMSE: 0.454324
+
+Epoch 694 results:
+Validation MAE: 0.334566
+Validation RMSE: 0.449089
+Test MAE: 0.343731
+Test RMSE: 0.453777
+
+Epoch 695 results:
+Validation MAE: 0.334098
+Validation RMSE: 0.448618
+Test MAE: 0.343069
+Test RMSE: 0.45302
+
+Epoch 696 results:
+Validation MAE: 0.33588
+Validation RMSE: 0.450669
+Test MAE: 0.345809
+Test RMSE: 0.456672
+
+Epoch 697 results:
+Validation MAE: 0.335901
+Validation RMSE: 0.449929
+Test MAE: 0.345432
+Test RMSE: 0.455838
+
+Epoch 698 results:
+Validation MAE: 0.337472
+Validation RMSE: 0.453126
+Test MAE: 0.346926
+Test RMSE: 0.458944
+
+Epoch 699 results:
+Validation MAE: 0.335564
+Validation RMSE: 0.448961
+Test MAE: 0.345241
+Test RMSE: 0.455791
+
+Epoch 700 results:
+Validation MAE: 0.336205
+Validation RMSE: 0.450791
+Test MAE: 0.346075
+Test RMSE: 0.457261
+
+Epoch 701 results:
+Validation MAE: 0.335847
+Validation RMSE: 0.450179
+Test MAE: 0.345844
+Test RMSE: 0.456895
+
+Epoch 702 results:
+Validation MAE: 0.335788
+Validation RMSE: 0.449695
+Test MAE: 0.345273
+Test RMSE: 0.456699
+
+Epoch 703 results:
+Validation MAE: 0.336037
+Validation RMSE: 0.452789
+Test MAE: 0.344042
+Test RMSE: 0.456495
+
+Epoch 704 results:
+Validation MAE: 0.33613
+Validation RMSE: 0.45044
+Test MAE: 0.345006
+Test RMSE: 0.455768
+
+Epoch 705 results:
+Validation MAE: 0.336878
+Validation RMSE: 0.450743
+Test MAE: 0.345942
+Test RMSE: 0.456211
+
+Epoch 706 results:
+Validation MAE: 0.338834
+Validation RMSE: 0.454261
+Test MAE: 0.348148
+Test RMSE: 0.459776
+
+Epoch 707 results:
+Validation MAE: 0.336889
+Validation RMSE: 0.451058
+Test MAE: 0.346679
+Test RMSE: 0.457516
+
+Epoch 708 results:
+Validation MAE: 0.336966
+Validation RMSE: 0.452021
+Test MAE: 0.34582
+Test RMSE: 0.457052
+
+Epoch 709 results:
+Validation MAE: 0.337874
+Validation RMSE: 0.453503
+Test MAE: 0.347019
+Test RMSE: 0.458361
+
+Epoch 710 results:
+Validation MAE: 0.337488
+Validation RMSE: 0.453215
+Test MAE: 0.347065
+Test RMSE: 0.459058
+
+Epoch 711 results:
+Validation MAE: 0.337393
+Validation RMSE: 0.452527
+Test MAE: 0.34765
+Test RMSE: 0.458902
+
+Epoch 712 results:
+Validation MAE: 0.334548
+Validation RMSE: 0.449664
+Test MAE: 0.345015
+Test RMSE: 0.456328
+
+Epoch 713 results:
+Validation MAE: 0.33629
+Validation RMSE: 0.451464
+Test MAE: 0.346617
+Test RMSE: 0.458085
+
+Epoch 714 results:
+Validation MAE: 0.3352
+Validation RMSE: 0.450096
+Test MAE: 0.345373
+Test RMSE: 0.456441
+
+Epoch 715 results:
+Validation MAE: 0.337751
+Validation RMSE: 0.451332
+Test MAE: 0.347771
+Test RMSE: 0.458103
+
+Epoch 716 results:
+Validation MAE: 0.336558
+Validation RMSE: 0.450733
+Test MAE: 0.34634
+Test RMSE: 0.457456
+
+Epoch 717 results:
+Validation MAE: 0.336263
+Validation RMSE: 0.451134
+Test MAE: 0.346039
+Test RMSE: 0.457104
+
+Epoch 718 results:
+Validation MAE: 0.336912
+Validation RMSE: 0.453187
+Test MAE: 0.345965
+Test RMSE: 0.458184
+
+Epoch 719 results:
+Validation MAE: 0.335805
+Validation RMSE: 0.450139
+Test MAE: 0.345319
+Test RMSE: 0.455622
+
+Epoch 720 results:
+Validation MAE: 0.336955
+Validation RMSE: 0.451191
+Test MAE: 0.346585
+Test RMSE: 0.457441
+
+Epoch 721 results:
+Validation MAE: 0.335964
+Validation RMSE: 0.452496
+Test MAE: 0.345639
+Test RMSE: 0.458145
+
+Epoch 722 results:
+Validation MAE: 0.336466
+Validation RMSE: 0.451568
+Test MAE: 0.345887
+Test RMSE: 0.457866
+
+Epoch 723 results:
+Validation MAE: 0.3353
+Validation RMSE: 0.450249
+Test MAE: 0.344385
+Test RMSE: 0.455736
+
+Epoch 724 results:
+Validation MAE: 0.336998
+Validation RMSE: 0.451012
+Test MAE: 0.345952
+Test RMSE: 0.456839
+
+Epoch 725 results:
+Validation MAE: 0.336017
+Validation RMSE: 0.450452
+Test MAE: 0.345236
+Test RMSE: 0.456695
+
+Epoch 726 results:
+Validation MAE: 0.337983
+Validation RMSE: 0.45287
+Test MAE: 0.347711
+Test RMSE: 0.460002
+
+Epoch 727 results:
+Validation MAE: 0.335708
+Validation RMSE: 0.450378
+Test MAE: 0.346068
+Test RMSE: 0.45849
+
+Epoch 728 results:
+Validation MAE: 0.333495
+Validation RMSE: 0.449495
+Test MAE: 0.342331
+Test RMSE: 0.454603
+
+Epoch 729 results:
+Validation MAE: 0.335762
+Validation RMSE: 0.452002
+Test MAE: 0.344166
+Test RMSE: 0.456844
+
+Epoch 730 results:
+Validation MAE: 0.336219
+Validation RMSE: 0.452644
+Test MAE: 0.345152
+Test RMSE: 0.457725
+
+Epoch 731 results:
+Validation MAE: 0.335344
+Validation RMSE: 0.451212
+Test MAE: 0.345109
+Test RMSE: 0.457447
+
+Epoch 732 results:
+Validation MAE: 0.335437
+Validation RMSE: 0.451014
+Test MAE: 0.344077
+Test RMSE: 0.456018
+
+Epoch 733 results:
+Validation MAE: 0.335622
+Validation RMSE: 0.454062
+Test MAE: 0.344711
+Test RMSE: 0.458426
+
+Epoch 734 results:
+Validation MAE: 0.33576
+Validation RMSE: 0.453295
+Test MAE: 0.345083
+Test RMSE: 0.458595
+
+Epoch 735 results:
+Validation MAE: 0.335408
+Validation RMSE: 0.451236
+Test MAE: 0.344203
+Test RMSE: 0.456139
+
+Epoch 736 results:
+Validation MAE: 0.337922
+Validation RMSE: 0.452623
+Test MAE: 0.346758
+Test RMSE: 0.458064
+
+Epoch 737 results:
+Validation MAE: 0.3352
+Validation RMSE: 0.452408
+Test MAE: 0.344263
+Test RMSE: 0.456637
+
+Epoch 738 results:
+Validation MAE: 0.334701
+Validation RMSE: 0.449057
+Test MAE: 0.344028
+Test RMSE: 0.454714
+
+Epoch 739 results:
+Validation MAE: 0.335072
+Validation RMSE: 0.449303
+Test MAE: 0.344164
+Test RMSE: 0.455047
+
+Epoch 740 results:
+Validation MAE: 0.333914
+Validation RMSE: 0.448389
+Test MAE: 0.344429
+Test RMSE: 0.456682
+
+Epoch 741 results:
+Validation MAE: 0.334776
+Validation RMSE: 0.451092
+Test MAE: 0.344689
+Test RMSE: 0.457921
+
+Epoch 742 results:
+Validation MAE: 0.338331
+Validation RMSE: 0.45259
+Test MAE: 0.347078
+Test RMSE: 0.45819
+
+Epoch 743 results:
+Validation MAE: 0.33474
+Validation RMSE: 0.449647
+Test MAE: 0.343728
+Test RMSE: 0.455984
+
+Epoch 744 results:
+Validation MAE: 0.335953
+Validation RMSE: 0.451189
+Test MAE: 0.345084
+Test RMSE: 0.456814
+
+Epoch 745 results:
+Validation MAE: 0.334041
+Validation RMSE: 0.448116
+Test MAE: 0.342955
+Test RMSE: 0.454004
+
+Epoch 746 results:
+Validation MAE: 0.336791
+Validation RMSE: 0.451511
+Test MAE: 0.345709
+Test RMSE: 0.457119
+
+Epoch 747 results:
+Validation MAE: 0.33488
+Validation RMSE: 0.450535
+Test MAE: 0.343205
+Test RMSE: 0.45471
+
+Epoch 748 results:
+Validation MAE: 0.33543
+Validation RMSE: 0.452035
+Test MAE: 0.344437
+Test RMSE: 0.456793
+
+Epoch 749 results:
+Validation MAE: 0.334427
+Validation RMSE: 0.449728
+Test MAE: 0.343365
+Test RMSE: 0.455268
+
+Epoch 750 results:
+Validation MAE: 0.334056
+Validation RMSE: 0.450351
+Test MAE: 0.342569
+Test RMSE: 0.455756
+
+Epoch 751 results:
+Validation MAE: 0.335107
+Validation RMSE: 0.451348
+Test MAE: 0.343945
+Test RMSE: 0.4571
+
+Epoch 752 results:
+Validation MAE: 0.335993
+Validation RMSE: 0.453647
+Test MAE: 0.344727
+Test RMSE: 0.459478
+
+Epoch 753 results:
+Validation MAE: 0.336224
+Validation RMSE: 0.452239
+Test MAE: 0.344658
+Test RMSE: 0.457294
+
+Epoch 754 results:
+Validation MAE: 0.336474
+Validation RMSE: 0.452651
+Test MAE: 0.345053
+Test RMSE: 0.457648
+
+Epoch 755 results:
+Validation MAE: 0.336558
+Validation RMSE: 0.454123
+Test MAE: 0.344905
+Test RMSE: 0.4576
+
+Epoch 756 results:
+Validation MAE: 0.335564
+Validation RMSE: 0.449404
+Test MAE: 0.344382
+Test RMSE: 0.455008
+
+Epoch 757 results:
+Validation MAE: 0.336572
+Validation RMSE: 0.450617
+Test MAE: 0.344748
+Test RMSE: 0.455995
+
+Epoch 758 results:
+Validation MAE: 0.336092
+Validation RMSE: 0.449171
+Test MAE: 0.343855
+Test RMSE: 0.454578
+
+Epoch 759 results:
+Validation MAE: 0.334798
+Validation RMSE: 0.448712
+Test MAE: 0.343586
+Test RMSE: 0.455434
+
+Epoch 760 results:
+Validation MAE: 0.337219
+Validation RMSE: 0.453048
+Test MAE: 0.345569
+Test RMSE: 0.458315
+
+Epoch 761 results:
+Validation MAE: 0.334782
+Validation RMSE: 0.449833
+Test MAE: 0.342864
+Test RMSE: 0.453906
+
+Epoch 762 results:
+Validation MAE: 0.335743
+Validation RMSE: 0.447141
+Test MAE: 0.344879
+Test RMSE: 0.454627
+
+Epoch 763 results:
+Validation MAE: 0.337385
+Validation RMSE: 0.458245
+Test MAE: 0.345135
+Test RMSE: 0.458979
+
+Epoch 764 results:
+Validation MAE: 0.334195
+Validation RMSE: 0.447906
+Test MAE: 0.34271
+Test RMSE: 0.452857
+
+Epoch 765 results:
+Validation MAE: 0.335327
+Validation RMSE: 0.448951
+Test MAE: 0.343999
+Test RMSE: 0.453962
+
+Epoch 766 results:
+Validation MAE: 0.334662
+Validation RMSE: 0.448076
+Test MAE: 0.343776
+Test RMSE: 0.454168
+
+Epoch 767 results:
+Validation MAE: 0.335075
+Validation RMSE: 0.450028
+Test MAE: 0.343566
+Test RMSE: 0.454842
+
+Epoch 768 results:
+Validation MAE: 0.336477
+Validation RMSE: 0.454038
+Test MAE: 0.345066
+Test RMSE: 0.45876
+
+Epoch 769 results:
+Validation MAE: 0.335888
+Validation RMSE: 0.450908
+Test MAE: 0.343895
+Test RMSE: 0.455266
+
+Epoch 770 results:
+Validation MAE: 0.336347
+Validation RMSE: 0.452744
+Test MAE: 0.344112
+Test RMSE: 0.4567
+
+Epoch 771 results:
+Validation MAE: 0.336365
+Validation RMSE: 0.453355
+Test MAE: 0.344461
+Test RMSE: 0.457842
+
+Epoch 772 results:
+Validation MAE: 0.334487
+Validation RMSE: 0.449916
+Test MAE: 0.342116
+Test RMSE: 0.454925
+
+Epoch 773 results:
+Validation MAE: 0.336617
+Validation RMSE: 0.450625
+Test MAE: 0.344881
+Test RMSE: 0.455947
+
+Epoch 774 results:
+Validation MAE: 0.33703
+Validation RMSE: 0.456573
+Test MAE: 0.344059
+Test RMSE: 0.459622
+
+Epoch 775 results:
+Validation MAE: 0.334617
+Validation RMSE: 0.450005
+Test MAE: 0.342506
+Test RMSE: 0.454347
+
+Epoch 776 results:
+Validation MAE: 0.336208
+Validation RMSE: 0.45036
+Test MAE: 0.343795
+Test RMSE: 0.454779
+
+Epoch 777 results:
+Validation MAE: 0.336999
+Validation RMSE: 0.452562
+Test MAE: 0.34493
+Test RMSE: 0.457705
+
+Epoch 778 results:
+Validation MAE: 0.335392
+Validation RMSE: 0.449711
+Test MAE: 0.343465
+Test RMSE: 0.454974
+
+Epoch 779 results:
+Validation MAE: 0.334663
+Validation RMSE: 0.449953
+Test MAE: 0.341851
+Test RMSE: 0.45379
+
+Epoch 780 results:
+Validation MAE: 0.336627
+Validation RMSE: 0.454115
+Test MAE: 0.343052
+Test RMSE: 0.457255
+
+Epoch 781 results:
+Validation MAE: 0.335995
+Validation RMSE: 0.450782
+Test MAE: 0.342883
+Test RMSE: 0.454861
+
+Epoch 782 results:
+Validation MAE: 0.335699
+Validation RMSE: 0.452098
+Test MAE: 0.343465
+Test RMSE: 0.455976
+
+Epoch 783 results:
+Validation MAE: 0.336932
+Validation RMSE: 0.455824
+Test MAE: 0.344426
+Test RMSE: 0.459668
+
+Epoch 784 results:
+Validation MAE: 0.335568
+Validation RMSE: 0.452932
+Test MAE: 0.343128
+Test RMSE: 0.456492
+
+Epoch 785 results:
+Validation MAE: 0.335099
+Validation RMSE: 0.446779
+Test MAE: 0.342851
+Test RMSE: 0.452334
+
+Epoch 786 results:
+Validation MAE: 0.336738
+Validation RMSE: 0.453303
+Test MAE: 0.344468
+Test RMSE: 0.457882
+
+Epoch 787 results:
+Validation MAE: 0.336275
+Validation RMSE: 0.449477
+Test MAE: 0.343284
+Test RMSE: 0.453768
+
+Epoch 788 results:
+Validation MAE: 0.337678
+Validation RMSE: 0.459379
+Test MAE: 0.344025
+Test RMSE: 0.460272
+
+Epoch 789 results:
+Validation MAE: 0.336462
+Validation RMSE: 0.453031
+Test MAE: 0.344159
+Test RMSE: 0.4578
+
+Epoch 790 results:
+Validation MAE: 0.333234
+Validation RMSE: 0.445913
+Test MAE: 0.341931
+Test RMSE: 0.451746
+
+Epoch 791 results:
+Validation MAE: 0.335691
+Validation RMSE: 0.450169
+Test MAE: 0.343613
+Test RMSE: 0.455468
+
+Epoch 792 results:
+Validation MAE: 0.335365
+Validation RMSE: 0.451784
+Test MAE: 0.343645
+Test RMSE: 0.456591
+
+Epoch 793 results:
+Validation MAE: 0.336331
+Validation RMSE: 0.4513
+Test MAE: 0.343775
+Test RMSE: 0.456208
+
+Epoch 794 results:
+Validation MAE: 0.335124
+Validation RMSE: 0.449502
+Test MAE: 0.342982
+Test RMSE: 0.454982
+
+Epoch 795 results:
+Validation MAE: 0.33451
+Validation RMSE: 0.4494
+Test MAE: 0.341345
+Test RMSE: 0.453146
+
+Epoch 796 results:
+Validation MAE: 0.334789
+Validation RMSE: 0.449009
+Test MAE: 0.342343
+Test RMSE: 0.453803
+
+Epoch 797 results:
+Validation MAE: 0.334796
+Validation RMSE: 0.44975
+Test MAE: 0.342459
+Test RMSE: 0.452815
+
+Epoch 798 results:
+Validation MAE: 0.333035
+Validation RMSE: 0.448515
+Test MAE: 0.34057
+Test RMSE: 0.450774
+
+Epoch 799 results:
+Validation MAE: 0.334692
+Validation RMSE: 0.449565
+Test MAE: 0.342036
+Test RMSE: 0.452756
+
+Epoch 800 results:
+Validation MAE: 0.335429
+Validation RMSE: 0.447318
+Test MAE: 0.342178
+Test RMSE: 0.450721
+
+Epoch 801 results:
+Validation MAE: 0.335804
+Validation RMSE: 0.450223
+Test MAE: 0.342831
+Test RMSE: 0.453487
+
+Epoch 802 results:
+Validation MAE: 0.334538
+Validation RMSE: 0.448261
+Test MAE: 0.341241
+Test RMSE: 0.451331
+
+Epoch 803 results:
+Validation MAE: 0.335953
+Validation RMSE: 0.450269
+Test MAE: 0.342604
+Test RMSE: 0.453893
+
+Epoch 804 results:
+Validation MAE: 0.33491
+Validation RMSE: 0.448546
+Test MAE: 0.341756
+Test RMSE: 0.451441
+
+Epoch 805 results:
+Validation MAE: 0.334307
+Validation RMSE: 0.448271
+Test MAE: 0.341217
+Test RMSE: 0.450239
+
+Epoch 806 results:
+Validation MAE: 0.334097
+Validation RMSE: 0.448342
+Test MAE: 0.34202
+Test RMSE: 0.452314
+
+Epoch 807 results:
+Validation MAE: 0.33546
+Validation RMSE: 0.448573
+Test MAE: 0.342634
+Test RMSE: 0.452309
+
+Epoch 808 results:
+Validation MAE: 0.335915
+Validation RMSE: 0.450409
+Test MAE: 0.343819
+Test RMSE: 0.454888
+
+Epoch 809 results:
+Validation MAE: 0.335976
+Validation RMSE: 0.449734
+Test MAE: 0.343013
+Test RMSE: 0.452778
+
+Epoch 810 results:
+Validation MAE: 0.3346
+Validation RMSE: 0.447994
+Test MAE: 0.341821
+Test RMSE: 0.451936
+
+Epoch 811 results:
+Validation MAE: 0.337357
+Validation RMSE: 0.453519
+Test MAE: 0.344755
+Test RMSE: 0.45698
+
+Epoch 812 results:
+Validation MAE: 0.335211
+Validation RMSE: 0.448713
+Test MAE: 0.342419
+Test RMSE: 0.452572
+
+Epoch 813 results:
+Validation MAE: 0.336317
+Validation RMSE: 0.455246
+Test MAE: 0.343857
+Test RMSE: 0.457983
+
+Epoch 814 results:
+Validation MAE: 0.335647
+Validation RMSE: 0.451559
+Test MAE: 0.34265
+Test RMSE: 0.453579
+
+Epoch 815 results:
+Validation MAE: 0.334585
+Validation RMSE: 0.449777
+Test MAE: 0.341775
+Test RMSE: 0.451612
+
+Epoch 816 results:
+Validation MAE: 0.336077
+Validation RMSE: 0.450696
+Test MAE: 0.342765
+Test RMSE: 0.453209
+
+Epoch 817 results:
+Validation MAE: 0.336166
+Validation RMSE: 0.451072
+Test MAE: 0.342856
+Test RMSE: 0.453728
+
+Epoch 818 results:
+Validation MAE: 0.337579
+Validation RMSE: 0.451716
+Test MAE: 0.344024
+Test RMSE: 0.454204
+
+Epoch 819 results:
+Validation MAE: 0.333829
+Validation RMSE: 0.447885
+Test MAE: 0.340434
+Test RMSE: 0.451126
+
+Epoch 820 results:
+Validation MAE: 0.334815
+Validation RMSE: 0.448568
+Test MAE: 0.341561
+Test RMSE: 0.451375
+
+Epoch 821 results:
+Validation MAE: 0.335914
+Validation RMSE: 0.451272
+Test MAE: 0.342709
+Test RMSE: 0.453345
+
+Epoch 822 results:
+Validation MAE: 0.336822
+Validation RMSE: 0.450937
+Test MAE: 0.343246
+Test RMSE: 0.453304
+
+Epoch 823 results:
+Validation MAE: 0.338316
+Validation RMSE: 0.452818
+Test MAE: 0.344946
+Test RMSE: 0.455807
+
+Epoch 824 results:
+Validation MAE: 0.336288
+Validation RMSE: 0.450206
+Test MAE: 0.342407
+Test RMSE: 0.451857
+
+Epoch 825 results:
+Validation MAE: 0.338015
+Validation RMSE: 0.455179
+Test MAE: 0.343527
+Test RMSE: 0.457087
+
+Epoch 826 results:
+Validation MAE: 0.339805
+Validation RMSE: 0.458838
+Test MAE: 0.346296
+Test RMSE: 0.462014
+
+Epoch 827 results:
+Validation MAE: 0.33759
+Validation RMSE: 0.456677
+Test MAE: 0.344244
+Test RMSE: 0.458806
+
+Epoch 828 results:
+Validation MAE: 0.336856
+Validation RMSE: 0.452882
+Test MAE: 0.344137
+Test RMSE: 0.457357
+
+Epoch 829 results:
+Validation MAE: 0.336421
+Validation RMSE: 0.454613
+Test MAE: 0.342631
+Test RMSE: 0.45752
+
+Epoch 830 results:
+Validation MAE: 0.338346
+Validation RMSE: 0.456042
+Test MAE: 0.3443
+Test RMSE: 0.459184
+
+Epoch 831 results:
+Validation MAE: 0.337883
+Validation RMSE: 0.454724
+Test MAE: 0.343709
+Test RMSE: 0.458427
+
+Epoch 832 results:
+Validation MAE: 0.336144
+Validation RMSE: 0.449809
+Test MAE: 0.343076
+Test RMSE: 0.453457
+
+Epoch 833 results:
+Validation MAE: 0.336927
+Validation RMSE: 0.452289
+Test MAE: 0.343613
+Test RMSE: 0.456033
+
+Epoch 834 results:
+Validation MAE: 0.33752
+Validation RMSE: 0.451577
+Test MAE: 0.344032
+Test RMSE: 0.455268
+
+Epoch 835 results:
+Validation MAE: 0.33858
+Validation RMSE: 0.453874
+Test MAE: 0.344507
+Test RMSE: 0.457874
+
+Epoch 836 results:
+Validation MAE: 0.337131
+Validation RMSE: 0.454681
+Test MAE: 0.343176
+Test RMSE: 0.45864
+
+Epoch 837 results:
+Validation MAE: 0.337911
+Validation RMSE: 0.455362
+Test MAE: 0.34383
+Test RMSE: 0.458326
+
+Epoch 838 results:
+Validation MAE: 0.337136
+Validation RMSE: 0.453116
+Test MAE: 0.342736
+Test RMSE: 0.4563
+
+Epoch 839 results:
+Validation MAE: 0.339347
+Validation RMSE: 0.456935
+Test MAE: 0.345053
+Test RMSE: 0.460543
+
+Epoch 840 results:
+Validation MAE: 0.340822
+Validation RMSE: 0.459125
+Test MAE: 0.346311
+Test RMSE: 0.462544
+
+Epoch 841 results:
+Validation MAE: 0.335726
+Validation RMSE: 0.452508
+Test MAE: 0.342271
+Test RMSE: 0.456249
+
+Epoch 842 results:
+Validation MAE: 0.340059
+Validation RMSE: 0.460669
+Test MAE: 0.345888
+Test RMSE: 0.462277
+
+Epoch 843 results:
+Validation MAE: 0.337268
+Validation RMSE: 0.449608
+Test MAE: 0.343556
+Test RMSE: 0.454401
+
+Epoch 844 results:
+Validation MAE: 0.340578
+Validation RMSE: 0.458495
+Test MAE: 0.345604
+Test RMSE: 0.460511
+
+Epoch 845 results:
+Validation MAE: 0.341737
+Validation RMSE: 0.460964
+Test MAE: 0.346839
+Test RMSE: 0.464192
+
+Epoch 846 results:
+Validation MAE: 0.342936
+Validation RMSE: 0.460106
+Test MAE: 0.348537
+Test RMSE: 0.463682
+
+Epoch 847 results:
+Validation MAE: 0.339886
+Validation RMSE: 0.453748
+Test MAE: 0.345873
+Test RMSE: 0.457221
+
+Epoch 848 results:
+Validation MAE: 0.33808
+Validation RMSE: 0.453277
+Test MAE: 0.343774
+Test RMSE: 0.457231
+
+Epoch 849 results:
+Validation MAE: 0.338161
+Validation RMSE: 0.45379
+Test MAE: 0.344154
+Test RMSE: 0.456836
+
+Epoch 850 results:
+Validation MAE: 0.339955
+Validation RMSE: 0.45763
+Test MAE: 0.344186
+Test RMSE: 0.457015
+
+Epoch 851 results:
+Validation MAE: 0.339266
+Validation RMSE: 0.457175
+Test MAE: 0.345183
+Test RMSE: 0.459338
+
+Epoch 852 results:
+Validation MAE: 0.336404
+Validation RMSE: 0.450417
+Test MAE: 0.342646
+Test RMSE: 0.453101
+
+Epoch 853 results:
+Validation MAE: 0.339376
+Validation RMSE: 0.456821
+Test MAE: 0.344977
+Test RMSE: 0.45903
+
+Epoch 854 results:
+Validation MAE: 0.33811
+Validation RMSE: 0.456216
+Test MAE: 0.343624
+Test RMSE: 0.458985
+
+Epoch 855 results:
+Validation MAE: 0.341673
+Validation RMSE: 0.458461
+Test MAE: 0.346969
+Test RMSE: 0.459617
+
+Epoch 856 results:
+Validation MAE: 0.336773
+Validation RMSE: 0.451394
+Test MAE: 0.342811
+Test RMSE: 0.454417
+
+Epoch 857 results:
+Validation MAE: 0.339367
+Validation RMSE: 0.455883
+Test MAE: 0.345742
+Test RMSE: 0.457977
+
+Epoch 858 results:
+Validation MAE: 0.339574
+Validation RMSE: 0.456883
+Test MAE: 0.346301
+Test RMSE: 0.459828
+
+Epoch 859 results:
+Validation MAE: 0.339335
+Validation RMSE: 0.456216
+Test MAE: 0.345249
+Test RMSE: 0.459104
+
+Epoch 860 results:
+Validation MAE: 0.338893
+Validation RMSE: 0.453909
+Test MAE: 0.344841
+Test RMSE: 0.45599
+
+Epoch 861 results:
+Validation MAE: 0.338364
+Validation RMSE: 0.455382
+Test MAE: 0.344077
+Test RMSE: 0.455995
+
+Epoch 862 results:
+Validation MAE: 0.337353
+Validation RMSE: 0.451625
+Test MAE: 0.342666
+Test RMSE: 0.453994
+
+Epoch 863 results:
+Validation MAE: 0.338347
+Validation RMSE: 0.453451
+Test MAE: 0.343528
+Test RMSE: 0.455164
+
+Epoch 864 results:
+Validation MAE: 0.340668
+Validation RMSE: 0.455998
+Test MAE: 0.345902
+Test RMSE: 0.458176
+
+Epoch 865 results:
+Validation MAE: 0.342371
+Validation RMSE: 0.456898
+Test MAE: 0.349403
+Test RMSE: 0.46152
+
+Epoch 866 results:
+Validation MAE: 0.34007
+Validation RMSE: 0.458338
+Test MAE: 0.345652
+Test RMSE: 0.461749
+
+Epoch 867 results:
+Validation MAE: 0.339708
+Validation RMSE: 0.457059
+Test MAE: 0.345195
+Test RMSE: 0.459697
+
+Epoch 868 results:
+Validation MAE: 0.340026
+Validation RMSE: 0.457843
+Test MAE: 0.346705
+Test RMSE: 0.460125
+
+Epoch 869 results:
+Validation MAE: 0.337251
+Validation RMSE: 0.452306
+Test MAE: 0.343217
+Test RMSE: 0.454018
+
+Epoch 870 results:
+Validation MAE: 0.339177
+Validation RMSE: 0.452294
+Test MAE: 0.344035
+Test RMSE: 0.454162
+
+Epoch 871 results:
+Validation MAE: 0.338541
+Validation RMSE: 0.453049
+Test MAE: 0.343917
+Test RMSE: 0.45476
+
+Epoch 872 results:
+Validation MAE: 0.33921
+Validation RMSE: 0.452948
+Test MAE: 0.345722
+Test RMSE: 0.456713
+
+Epoch 873 results:
+Validation MAE: 0.340431
+Validation RMSE: 0.454744
+Test MAE: 0.346149
+Test RMSE: 0.457097
+
+Epoch 874 results:
+Validation MAE: 0.339621
+Validation RMSE: 0.456784
+Test MAE: 0.345137
+Test RMSE: 0.458859
+
+Epoch 875 results:
+Validation MAE: 0.339275
+Validation RMSE: 0.455454
+Test MAE: 0.344939
+Test RMSE: 0.458158
+
+Epoch 876 results:
+Validation MAE: 0.337651
+Validation RMSE: 0.453674
+Test MAE: 0.343164
+Test RMSE: 0.455246
+
+Epoch 877 results:
+Validation MAE: 0.339617
+Validation RMSE: 0.454404
+Test MAE: 0.345301
+Test RMSE: 0.456747
+
+Epoch 878 results:
+Validation MAE: 0.340777
+Validation RMSE: 0.455639
+Test MAE: 0.34493
+Test RMSE: 0.456629
+
+Epoch 879 results:
+Validation MAE: 0.34072
+Validation RMSE: 0.454419
+Test MAE: 0.345525
+Test RMSE: 0.455923
+
+Epoch 880 results:
+Validation MAE: 0.337324
+Validation RMSE: 0.450621
+Test MAE: 0.345083
+Test RMSE: 0.454941
+
+Epoch 881 results:
+Validation MAE: 0.335223
+Validation RMSE: 0.447119
+Test MAE: 0.34148
+Test RMSE: 0.450882
+
+Epoch 882 results:
+Validation MAE: 0.337498
+Validation RMSE: 0.449635
+Test MAE: 0.343692
+Test RMSE: 0.453674
+
+Epoch 883 results:
+Validation MAE: 0.337878
+Validation RMSE: 0.451465
+Test MAE: 0.344563
+Test RMSE: 0.456482
+
+Epoch 884 results:
+Validation MAE: 0.338675
+Validation RMSE: 0.450446
+Test MAE: 0.344063
+Test RMSE: 0.453793
+
+Epoch 885 results:
+Validation MAE: 0.338436
+Validation RMSE: 0.451369
+Test MAE: 0.344017
+Test RMSE: 0.454348
+
+Epoch 886 results:
+Validation MAE: 0.338907
+Validation RMSE: 0.451136
+Test MAE: 0.343275
+Test RMSE: 0.453039
+
+Epoch 887 results:
+Validation MAE: 0.337314
+Validation RMSE: 0.449718
+Test MAE: 0.34347
+Test RMSE: 0.45401
+
+Epoch 888 results:
+Validation MAE: 0.338527
+Validation RMSE: 0.44964
+Test MAE: 0.344173
+Test RMSE: 0.453702
+
+Epoch 889 results:
+Validation MAE: 0.340864
+Validation RMSE: 0.452325
+Test MAE: 0.34515
+Test RMSE: 0.455128
+
+Epoch 890 results:
+Validation MAE: 0.337461
+Validation RMSE: 0.45407
+Test MAE: 0.342982
+Test RMSE: 0.45775
+
+Epoch 891 results:
+Validation MAE: 0.341457
+Validation RMSE: 0.459354
+Test MAE: 0.347092
+Test RMSE: 0.464181
+
+Epoch 892 results:
+Validation MAE: 0.338162
+Validation RMSE: 0.454735
+Test MAE: 0.343649
+Test RMSE: 0.458516
+
+Epoch 893 results:
+Validation MAE: 0.336369
+Validation RMSE: 0.447372
+Test MAE: 0.342075
+Test RMSE: 0.451679
+
+Epoch 894 results:
+Validation MAE: 0.337269
+Validation RMSE: 0.449279
+Test MAE: 0.342837
+Test RMSE: 0.453514
+
+Epoch 895 results:
+Validation MAE: 0.335898
+Validation RMSE: 0.446564
+Test MAE: 0.342898
+Test RMSE: 0.452531
+
+Epoch 896 results:
+Validation MAE: 0.33848
+Validation RMSE: 0.451583
+Test MAE: 0.344126
+Test RMSE: 0.454972
+
+Epoch 897 results:
+Validation MAE: 0.336952
+Validation RMSE: 0.448088
+Test MAE: 0.343735
+Test RMSE: 0.453606
+
+Epoch 898 results:
+Validation MAE: 0.338344
+Validation RMSE: 0.450503
+Test MAE: 0.344461
+Test RMSE: 0.455056
+
+Epoch 899 results:
+Validation MAE: 0.338886
+Validation RMSE: 0.451905
+Test MAE: 0.345317
+Test RMSE: 0.456639
+
+Epoch 900 results:
+Validation MAE: 0.34077
+Validation RMSE: 0.455584
+Test MAE: 0.345927
+Test RMSE: 0.459873
+
+Epoch 901 results:
+Validation MAE: 0.338981
+Validation RMSE: 0.451402
+Test MAE: 0.344532
+Test RMSE: 0.455638
+
+Epoch 902 results:
+Validation MAE: 0.339239
+Validation RMSE: 0.454088
+Test MAE: 0.344144
+Test RMSE: 0.456536
+
+Epoch 903 results:
+Validation MAE: 0.338837
+Validation RMSE: 0.452768
+Test MAE: 0.344466
+Test RMSE: 0.457094
+
+Epoch 904 results:
+Validation MAE: 0.339006
+Validation RMSE: 0.452302
+Test MAE: 0.343833
+Test RMSE: 0.455844
+
+Epoch 905 results:
+Validation MAE: 0.33771
+Validation RMSE: 0.449805
+Test MAE: 0.343556
+Test RMSE: 0.454536
+
+Epoch 906 results:
+Validation MAE: 0.339004
+Validation RMSE: 0.453065
+Test MAE: 0.345692
+Test RMSE: 0.458517
+
+Epoch 907 results:
+Validation MAE: 0.336566
+Validation RMSE: 0.448443
+Test MAE: 0.342626
+Test RMSE: 0.453278
+
+Epoch 908 results:
+Validation MAE: 0.334987
+Validation RMSE: 0.446701
+Test MAE: 0.342769
+Test RMSE: 0.452829
+
+Epoch 909 results:
+Validation MAE: 0.336891
+Validation RMSE: 0.448643
+Test MAE: 0.342325
+Test RMSE: 0.452344
+
+Epoch 910 results:
+Validation MAE: 0.340733
+Validation RMSE: 0.453309
+Test MAE: 0.346713
+Test RMSE: 0.458166
+
+Epoch 911 results:
+Validation MAE: 0.337464
+Validation RMSE: 0.450366
+Test MAE: 0.344195
+Test RMSE: 0.455327
+
+Epoch 912 results:
+Validation MAE: 0.337378
+Validation RMSE: 0.449466
+Test MAE: 0.343854
+Test RMSE: 0.454001
+
+Epoch 913 results:
+Validation MAE: 0.338204
+Validation RMSE: 0.449755
+Test MAE: 0.34479
+Test RMSE: 0.45455
+
+Epoch 914 results:
+Validation MAE: 0.338098
+Validation RMSE: 0.450763
+Test MAE: 0.343596
+Test RMSE: 0.454278
+
+Epoch 915 results:
+Validation MAE: 0.341314
+Validation RMSE: 0.454249
+Test MAE: 0.346553
+Test RMSE: 0.457507
+
+Epoch 916 results:
+Validation MAE: 0.339378
+Validation RMSE: 0.452591
+Test MAE: 0.344844
+Test RMSE: 0.455725
+
+Epoch 917 results:
+Validation MAE: 0.33748
+Validation RMSE: 0.449258
+Test MAE: 0.343361
+Test RMSE: 0.453249
+
+Epoch 918 results:
+Validation MAE: 0.337564
+Validation RMSE: 0.449348
+Test MAE: 0.343521
+Test RMSE: 0.454127
+
+Epoch 919 results:
+Validation MAE: 0.338146
+Validation RMSE: 0.449779
+Test MAE: 0.343472
+Test RMSE: 0.45436
+
+Epoch 920 results:
+Validation MAE: 0.337172
+Validation RMSE: 0.449052
+Test MAE: 0.34325
+Test RMSE: 0.454241
+
+Epoch 921 results:
+Validation MAE: 0.339606
+Validation RMSE: 0.450035
+Test MAE: 0.345701
+Test RMSE: 0.455172
+
+Epoch 922 results:
+Validation MAE: 0.338645
+Validation RMSE: 0.449481
+Test MAE: 0.344522
+Test RMSE: 0.45359
+
+Epoch 923 results:
+Validation MAE: 0.33896
+Validation RMSE: 0.448856
+Test MAE: 0.343757
+Test RMSE: 0.453039
+
+Epoch 924 results:
+Validation MAE: 0.340758
+Validation RMSE: 0.45153
+Test MAE: 0.345292
+Test RMSE: 0.4547
+
+Epoch 925 results:
+Validation MAE: 0.337796
+Validation RMSE: 0.447788
+Test MAE: 0.342905
+Test RMSE: 0.451492
+
+Epoch 926 results:
+Validation MAE: 0.339921
+Validation RMSE: 0.450177
+Test MAE: 0.345218
+Test RMSE: 0.454298
+
+Epoch 927 results:
+Validation MAE: 0.338286
+Validation RMSE: 0.448581
+Test MAE: 0.343654
+Test RMSE: 0.452234
+
+Epoch 928 results:
+Validation MAE: 0.341422
+Validation RMSE: 0.451704
+Test MAE: 0.347486
+Test RMSE: 0.456508
+
+Epoch 929 results:
+Validation MAE: 0.343901
+Validation RMSE: 0.455455
+Test MAE: 0.349196
+Test RMSE: 0.459367
+
+Epoch 930 results:
+Validation MAE: 0.342236
+Validation RMSE: 0.455125
+Test MAE: 0.347386
+Test RMSE: 0.458438
+
+Epoch 931 results:
+Validation MAE: 0.339588
+Validation RMSE: 0.452022
+Test MAE: 0.34534
+Test RMSE: 0.455862
+
+Epoch 932 results:
+Validation MAE: 0.339511
+Validation RMSE: 0.451958
+Test MAE: 0.345242
+Test RMSE: 0.455299
+
+Epoch 933 results:
+Validation MAE: 0.336212
+Validation RMSE: 0.446637
+Test MAE: 0.34204
+Test RMSE: 0.450677
+
+Epoch 934 results:
+Validation MAE: 0.336553
+Validation RMSE: 0.448494
+Test MAE: 0.341597
+Test RMSE: 0.451392
+
+Epoch 935 results:
+Validation MAE: 0.337914
+Validation RMSE: 0.448949
+Test MAE: 0.344098
+Test RMSE: 0.454015
+
+Epoch 936 results:
+Validation MAE: 0.335829
+Validation RMSE: 0.446636
+Test MAE: 0.341554
+Test RMSE: 0.450862
+
+Epoch 937 results:
+Validation MAE: 0.338568
+Validation RMSE: 0.450436
+Test MAE: 0.344688
+Test RMSE: 0.454625
+
+Epoch 938 results:
+Validation MAE: 0.337926
+Validation RMSE: 0.451086
+Test MAE: 0.343207
+Test RMSE: 0.454074
+
+Epoch 939 results:
+Validation MAE: 0.33859
+Validation RMSE: 0.449426
+Test MAE: 0.344379
+Test RMSE: 0.453627
+
+Epoch 940 results:
+Validation MAE: 0.338655
+Validation RMSE: 0.450546
+Test MAE: 0.344397
+Test RMSE: 0.454517
+
+Epoch 941 results:
+Validation MAE: 0.338079
+Validation RMSE: 0.450262
+Test MAE: 0.343411
+Test RMSE: 0.453212
+
+Epoch 942 results:
+Validation MAE: 0.338148
+Validation RMSE: 0.449955
+Test MAE: 0.343844
+Test RMSE: 0.453662
+
+Epoch 943 results:
+Validation MAE: 0.339687
+Validation RMSE: 0.450855
+Test MAE: 0.344428
+Test RMSE: 0.453843
+
+Epoch 944 results:
+Validation MAE: 0.339658
+Validation RMSE: 0.451293
+Test MAE: 0.344597
+Test RMSE: 0.455158
+
+Epoch 945 results:
+Validation MAE: 0.340586
+Validation RMSE: 0.452225
+Test MAE: 0.345265
+Test RMSE: 0.454889
+
+Epoch 946 results:
+Validation MAE: 0.341678
+Validation RMSE: 0.453195
+Test MAE: 0.346896
+Test RMSE: 0.456801
+
+Epoch 947 results:
+Validation MAE: 0.335892
+Validation RMSE: 0.447988
+Test MAE: 0.341751
+Test RMSE: 0.451415
+
+Epoch 948 results:
+Validation MAE: 0.339428
+Validation RMSE: 0.451079
+Test MAE: 0.345294
+Test RMSE: 0.455401
+
+Epoch 949 results:
+Validation MAE: 0.336313
+Validation RMSE: 0.448159
+Test MAE: 0.342914
+Test RMSE: 0.452821
+
+Epoch 950 results:
+Validation MAE: 0.339761
+Validation RMSE: 0.451673
+Test MAE: 0.345206
+Test RMSE: 0.455116
+
+Epoch 951 results:
+Validation MAE: 0.343592
+Validation RMSE: 0.456206
+Test MAE: 0.348837
+Test RMSE: 0.459542
+
+Epoch 952 results:
+Validation MAE: 0.338903
+Validation RMSE: 0.451501
+Test MAE: 0.346213
+Test RMSE: 0.456186
+
+Epoch 953 results:
+Validation MAE: 0.342082
+Validation RMSE: 0.454362
+Test MAE: 0.347539
+Test RMSE: 0.458079
+
+Epoch 954 results:
+Validation MAE: 0.344385
+Validation RMSE: 0.4568
+Test MAE: 0.349649
+Test RMSE: 0.460744
+
+Epoch 955 results:
+Validation MAE: 0.341318
+Validation RMSE: 0.457297
+Test MAE: 0.346243
+Test RMSE: 0.460525
+
+Epoch 956 results:
+Validation MAE: 0.336781
+Validation RMSE: 0.446391
+Test MAE: 0.343271
+Test RMSE: 0.452857
+
+Epoch 957 results:
+Validation MAE: 0.336411
+Validation RMSE: 0.450168
+Test MAE: 0.342497
+Test RMSE: 0.454024
+
+Epoch 958 results:
+Validation MAE: 0.336917
+Validation RMSE: 0.447619
+Test MAE: 0.342621
+Test RMSE: 0.451644
+
+Epoch 959 results:
+Validation MAE: 0.337454
+Validation RMSE: 0.448447
+Test MAE: 0.342781
+Test RMSE: 0.452766
+
+Epoch 960 results:
+Validation MAE: 0.336878
+Validation RMSE: 0.44869
+Test MAE: 0.343477
+Test RMSE: 0.453713
+
+Epoch 961 results:
+Validation MAE: 0.337589
+Validation RMSE: 0.448357
+Test MAE: 0.343099
+Test RMSE: 0.452937
+
+Epoch 962 results:
+Validation MAE: 0.338313
+Validation RMSE: 0.449679
+Test MAE: 0.343544
+Test RMSE: 0.454197
+
+Epoch 963 results:
+Validation MAE: 0.335894
+Validation RMSE: 0.447117
+Test MAE: 0.341948
+Test RMSE: 0.452549
+
+Epoch 964 results:
+Validation MAE: 0.338423
+Validation RMSE: 0.449585
+Test MAE: 0.344789
+Test RMSE: 0.454886
+
+Epoch 965 results:
+Validation MAE: 0.339048
+Validation RMSE: 0.450966
+Test MAE: 0.345413
+Test RMSE: 0.456827
+
+Epoch 966 results:
+Validation MAE: 0.340077
+Validation RMSE: 0.451756
+Test MAE: 0.345975
+Test RMSE: 0.457045
+
+Epoch 967 results:
+Validation MAE: 0.33826
+Validation RMSE: 0.450222
+Test MAE: 0.344308
+Test RMSE: 0.454373
+
+Epoch 968 results:
+Validation MAE: 0.33907
+Validation RMSE: 0.45107
+Test MAE: 0.34513
+Test RMSE: 0.455558
+
+Epoch 969 results:
+Validation MAE: 0.338712
+Validation RMSE: 0.450491
+Test MAE: 0.344297
+Test RMSE: 0.454525
+
+Epoch 970 results:
+Validation MAE: 0.337621
+Validation RMSE: 0.449357
+Test MAE: 0.342703
+Test RMSE: 0.452905
+
+Epoch 971 results:
+Validation MAE: 0.337252
+Validation RMSE: 0.447475
+Test MAE: 0.343095
+Test RMSE: 0.452383
+
+Epoch 972 results:
+Validation MAE: 0.334987
+Validation RMSE: 0.447071
+Test MAE: 0.340467
+Test RMSE: 0.451157
+
+Epoch 973 results:
+Validation MAE: 0.336853
+Validation RMSE: 0.449059
+Test MAE: 0.342242
+Test RMSE: 0.452545
+
+Epoch 974 results:
+Validation MAE: 0.336554
+Validation RMSE: 0.448454
+Test MAE: 0.34185
+Test RMSE: 0.451171
+
+Epoch 975 results:
+Validation MAE: 0.338763
+Validation RMSE: 0.45044
+Test MAE: 0.344021
+Test RMSE: 0.453816
+
+Epoch 976 results:
+Validation MAE: 0.338166
+Validation RMSE: 0.450097
+Test MAE: 0.344219
+Test RMSE: 0.454024
+
+Epoch 977 results:
+Validation MAE: 0.336907
+Validation RMSE: 0.448319
+Test MAE: 0.343041
+Test RMSE: 0.452919
+
+Epoch 978 results:
+Validation MAE: 0.338883
+Validation RMSE: 0.450658
+Test MAE: 0.345022
+Test RMSE: 0.45506
+
+Epoch 979 results:
+Validation MAE: 0.336276
+Validation RMSE: 0.448804
+Test MAE: 0.342264
+Test RMSE: 0.45194
+
+Epoch 980 results:
+Validation MAE: 0.333492
+Validation RMSE: 0.44313
+Test MAE: 0.340858
+Test RMSE: 0.44976
+
+Epoch 981 results:
+Validation MAE: 0.338038
+Validation RMSE: 0.450755
+Test MAE: 0.344078
+Test RMSE: 0.454516
+
+Epoch 982 results:
+Validation MAE: 0.337022
+Validation RMSE: 0.449254
+Test MAE: 0.343066
+Test RMSE: 0.453201
+
+Epoch 983 results:
+Validation MAE: 0.337913
+Validation RMSE: 0.45057
+Test MAE: 0.344482
+Test RMSE: 0.454759
+
+Epoch 984 results:
+Validation MAE: 0.336805
+Validation RMSE: 0.449781
+Test MAE: 0.343756
+Test RMSE: 0.454345
+
+Epoch 985 results:
+Validation MAE: 0.338769
+Validation RMSE: 0.451912
+Test MAE: 0.344883
+Test RMSE: 0.456122
+
+Epoch 986 results:
+Validation MAE: 0.340013
+Validation RMSE: 0.452525
+Test MAE: 0.345628
+Test RMSE: 0.456061
+
+Epoch 987 results:
+Validation MAE: 0.339605
+Validation RMSE: 0.451837
+Test MAE: 0.345813
+Test RMSE: 0.456355
+
+Epoch 988 results:
+Validation MAE: 0.338585
+Validation RMSE: 0.451412
+Test MAE: 0.345114
+Test RMSE: 0.456022
+
+Epoch 989 results:
+Validation MAE: 0.336915
+Validation RMSE: 0.450676
+Test MAE: 0.343971
+Test RMSE: 0.455372
+
+Epoch 990 results:
+Validation MAE: 0.337585
+Validation RMSE: 0.449983
+Test MAE: 0.344049
+Test RMSE: 0.454443
+
+Epoch 991 results:
+Validation MAE: 0.337182
+Validation RMSE: 0.449857
+Test MAE: 0.343789
+Test RMSE: 0.454117
+
+Epoch 992 results:
+Validation MAE: 0.338098
+Validation RMSE: 0.451635
+Test MAE: 0.344335
+Test RMSE: 0.455222
+
+Epoch 993 results:
+Validation MAE: 0.335987
+Validation RMSE: 0.446196
+Test MAE: 0.343291
+Test RMSE: 0.453219
+
+Epoch 994 results:
+Validation MAE: 0.337593
+Validation RMSE: 0.448439
+Test MAE: 0.343563
+Test RMSE: 0.453146
+
+Epoch 995 results:
+Validation MAE: 0.345431
+Validation RMSE: 0.461711
+Test MAE: 0.350999
+Test RMSE: 0.465298
+
+Epoch 996 results:
+Validation MAE: 0.335358
+Validation RMSE: 0.449043
+Test MAE: 0.342555
+Test RMSE: 0.454895
+
+Epoch 997 results:
+Validation MAE: 0.338583
+Validation RMSE: 0.452374
+Test MAE: 0.34394
+Test RMSE: 0.455224
+
+Epoch 998 results:
+Validation MAE: 0.337373
+Validation RMSE: 0.450531
+Test MAE: 0.343107
+Test RMSE: 0.454664
+
+Epoch 999 results:
+Validation MAE: 0.337837
+Validation RMSE: 0.452825
+Test MAE: 0.344327
+Test RMSE: 0.458506
+
+Epoch 1000 results:
+Validation MAE: 0.336352
+Validation RMSE: 0.451426
+Test MAE: 0.342419
+Test RMSE: 0.455286
+
+Epoch 1001 results:
+Validation MAE: 0.335788
+Validation RMSE: 0.448272
+Test MAE: 0.342133
+Test RMSE: 0.453494
+
+Epoch 1002 results:
+Validation MAE: 0.33513
+Validation RMSE: 0.447918
+Test MAE: 0.341077
+Test RMSE: 0.452179
+
+Epoch 1003 results:
+Validation MAE: 0.335501
+Validation RMSE: 0.447676
+Test MAE: 0.342751
+Test RMSE: 0.454392
+
+Epoch 1004 results:
+Validation MAE: 0.336672
+Validation RMSE: 0.448539
+Test MAE: 0.343677
+Test RMSE: 0.455546
+
+Epoch 1005 results:
+Validation MAE: 0.336699
+Validation RMSE: 0.448675
+Test MAE: 0.342646
+Test RMSE: 0.454502
+
+Epoch 1006 results:
+Validation MAE: 0.336371
+Validation RMSE: 0.447809
+Test MAE: 0.34268
+Test RMSE: 0.453413
+
+Epoch 1007 results:
+Validation MAE: 0.337541
+Validation RMSE: 0.450264
+Test MAE: 0.343939
+Test RMSE: 0.455671
+
+Epoch 1008 results:
+Validation MAE: 0.33478
+Validation RMSE: 0.448136
+Test MAE: 0.340977
+Test RMSE: 0.452903
+
+Epoch 1009 results:
+Validation MAE: 0.336554
+Validation RMSE: 0.449366
+Test MAE: 0.3426
+Test RMSE: 0.453138
+
+Epoch 1010 results:
+Validation MAE: 0.333898
+Validation RMSE: 0.445943
+Test MAE: 0.340854
+Test RMSE: 0.451201
+
+Epoch 1011 results:
+Validation MAE: 0.33649
+Validation RMSE: 0.449551
+Test MAE: 0.34279
+Test RMSE: 0.45374
+
+Epoch 1012 results:
+Validation MAE: 0.336519
+Validation RMSE: 0.449335
+Test MAE: 0.342328
+Test RMSE: 0.45344
+
+Epoch 1013 results:
+Validation MAE: 0.335903
+Validation RMSE: 0.447484
+Test MAE: 0.341991
+Test RMSE: 0.452066
+
+Epoch 1014 results:
+Validation MAE: 0.336259
+Validation RMSE: 0.448387
+Test MAE: 0.342941
+Test RMSE: 0.45373
+
+Epoch 1015 results:
+Validation MAE: 0.33548
+Validation RMSE: 0.447691
+Test MAE: 0.342334
+Test RMSE: 0.453156
+
+Epoch 1016 results:
+Validation MAE: 0.335988
+Validation RMSE: 0.447221
+Test MAE: 0.34259
+Test RMSE: 0.451746
+
+Epoch 1017 results:
+Validation MAE: 0.334113
+Validation RMSE: 0.446543
+Test MAE: 0.340795
+Test RMSE: 0.45197
+
+Epoch 1018 results:
+Validation MAE: 0.336905
+Validation RMSE: 0.448982
+Test MAE: 0.34376
+Test RMSE: 0.454517
+
+Epoch 1019 results:
+Validation MAE: 0.333972
+Validation RMSE: 0.445419
+Test MAE: 0.340915
+Test RMSE: 0.452007
+
+Epoch 1020 results:
+Validation MAE: 0.333314
+Validation RMSE: 0.444293
+Test MAE: 0.340538
+Test RMSE: 0.450827
+
+Epoch 1021 results:
+Validation MAE: 0.337727
+Validation RMSE: 0.448991
+Test MAE: 0.343409
+Test RMSE: 0.453996
+
+Epoch 1022 results:
+Validation MAE: 0.332567
+Validation RMSE: 0.443424
+Test MAE: 0.338948
+Test RMSE: 0.448446
+
+Epoch 1023 results:
+Validation MAE: 0.335508
+Validation RMSE: 0.447501
+Test MAE: 0.342143
+Test RMSE: 0.452045
+
+Epoch 1024 results:
+Validation MAE: 0.338366
+Validation RMSE: 0.451345
+Test MAE: 0.344226
+Test RMSE: 0.455234
+
+Summary: 
+Train MAE: 0.32001
+Train RMSE: 0.4228
+Validation MAE: 0.333492
+Validation RMSE: 0.443131
+Test MAE: 0.340859
+Test RMSE: 0.44976
