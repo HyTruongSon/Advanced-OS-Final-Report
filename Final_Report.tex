@@ -3,40 +3,52 @@
 \usepackage{INTERSPEECH_v2}
 \usepackage{color}
 \usepackage{hyperref}
+\usepackage{subcaption}
 
 \DeclareMathOperator*{\minp}{min^\prime}
 
 \title{Graph Neural Networks with Efficient Tensor Operations in CUDA/GPU and GraphFlow Deep Learning Framework in C++ for Quantum Chemistry}
+% and GraphFlow Deep Learning Framework in C++ for Quantum Chemistry}
 \name{Hy Truong Son, Chris Jones}
 \address{Department of Computer Science, The University of Chicago}
 \email{hytruongson@uchicago.edu, csj@uchicago.edu}
 
 \begin{document}
+\pagestyle{headings}
 
 \maketitle
 % 
 \begin{abstract}
-In this paper, we propose Covariant Compositional Networks (CCNs), the state-of-the-art generalized convolution graph neural network for learning graphs. By applying higher-order representations and tensor contraction operations that are permutation-invariant with respect to the set of vertices, CCNs address the representation limitation of all existing neural networks for learning graphs in which permutation invariance is only obtained by summation of feature vectors coming from the neighbors for each vertex via well-known message passing scheme. To efficiently implement graph neural networks and high-complexity tensor operations in practice, we designed our custom Deep Learning framework in C++ named GraphFlow that supports dynamic computation graphs, automatic and symbolic differentiation as well as tensor/matrix implementation in CUDA to speed-up computation with GPUs. For an application of graph neural networks in quantum chemistry and molecular dynamics, we investigate the efficiency of CCNs in estimating Density Functional Theory (DFT) that is the most successful and widely used approach to compute the electronic structure of matter but significantly expensive in computation. We obtain a very promising result and outperform other state-of-the-art models in Harvard Clean Energy Project molecular dataset. \\
+In this paper, we propose Covariant Compositional Networks (CCNs), state-of-the-art generalized convolution graph neural networks for learning graphs. By applying higher-order graph representations and tensor contraction operations that are permutation-invariant with respect to the set of vertices, CCNs address the representation limitation of all existing neural networks for learning graphs. To efficiently implement graph neural networks, which require expensive tensor operations, we designed our custom deep learning framework in C++, GraphFlow, that supports dynamic computation graphs, automatic and symbolic differentiation, as well as tensor/matrix implementation in CUDA to speed up computation with GPUs. For an application of graph neural networks in quantum chemistry and molecular dynamics, we investigate the efficiency of CCNs in simulating Density Functional Theory (DFT) which is the most successful and widely used (yet computationally expensive) approach to computing the electronic structure of matter. We obtain a very promising result and outperform other state-of-the-art models on the Harvard Clean Energy Project molecular dataset. \\
 \end{abstract}
 \noindent\textbf{Index Terms}: graph neural network, message passing, representation theory, density functional theory, molecular dynamics
 
 \section{Introduction}
 
-In the field of Machine Learning, standard objects such as vectors, matrices, tensors were carefully studied and successfully applied into various areas including Computer Vision, Natural Language Processing, Speech Recognition, etc. However, none of these standard objects are efficient in capturing the structures of molecules, social networks or the World Wide Web which are not fixed in size. This arises the need of graph representation and extensions of Support Vector Machine and Convolution Neural Network to graphs. \\ \\
-To represent graphs in general and molecules specifically, the proposed models must be \textit{permutation-invariant} and \textit{rotation-invariant}. In addition, to apply kernel methods on graphs, the proposed kernels must be \textit{positive semi-definite}. Many graph kernels and graph similarity functions have been introduced by researchers. Among them, one of the most successful and efficient is the Weisfeiler-Lehman graph kernel which aims to build a multi-level, hierarchical representation of a graph \cite{Nino}. However, a limitation of kernel methods is quadratic space usage and quadratic time-complexity in the number of examples. In this paper, we address this drawback by proposing Dictionary Weisfeiler-Lehman graph features in combination with Morgan circular fingerprints in section 3.1. The common idea of family of Weisfeiler-Lehman graph kernel is hashing the sub-structures of a graph. Extending this idea, we come to the simplest form of graph neural networks in which the \textit{fixed} hashing function is replaced by a \textit{learnable} one as a non-linearity mapping. We detail the graph neural network baselines such as Neural Graph Fingerprint \cite{Duvenaud} and Learning Convolutional Neural Networks \cite{Niepert} in section 3.2. In the context of graphs, the sub-structures can be considered as a set of vertex feature vectors. We ultilize the convolution operation by introducing higher-order representations for each vertex, from zero-order as a vector to the first-order as a matrix and the second-order as a 3-order tensor in section 3.3. Also in this section, we introduce the notions of tensor contractions and tensor products to keep the orders of tensors manageable without exponentially growing. Our generalized convolution graph neural network is named as Covariant Compositional Networks. \\ \\
-Current Deep Learning frameworks including TensorFlow \cite{Google-Research}, PyTorch \cite{PyTorch}, Mxnet \cite{Mxnet}, Theano \cite{Theano}, etc. showed their limitations for constructing dynamic computation graphs along with specialized tensor operations. It leads to the need of a flexible programming framework for graph neural networks addressing both these drawbacks. With this motivation, we designed our Deep Learning framework in C++ named GraphFlow for our long-term Machine Learning research. All of our experiments have been implemented efficiently within GraphFlow. In addition, GraphFlow is currently being parallelized with CPU/GPU multi-threading. Implementation of GraphFlow is mentioned in chapter 4. We carefully evaluate the performance improvement of GraphFlow before and after parallelization in various experiments from testing tensor/matrix operations to training on a small molecular dataset. The performance gain is significant. Finally, we apply our methods to the Harvard Clean Energy Project (HCEP) molecular dataset \cite{Johannes}. The visualizations, experiments and empirical results are detailed in chapter 5. Chapter 6 is our conclusion and future research direction.
+In the field of machine learning, standard objects such as vectors, matrices, and tensors have been carefully studied and successfully applied to various areas including computer vision, natural language processing, speech recognition, etc. However, none of these standard objects are effecitve at capturing the structure of molecules, social networks, or the World Wide Web, all of which have a rich underlying graph structure. Thus there is a need for native graph representation and extensions of Support Vector Machine and Convolution Neural Networks to graphs. \\ \\
+To represent graphs in general and molecules specifically, a proposed model must be \textit{permutation-invariant} and \textit{rotation-invariant}. In addition, to apply kernel methods to graphs, a proposed kernel must be \textit{positive semi-definite}. Many graph kernels and graph similarity functions have been introduced by researchers. Among them, one of the most successful and efficient is the Weisfeiler-Lehman graph kernel, which aims to build a multi-level, hierarchical representation of a graph \cite{Nino}. However, a limitation of kernel methods is their quadratic space usage and quadratic time complexity. In this paper, we address this drawback by proposing Dictionary Weisfeiler-Lehman graph features in combination with Morgan circular fingerprints. The common idea in the family of Weisfeiler-Lehman graph kernel is to hash the sub-structures of a graph. Extending this idea, we arrive at the simplest form of graph neural networks in which the \textit{fixed} hashing function is replaced by a \textit{learnable} one such as a non-linearity mapping. The details of this idea are given in Section 3.1. We detail the graph neural network baselines, such as Neural Graph Fingerprint \cite{Duvenaud} and Learning Convolutional Neural Networks \cite{Niepert}, in Section 3.2. In the context of graphs, the sub-structures can be viewed as a set of vertex feature vectors. We utilize the convolution operation to introduce higher-order representations for each vertex, from zero-order as a vector to first-order as a matrix and second-order as a 3-order tensor; this is described in Section 3.3. Also in this section, we introduce the notions of tensor contractions and tensor products to keep the size of all tensors manageable. Our generalized convolution graph neural network as described in the preceding paragraph is named a Covariant Compositional Network. \\ \\
+Current Deep Learning frameworks including TensorFlow \cite{Google-Research}, PyTorch \cite{PyTorch}, Mxnet \cite{Mxnet}, Theano \cite{Theano} show limitations for constructing dynamic computation graphs along with specialized tensor operations. There is a need for a flexible programming framework for graph neural networks addressing both these drawbacks. With this motivation, we designed our deep learning framework in C++, GraphFlow, for our long-term machine learning research. All of our experiments have been implemented efficiently within GraphFlow. In addition, GraphFlow is parallelized with CPU/GPU multi-threading. Implementation of GraphFlow is described in Chapter 4. We carefully evaluate the performance improvements of GraphFlow before and after parallelization in various experiments, from testing tensor/matrix operations to training on a small molecular dataset. The increased efficiency from parallelization allows for deeper networks to be trained in a reasonable timeframe; the resulting performance gain is significant. These analyses are given in Chapter 5. Finally, we apply our methods to the Harvard Clean Energy Project (HCEP) molecular dataset \cite{Johannes}. The visualizations, experiments and empirical results from this experiment are detailed in Chapter 5. Chapter 6 concludes and presents future research directions.
 
-\begin{center}
-Figure 1. Two molecules with adjacency matrices in HCEP \\
-	\includegraphics[scale=0.20]{sketcher2} \\
-	\includegraphics[scale=0.20]{adjacency1}
-	\includegraphics[scale=0.20]{adjacency2} \\
-	C$_{18}$H$_9$N$_3$OSSe \ \ \ \ \ \ \ \ \ \ \ C$_{22}$H$_{15}$NSeSi
-\end{center}
+\begin{figure}[h]
+\caption{Two molecules with adjacency matrices in HCEP }
+\label{fig:molecules}
+\centering
+\begin{subfigure}[h]{0.5\columnwidth}
+	\includegraphics[width=\textwidth]{sketcher2}
+\end{subfigure}\\
+\begin{subfigure}[h]{0.3\columnwidth}
+	\includegraphics[width=\textwidth]{adjacency1}
+     \caption{C$_{18}$H$_9$N$_3$OSSe}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\columnwidth}
+	\includegraphics[width=\textwidth]{adjacency2}
+	\caption{C$_{22}$H$_{15}$NSeSi}
+\end{subfigure}
+\end{figure}
 
-\section{Related works}
+\section{Related Work}
 
-The notion of graph kernel was first introduced by Kondor and Lafferty in their ICML 2002 paper \cite{Risi}. Borgwardt and colleagues proposed the state-of-the-art Weisfeiler-Lehman graph kernel based on the famous Weisfeiler-Lehman test for graph isomorphism \cite{Nino}. N. M. Kriege, P. L. Giscard and R. C. Wilson applied the Hungarian matching algorithm to define a more robust Weisfeiler-Lehman graph kernel \cite{Nils}. The convolution on graphs as well as Graph Neural Network for learning molecular fingerprints are mentioned by other authors \cite{Steven}, \cite{Duvenaud}, and \cite{Thomas}.
+The notion of graph kernel was first introduced by Kondor and Lafferty in \cite{Risi}. Borgwardt and colleagues proposed the state-of-the-art Weisfeiler-Lehman graph kernel, based on the famous Weisfeiler-Lehman test for graph isomorphism \cite{Nino}. N. M. Kriege, P. L. Giscard and R. C. Wilson applied the Hungarian matching algorithm to define a more robust Weisfeiler-Lehman graph kernel \cite{Nils}. The convolution operation on graphs from Section 3.3, as well as graph neural networks for learning molecular fingerprints, are mentioned by other authors \cite{Steven}, \cite{Duvenaud}, and \cite{Thomas}, without implementation of an efficient tensor contraction algorithm.
 
 \section{Methods}
 
@@ -44,18 +56,18 @@ The notion of graph kernel was first introduced by Kondor and Lafferty in their 
 
 \subsubsection{Positive Semi-definite Kernel}
 
-Given two undirected graphs $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$. Each vertex is associated with a feature vector $f: V \rightarrow \Omega$. A \textit{positive semi-definite} graph kernel between $G_1$ and $G_2$ is defined as:
+Say we're given two undirected graphs $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$. Further assume each vertex is associated with a feature vector $f: V \rightarrow \Omega$. A \textit{positive semi-definite} graph kernel between $G_1$ and $G_2$ is defined as:
 $$\mathcal{K}_{graph}(G_1, G_2) = \frac{1}{|V_1|} \cdot \frac{1}{|V_2|} \cdot \sum\limits_{v_1 \in V_1} \sum\limits_{v_2 \in V_2} k_{base}(f(v_1), f(v_2))$$
-where $k_{base}$ is the base kernel and can be:
+where $k_{base}$ is any base kernel and can be:
 \begin{itemize}
 	\item Linear: $k_{base}(x, y) = \langle x, y \rangle_{norm} = x^Ty / (\|x\| \cdot \|y\|)$
 	\item Quadratic: $k_{base}(x, y) = (\langle x, y \rangle_{norm} + q)^2$
 	\item RBF: $k_{base}(x, y) = \exp(-\gamma \|x - y\|^2)$
 \end{itemize}
 
-\subsubsection{Weisfeiler-Lehman Graph Feature}
+\subsubsection{Weisfeiler-Lehman Graph Features}
 
-We combine Weisfeiler-Lehman graph kernel \cite{Nino} and Morgan circular fingerprints into the Dictionary Weisfeiler-Lehman graph feature algorithm. To express the idea of this combination, we define a Weisfeiler-Lehman subtree level $l$ rooted at a vertex $v$ as the shortest-path subtree that includes all vertices reachable from $v$ by a shortest-path of length at most $2^l$. Each substree is represented by a multi-set of vertex labels. We build the Weisfeiler-Lehman dictionary by finding all subtree representations of every graph in the dataset. The graph feature or fingerprint is a frequency vector in which each component corresponds to the frequency of a particular dictionary element. \\ \\
+We combine the Weisfeiler-Lehman graph kernel \cite{Nino} and Morgan circular fingerprints into the Dictionary Weisfeiler-Lehman graph feature algorithm. To capture the substructures of a graph, we define a Weisfeiler-Lehman subtree at level $l$ rooted at a vertex $v$ to be the shortest-path subtree that includes all vertices reachable from $v$ by a path of length at most $2^l$. Each subtree is represented by a multiset of vertex labels. We build the Weisfeiler-Lehman dictionary by finding all subtree representations of every graph in the dataset. The graph feature or fingerprint is a frequency vector in which each component corresponds to the frequency of a particular dictionary element. \\ \\
 Formally, we have a set of $N$ graphs $\mathcal{G} = \{G^{(1)}, .., G^{(N)}\}$ where $G^{(i)} = (V^{(i)}, E^{(i)})$ $(1 \leq i \leq N)$. Let $f^G: V \rightarrow \Omega$ be the initial feature vector for each vertex of graph $G = (V, E)$. Let $S^G_k(v)$ be the set of vectors for vertex $v \in V$ of graph $G$ at Weisfeiler-Lehman level $k$. \\ \\
 \textbf{function} Dictionary Weisfeiler-Lehman \\
 01. \ \ \ \ Universal dictionary: $\mathcal{D} \leftarrow \emptyset$ \\
@@ -80,27 +92,27 @@ Formally, we have a set of $N$ graphs $\mathcal{G} = \{G^{(1)}, .., G^{(N)}\}$ w
 20. \ \ \ \ \textbf{return} $\mathcal{D}$, $\mathcal{S}$ \\
 \textbf{end function}
 
-\subsubsection{Histogram-Alignment Graph Feature}
+\subsubsection{Histogram-Alignment Graph Features}
 
-Optimal-assignment Weisfeiler-Lehman graph kernel \cite{Nils} ultilizes the original Weisfeiler-Lehman graph kernel by applying the Hungarian matching algorithm for bipartite graphs to find the optimal matching between two sets of vertex feature vectors of two graphs. One drawback of this approach is the time complexity of the matching algorithm. To address this problem, we construct a multi-level histogram of frequencies as the fingerprint for each graph. This method is known as \textit{Histogram-alignment Weisfeiler-Lehman graph feature}. 
+The optimal-assignment Weisfeiler-Lehman graph kernel \cite{Nils} computes the original Weisfeiler-Lehman graph kernel, then applies the Hungarian matching algorithm for bipartite graphs to find the optimal matching between the two sets of vertex feature vectors of the two graphs. One drawback of this approach is the time complexity of the matching algorithm, which is polynomial but $O(n^5)$. To address this problem, we construct a multi-level histogram of frequencies as the fingerprint for each graph, and compare histograms directly. This method is known as \textit{Histogram-alignment Weisfeiler-Lehman graph features}. 
 
 \subsection{Graph Neural Networks}
 
-In this section, we discuss about the two state-of-the-art graph neural networks that are our baseline models: Neural Graph Fingerprint (NGF) proposed by Duvenaud and colleagues in their NIPS 2015 paper \cite{Duvenaud}, and Learning Convolutional Neural Networks (LCNN) proposed by Niepert and colleagues in their ICML 2016 paper \cite{Niepert}. However, these two models have their own drawbacks:
+In this section, we discuss the two state-of-the-art graph neural networks that are our baseline models: Neural Graph Fingerprint (NGF) proposed by Duvenaud et al \cite{Duvenaud}, and Learning Convolutional Neural Networks (LCNN) proposed by Niepert et al \cite{Niepert}. However, these two models have their own drawbacks:
 \begin{itemize}
-	\item NGF has its limitation in representation power since each vertex is only represented by a multi-channel vector, that means each channel is represented by only a single scalar. We classify this type of representation as zero-order. To empower the vertex representation, we propose the first-order and second-order representations in which each channel is representated by a vector and a matrix, consequentially the vertex representations are a matrix and 3-order tensor, respectively.
-	\item LCNN has its limitation in permutation invariance because it uses Weisfeiler-Lehman algorithm to rank the set of vertices into a particular ordering. However, finding an optimal ordering of the set of vertices is an NP-hard problem. That means LCNN is not invariant to the permuation of vertices. To address this issue, we apply tensor contraction and tensor product operations over high-order representations of vertices such that these operations are perfectly equivariant.
+	\item NGF is limited in representation power since each vertex is only represented by a multi-channel vector (and each channel is represented by only a single scalar). In our terminology we classify this type of representation as zero-order. To empower the vertex representation, we introduce first-order and second-order representations in which each channel is representated by a vector and a matrix, and consequently the vertex representations are a matrix and 3-order tensor, respectively.
+	\item LCNN is not permutation invariant because it uses the Weisfeiler-Lehman algorithm to rank the vertices into a particular ordering (note that finding an optimal ordering of the set of vertices is an NP-hard problem). This means LCNN is not invariant under a permutation of the vertices. To address this issue, we apply tensor contraction and tensor product operations over higher-order representations of vertices in a way such that the resulting features are perfectly equivariant.
 \end{itemize}
 
 \subsubsection{Neural Graph Fingerprint \cite{Duvenaud}}
 
-First of all, we define a simple form of message passing scheme. Given an input graph $G = (V, E, A)$, where $V$ is the set of vertices, $E$ is the set of edges and matrix $A \in \{0, 1\}^{|V| \times |V|}$ is the corresponding adjacency matrix. The goal is to learn an unknown class of functions parameterized by $\{W_1, .., W_T, u\}$ in the following scheme:
+In this section we describe the NGF model. First of all, we define a simple message passing scheme. Fix an input graph $G = (V, E, A)$, where $V$ is the set of vertices, $E$ is the set of edges and matrix $A \in \{0, 1\}^{|V| \times |V|}$ is the corresponding adjacency matrix. The goal is to learn an unknown class of functions parameterized by $\{W_1, .., W_T, u\}$ under the following generative model:
 \begin{enumerate}
     \item The inputs are vectors $f(v) \in \Re^d$ for each vertex $v \in V$. We call the vector embedding $f$ the multi-dimensional vertex label function.
-    \item We assume some learnable weight matrix $W_i \in \Re^{d \times d}$ associating with level $i$-th of the neural network. For $T$ levels, we update the vector stored at vertex $v$ using $W_i$.
-    \item Finally, we assume some learnable weight vector $u \in \Re^d$. We add up the iterated vertex labels and dot product the result with $u$. This can be considered as a linear regression on top of the graph neural network.
+    \item We assume some learnable weight matrix $W_i \in \Re^{d \times d}$ associated with level $i$ of the neural network. For each of $T$ levels, we update the vector stored at vertex $v$ using $W_i$.
+    \item Finally, we assume some learnable weight vector $u \in \Re^d$. We add up the iterated vertex labels and dot product the result with $u$. This can be thought of as a linear regression on top of the graph neural network.
 \end{enumerate}
-More formally, we define the $T$-iteration label propagation algorithm on graph $G$. Let $h_t(v) \in \Re^d$ be the vertex embedding of vertex $v$ at iteration $t \in \{0, T\}$. At $t = 0$, we initialize $h_0(v) = f(v)$. At $t \in \{1, .., T\}$, we update $h_{t-1}$ to $h_t$ at a vertex $v$ using the values on $v$'s neighbors:
+More formally, we define the $T$-iteration label propagation algorithm on graph $G$. Let $h_t(v) \in \Re^d$ be the vertex embedding of vertex $v$ at iteration $t \in \{0, \dots, T\}$. At $t = 0$, we initialize $h_0(v) = f(v)$. At $t \in \{1, .., T\}$, we update $h_{t-1}$ to $h_t$ at a vertex $v$ using the values on $v$'s neighbors:
 \begin{equation}
 h_t(v) = h_{t - 1}(v) + \frac{1}{|\mathcal{N}(v)|}\sum\limits_{w \in \mathcal{N}(v)} h_{t - 1}(w)
 \end{equation}
@@ -108,7 +120,7 @@ where $\mathcal{N}(v) = \{w \in V | (v, w) \in E\}$ denotes the set of adjacent 
 \begin{equation}
 H_t = (I_{|V|} + D^{-1} \cdot A) \cdot H_{t - 1}
 \end{equation}
-where $I_{|V|}$ is the identity matrix of size $|V| \times |V|$ and $D$ is the diagonal matrix with entries equal to the vertex degrees. Note that's is also common to define another label propagation algorithm via the normalized graph Laplacian \cite{Thomas}:
+where $I_{|V|}$ is the identity matrix of size $|V| \times |V|$ and $D$ is the diagonal matrix with entries equal to the vertex degrees. Note that it is also common to define another label propagation algorithm via the normalized graph Laplacian \cite{Thomas}:
 \begin{equation}
 H_t = (I_{|V|} - D^{-1/2}AD^{-1/2}) \cdot H_{t - 1}
 \end{equation}
@@ -121,26 +133,26 @@ From the label propagation algorithms, we build the simplest form of graph neura
 05. \ \ \ \ Linear regression on layer $T + 1$ \\
 06. \ \ \ \ Minimize: $\|\langle u, f_G \rangle - \mathcal{L}_G\|_2^2$ where $u \in \Re^d$ is learnable \\
 \textbf{end function} \\ \\
-Learnable matrices $W_i$ and learnable vector $u$ are optimized by the Back-Propagation algorithm as done when training a conventional multi-layer feed-forward neural network. \\ \\
-To empower Neural Graph Fingerprint, we can also introduce quadratic and cubic aggregation rules that can be considered a special simplified form of tensor contractions. In detail, the linear aggregation rule can be defined as summation of feature vectors in a neighborhood $\mathcal{N}(v)$ of vertex $v$ at level $l - 1$ to get a permutation invariant representation of vertex $v$ at level $l$:
+Learnable matrices $W_i$ and learnable vector $u$ are optimized by the back-propagation algorithm as used when training a conventional multi-layer feed-forward neural network. \\ \\
+To build on the Neural Graph Fingerprint, we can also introduce quadratic and cubic aggregation rules. These can be considered a special case of our general model of tensor contractions to be introduced in Section 3.3. In detail, the linear aggregation rule can be defined as the summation of feature vectors in a neighborhood $\mathcal{N}(v)$ of vertex $v$ at level $l - 1$. This yields a permutation invariant representation of vertex $v$ at level $l$:
 $$\phi_l^{linear}(v) = \sum\limits_{w \in \mathcal{N}(v)} h_{l - 1}(w)$$
-where $\phi_l^{linear}(v) \in \Re^d$ and $h_{l - 1}(w) \in \Re^d$ are still in zero-order representation such that each channel of $d$ channels is represented by a single scalar. Extending this we get the quadratic aggregation rule for $\phi_l^{quadratic}(v)$:
+where $\phi_l^{linear}(v) \in \Re^d$ and $h_{l - 1}(w) \in \Re^d$ are zero-order representations such that each of $d$ channels is represented by a single scalar. Extending this we formulate the quadratic aggregation rule, $\phi_l^{quadratic}(v)$:
 $$\phi_l^{quadratic}(v) = diag \bigg(\sum\limits_{u \in \mathcal{N}(v)} \sum\limits_{w \in \mathcal{N}(v)} h_{l - 1}(u) h_{l - 1}(w)^T \bigg)$$
-where $h_{l - 1}(u) h_{l - 1}(w)^T \in \Re^{d \times d}$ is the outter-product of level $(l - 1)$-th representation of vertex $u$ and $w$ in the neighborhood $\mathcal{N}(v)$. Again $\phi_l^{quadratic}(v) \in \Re^d$ is still in zero-order. Finally, we extend to the cubic aggregation rule for $\phi_l^{cubic}(v)$:
+where $h_{l - 1}(u) h_{l - 1}(w)^T \in \Re^{d \times d}$ is the outer-product of the level $(l - 1)$-th representation of vertices $u$ and $w$ in the neighborhood $\mathcal{N}(v)$. Again $\phi_l^{quadratic}(v) \in \Re^d$ is still zero-order. Finally, we extend to the cubic aggregation rule for $\phi_l^{cubic}(v)$:
 $$\phi_l^{cubic}(v) = diag \bigg( \sum\limits_{u, w, t \in \mathcal{N}(v)} h_{l - 1}(u) \otimes h_{l - 1}(w) \otimes h_{l - 1}(t) \bigg)$$
-where $h_{l - 1}(u) \otimes h_{l - 1}(w) \otimes h_{l - 1}(t) \in \Re^{d \times d \times d}$ is the tensor product of $3$ rank-$1$ vectors, and we obtain zero-order $\phi_l^{cubic}(v) \in \Re^d$ by taking the diagonal of the $3$-order result tensor. \\ \\
-Moreover, it is not a natural idea to limit the neighborhood $\mathcal{N}(v)$ to only the set of adjacent vertices of $v$. Another way to extend $\mathcal{N}(v)$ is to use different neighborhoods at different levels / layers of the network, for example:
+where $h_{l - 1}(u) \otimes h_{l - 1}(w) \otimes h_{l - 1}(t) \in \Re^{d \times d \times d}$ is the tensor product of three rank-$1$ vectors, and we obtain the zero-order $\phi_l^{cubic}(v) \in \Re^d$ by taking the diagonal of the resulting $3$-order tensor. \\ \\
+Moreover, it is slightly unnatural to limit the iteration to only the set of adjacent vertices $\mathcal{N}(v)$  of $v$. Another way to extend $\mathcal{N}(v)$ is to use different neighborhoods at different levels or layers of the network, for example:
 \begin{itemize}
 	\item At level $l = 0$: $\mathcal{N}_0(v) = \{v\}$
 	\item At level $l > 0$: 
 	$$\mathcal{N}_l(v) = \mathcal{N}_{l - 1}(v) \cup \bigcup_{w \in B(v, 1)} \mathcal{N}_{l - 1}(w)$$
-	where $B(v, 1)$ denotes the set of vertices are at the distance $1$ from the center $v$.
+	where $B(v, 1)$ denotes the set of vertices are at distance $1$ from the center $v$.
 \end{itemize}
-In section 3.3. Covariant Compositional Networks, we will discuss further this hierarchical extension of neighborhood and definition of a receptive field.
+In Section 3.3, we will discuss further this hierarchical extension of neighborhoods captured in the definition of a receptive field.
 
 \subsubsection{Learning Convolutional Neural Networks \cite{Niepert}}
 
-The idea of LCNN can be summarized as \textit{flattening} a graph into a fixed-size sequence. Suppose that the maximum number of vertices over the whole dataset is $N$. Consider an input graph $G = (V, E)$. If $|V| < N$ then we add $N - |V|$ \textit{dummy vertices} into $V$ such that every graph in the dataset has the same number of vertices. For each vertex $v \in V$, LCNN fixes the size of its neighborhood $\Omega(v)$ as $K$. In the case $|\Omega(v)| < K$, again we add $K - |\Omega(v)|$ dummy vertices into $\Omega(v)$ to ensure that every neighborhood of every vertex has exactly the same number of vertices. Let $d: V \times V \rightarrow \{0, .., |V| - 1\}$ denote the shortest-path distance between any pair of vertices in $G$. Let $\sigma: V \rightarrow \Re$ denote the sub-optimal hashing function obtained from Weisfeiler-Lehman graph isomorphism test. Based on $\sigma$, we can obtain a sub-optimal ranking of vertices. The neighborhood $\Omega(v)$ of vertex $v$ is constructed by the following algorithm: \\ \\
+The idea of LCNNs can be summarized as \textit{flattening} a graph into a fixed-size sequence. Suppose that the maximum number of vertices over the entire dataset is $N$. Consider an input graph $G = (V, E)$. If $|V| < N$ then we add $N - |V|$ \textit{dummy vertices} into $V$ to ensure every graph in the dataset has the same number of vertices. For each vertex $v \in V$, LCNN fixes the size of its neighborhood $\Omega(v)$ as $K$. In the case $|\Omega(v)| < K$, again we add $K - |\Omega(v)|$ dummy vertices into $\Omega(v)$ to ensure that every neighborhood of every vertex has exactly the same number of vertices. Let $d: V \times V \rightarrow \{0, .., |V| - 1\}$ denote the shortest-path distance between any pair of vertices in $G$. Let $\sigma: V \rightarrow \Re$ denote the hashing function obtained via the Weisfeiler-Lehman graph isomorphism test. Based on $\sigma$, we can obtain a sub-optimal ranking of vertices. The neighborhood $\Omega(v)$ of vertex $v$ is constructed by the following algorithm: \\ \\
 \textbf{function} Contruct-Neighbor \ ($v \in V$) \\
 01. \ \ \ \ $\Omega(v) \leftarrow \emptyset$ \\
 02. \ \ \ \ for each distance $l \in {0, .., |V| - 1}$: \\
@@ -160,7 +172,7 @@ The idea of LCNN can be summarized as \textit{flattening} a graph into a fixed-s
 16. \ \ \ \ Sort $\Omega(v) \leftarrow \{v_{i_1}, .., v_{i_K}\}$ such that $\sigma(v_{i_t}) < \sigma(v_{i_{t + 1}})$ \\
 17. \ \ \ \ Return $\Omega(v)$ \\
 \textbf{end function} \\ \\
-We also have the algorithm to flatten the input graph $G$ as follows into a sequence of $N \times K$ vertices: \\ \\
+We also have an algorithm to flatten the input graph $G$ as follows into a sequence of $N \times K$ vertices: \\ \\
 \textbf{function} Flatten-Graph ($G = (V, E)$) \\
 01. \ \ \ \ Suppose that $V = \{v_1, .., v_{|V|}\}$ \\
 02. \ \ \ \ Sort $\bar{V} \leftarrow \{v_{i_1}, .., v_{i_{|V|}}\}$ such that $\sigma(v_{i_t}) < \sigma(v_{i_{t + 1}})$ \\
@@ -170,20 +182,20 @@ We also have the algorithm to flatten the input graph $G$ as follows into a sequ
 06. \ \ \ \ end for \\
 07. \ \ \ \ return $S$ \\
 \textbf{end function} \\ \\
-Suppose that each vertex is associated with a fixed-size input feature vector of $L$ channels. By the Flatten-Graph algorithm, we can produce a feature matrix of size $L \times (NK)$. We can apply the standard convolutional operation as 1D Convolutional Neural Network on the columns of this matrix. On top of LCNN is a fully-connected layer for regression tasks or classification tasks.  
+Suppose that each vertex is associated with a fixed-size input feature vector of $L$ channels. By the Flatten-Graph algorithm, we can produce a feature matrix of size $L \times (NK)$. We can apply the standard convolution operation as a 1-dimensional Convolutional Neural Network on the columns of this matrix. On top of LCNN is a fully-connected layer for regression tasks or classification tasks.  
 
 \subsection{Covariant Compositional Networks}
 
 \subsubsection{Generic Algorithm}
 
-Covariant Compositional Networks are designed to have a hierarchical and multi-scale structure with multiple levels / layers to capture the structure of the input graph from local scale to global scale in such a way that representations of higher levels are built based on representations of lower levels and importantly respect permutation and rotational invariance. First of all, we define the hierarchical receptive field $\Omega_l(v)$ of a vertex $v$ at level $l$ recursively:
+Covariant Compositional Networks are designed to have a hierarchical and multi-scale structure with multiple levels or layers that capture the structure of the input graph, from local scale to global scale. Furthermore, the data carried at the various levels of the network is built in such a way that representations of higher levels are built based on representations of lower levels, and critically all representations have permutation and rotation invariance. First of all, we recursively define a generalization of the neighborhood of a vertex, the hierarchical receptive field $\Omega_l(v)$ of a vertex $v$ at level $l$:
 \begin{itemize}
 	\item $\Omega_0(v) = \{v\}$
 	\item $\Omega_l(v) = \Omega_{l - 1}(v) \cup \bigcup_{w \in B(v, 1)} \Omega_{l - 1}(w)$
 \end{itemize} 
-The receptive field can be considered as the set of vertices centered at $v$. Information of $v$ at level $l$ will be collected from $\Omega_l(v)$ via generalized message passing scheme. Based on the definition of $\Omega_l(v)$, we generalize the vertex represetation $f_l(v)$ to higher-order representations. The zero-order representation limits $f_l(v)$ to be a vector of $d$ channels as discussed in section 3.2. \\ \\
-The first-order representation allows each channel of $d$ channels of $f_l(v)$ to be represented by a vector of size $|\Omega_l(v)|$ in which each element of this vector corresponds to a vertex in the receptive field $\Omega_l(v)$. Thus in the first-order, $f_l(v) \in \Re^{|\Omega_l(v)| \times d}$ where each row of $f_l(v)$ is a zero-order representation of $d$ channels of a vertex in $\Omega_{l}(v)$ at level $l - 1$. \\ \\
-More general, the second-order representation allows each channel of $d$ channels of $f_l(v)$ to be represented by a symmetric matrix of size $|\Omega_l(v)| \times |\Omega_l(v)|$. Thus, $f_l(v) \in |\Omega_l(v)| \times |\Omega_l(v)| \times d$ is a 3-order tensor. \\ \\
+The receptive field should be thought of as the set of vertices centered at $v$, with the parameter $l$ describing how ``deep" we look out from $v$. The data for $v$ at level $l$ of the CCN will be aggregated from $\Omega_l(v)$ via a generalized message passing scheme. Based on the definition of $\Omega_l(v)$, we generalize the vertex represetation $f_l(v)$ to higher-order representations. The zero-order representation limits $f_l(v)$ to be a vector of $d$ channels as discussed in Section 3.2. \\ \\
+The first-order representation allows each of the $d$ channels of $f_l(v)$ to be represented by a vector of size $|\Omega_l(v)|$ in which each element of this vector corresponds to a vertex in the receptive field $\Omega_l(v)$. Thus in the first-order representation, $f_l(v) \in \Re^{|\Omega_l(v)| \times d}$ where each row of $f_l(v)$ is a zero-order representation of $d$ channels of a vertex in $\Omega_{l}(v)$ at level $l - 1$. \\ \\
+More generally, the second-order representation allows each channel of $d$ channels of $f_l(v)$ to be represented by a symmetric matrix of size $|\Omega_l(v)| \times |\Omega_l(v)|$. Thus, $f_l(v) \in |\Omega_l(v)| \times |\Omega_l(v)| \times d$ is a 3-order tensor. \\ \\
 The first-order aggregation rule can be defined as follows:
 $$\phi_l^{first}(v) = \sum\limits_{w \in \Omega_l(v)} X_l(v, w) f_{l - 1}(w)$$
 where $f_{l - 1}(w) \in \Re^{|\Omega_{l - 1}(w)| \times d}$ for each $w \in \Omega_l(v)$, and $X_l(v, w) \in \{0, 1\}^{|\Omega_l(v)| \times |\Omega_{l - 1}(w)|}$ is a permutation matrix defined as follows:
@@ -191,19 +203,19 @@ where $f_{l - 1}(w) \in \Re^{|\Omega_{l - 1}(w)| \times d}$ for each $w \in \Ome
 	\item $X_l(v, w)_{ij} = 1$: if $\Omega_l(v)_i = \Omega_{l - 1}(w)_j$
 	\item $X_l(v, w)_{ij} = 0$: otherwise
 \end{itemize}
-This permutation matrix arranges vertices in $\Omega_{l - 1}(w)$ into the correct position in $\Omega_l(v)$. Remark that $\Omega_{l - 1}(w) \subseteq \Omega_l(v)$. Obviously, the first-order aggregation rule give us the first-order representation $\phi_l^{first}(v) \in \Re^{|\Omega_l(v)| \times d}$. The second-order aggregation rule can be defined as follows:
+This permutation matrix arranges vertices in $\Omega_{l - 1}(w)$ into the correct position in $\Omega_l(v)$. Remark that $\Omega_{l - 1}(w) \subseteq \Omega_l(v)$. By definition, the first-order aggregation rule gives us the first-order representation $\phi_l^{first}(v) \in \Re^{|\Omega_l(v)| \times d}$. The second-order aggregation rule can be defined as follows:
 $$\phi_l^{second}(v) = \sum\limits_{w \in \Omega_l(v)} X_l(v, w) \otimes f_{l - 1}(w) \otimes X_l(v, w)^T$$
 where $f_{l - 1}(w) \in \Re^{|\Omega_{l - 1}(w)| \times |\Omega_{l - 1}(w)| \times d}$ for each $w$, operatior $\otimes$ is the broad-casting matrix-tensor multiplication, and $X_l(v, w) \in \Re^{|\Omega_l(v)| \times |\Omega_{l - 1}(w)|}$ is the permutation matrix defined as above. The second-order aggregation rule gives us the second-order representation $\phi_l^{second}(v) \in \Re^{|\Omega_l(v)| \times |\Omega_l(v)| \times d}$. \\ \\
 The generic learning rule can be expressed as:
 $$f_l(v) = \sigma \big( b_l + W_l \otimes \phi_l(v) \big)$$
-where $\phi_l(v)$ can be obtained by zero-order, first-order or second-order aggregation rules; learnable weight matrix $W_l \in \Re^{d \times d}$; learnable bias vector $b_l \in \Re^d$; operator $\otimes$ represents broad-casting matrix-tensor multiplication in the sense that we apply an affine transformation to the $d$ channels of $\phi_l(v)$; and $\sigma$ is a non-linearity function. In our case, we choose the non-linearity as Leaky ReLU. We can see that $f_l(v)$ has the same number of channels as in the previous level, but in practice we can reduce the number of channels by half after each level to increase the robustness of the whole network, in particular $W_l \in \Re^{\lfloor d/2 \rfloor \times d}$ and $b_l \in \Re^{\lfloor d / 2 \rfloor}$. \\ \\
-Suppose that the network has $T$ levels. On the top level, for an input graph of $|V|$ vertices, we obtain $|V|$ tensors $\{f_T(v_1), .., f_T(v_{|V|})\}$. For each tensor, we \textit{shrink} it into a $d$-dimensional vector by summation such that we get the set of $|V|$ $d$-dimensional vectors $\{\hat{f}_T(v_1), .., \hat{f}_T(v_{|V|})\}$. The graph $G$ is represented by:
+where $\phi_l(v)$ can be obtained by zero-order, first-order or second-order aggregation rules; learnable weight matrix $W_l \in \Re^{d \times d}$; learnable bias vector $b_l \in \Re^d$; operator $\otimes$ represents broad-casting matrix-tensor multiplication in the sense that we apply an affine transformation to the $d$ channels of $\phi_l(v)$; and $\sigma$ is a non-linearity function. In our case, we choose the non-linearity to be Leaky ReLU. We can see that $f_l(v)$ has the same number of channels as in the previous level, but in practice we can reduce the number of channels by half after each level to increase the robustness of the whole network; in particular $W_l \in \Re^{\lfloor d/2 \rfloor \times d}$ and $b_l \in \Re^{\lfloor d / 2 \rfloor}$. \\ \\
+Suppose that the network has $T$ levels. On the top level, for an input graph of $|V|$ vertices, we obtain $|V|$ tensors $\{f_T(v_1), .., f_T(v_{|V|})\}$. For each tensor, we \textit{shrink} it into a $d$-dimensional vector by summation such that we get the set of size $|V|$ of $d$-dimensional vectors $\{\hat{f}_T(v_1), .., \hat{f}_T(v_{|V|})\}$. The graph $G$ is then represented by:
 $$f_T(G) = \sum\limits_{v \in V} \hat{f}_T(v)$$
 in which each channel of $f_T(G)$ is a scalar. Based on $f_T(G)$, we can apply a fully-connected layer (linear regression, softmax or multi-layer perceptron) for regression or classification tasks. 
 
 \subsubsection{Tensor Stacking}
 
-To empower the first-order and second-order representations, instead of summing up the lower-level vertex representations as in section 3.3.2. Generic Algorithm, we stack them into a higher-order tensor:
+To strengthen the first-order and second-order representations, instead of summing up the lower-level vertex representations as in Section 3.3.2, we stack them into a higher-order tensor:
 $$\phi_l^{first}(v) = \Phi \big\{ X_l(v, w) f_{l - 1}(w) \ \big| \ w \in \Omega_l(v) \big\}$$
 $$\phi_l^{second}(v) = \Phi \big\{ X_l(v, w) \otimes f_{l - 1}(w) \otimes X_l(v, w)^T \ \big| \ w \in \Omega_l(v) \big\}$$
 where $\Phi\{.\}$ denotes the tensor stacking operation. Thus, the first-order aggregation rule returns a 3-order tensor:
@@ -213,57 +225,59 @@ $$\phi_l^{second}(v) \in \Re^{|\Omega_l(v)| \times |\Omega_l(v)| \times |\Omega_
 
 \subsubsection{Tensor Product}
 
-To capture more structure of graph, we introduce the tensor products between the aggregated representation with the reduced Adjacency matrix:
+To capture more structure of a graph, we introduce a tensor product between the aggregated representation with the reduced adjacency matrix:
 $$\hat{\phi}_l^{second}(v) \leftarrow \phi_l^{second}(v) \otimes A_{\Omega_l(v)}$$
-where $A_{\Omega_l(v)} \in \{0, 1\}^{|\Omega_l(v)| \times |\Omega_l(v)|}$ such that $A_{\Omega_l(v)}(i, j) = 1$ if and only if there is an edge between two vertices $\Omega_l(v)_i$ and $\Omega_l(v)_j$. The operator $\otimes$ denotes a tensor product operation resulting into a 6-order tensor:
+where $A_{\Omega_l(v)} \in \{0, 1\}^{|\Omega_l(v)| \times |\Omega_l(v)|}$ such that $A_{\Omega_l(v)}(i, j) = 1$ if and only if there is an edge between two vertices $\Omega_l(v)_i$ and $\Omega_l(v)_j$. The operator $\otimes$ denotes a tensor product operation resulting in a 6-order tensor:
 $$\hat{\phi}_l^{second}(v) \in \Re^{|\Omega_l(v)| \times |\Omega_l(v)| \times|\Omega_l(v)| \times |\Omega_l(v)| \times |\Omega_l(v)| \times d}$$
-For notation simplicity, we denote $\hat{\phi}_l^{second}(v)$ as $\phi_l^{second}(v)$ with an understanding that $\phi_l^{second}(v)$ is obtained by tensor stacking first and then tensor product with the reduced adjacency matrix. \\ \\
-Instead of tensor product with the reduced adjacency matrix $A_{\Omega_l(v)}$, we can replace $A_{\Omega_l(v)}$ by the normalized graph Laplacian restricted to $\Omega_l(v)$, formally $\mathcal{L}_{\Omega_l(v)} = I_{|\Omega_l(v)|} - D_{\Omega_l(v)}^{-1/2} A_{\Omega_l(v)} D_{\Omega_l(v)}^{-1/2}$ where $I$ is the identity matrix and $D$ is the diagonal matrix of vertex degree, or the Coulomb matrix in some physical applications.
+For notational simplicity, we denote $\hat{\phi}_l^{second}(v)$ as $\phi_l^{second}(v)$ with an understanding that $\phi_l^{second}(v)$ is obtained by tensor stacking first and then tensor product with the reduced adjacency matrix. \\ \\
+Instead of tensor product with the reduced adjacency matrix $A_{\Omega_l(v)}$, we can replace $A_{\Omega_l(v)}$ by the normalized graph Laplacian restricted to $\Omega_l(v)$. Formally 
+\[\mathcal{L}_{\Omega_l(v)} = I_{|\Omega_l(v)|} - D_{\Omega_l(v)}^{-1/2} A_{\Omega_l(v)} D_{\Omega_l(v)}^{-1/2}\]
+ where $I$ is the identity matrix and $D$ is the diagonal matrix of vertex degree, or the Coulomb matrix in some physical applications.
 
 \subsubsection{Virtual Indexing System}
 
-One of the most challenging problem is dealing with extremely high order tensors:
+One of the most challenging problems is dealing with extremely high-order tensors:
 $$\phi_l^{first}(v) \in \Re^{|\Omega_l(v)| \times |\Omega_l(v)| \times d}$$
 $$\phi_l^{second}(v) \in \Re^{|\Omega_l(v)| \times |\Omega_l(v)| \times|\Omega_l(v)| \times |\Omega_l(v)| \times |\Omega_l(v)| \times d}$$
-\textbf{\color{red} We cannot directly store these huge tensors in the memory.} We need to emphasize that this problem is very difficult both algorithmically and systematically. For example, if the receptive field $\Omega_l(v)$ has 10 vertices and the number of channels $d = 10$, then to store $\phi_l^{first}(v)$ we need $10^3$ floating-point numbers, and to store $\phi_l^{second}(v)$ we need $10^6$ floating-point numbers. Moreover, the graph has $|V|$ vertices, each vertex $v$ need that much floating-point numbers. We also have to take into account that the neural network has $T$ levels, at each level we have to construct the representation for each vertex. Approximately the amount of memory is $O(T \times |V| \times |\Omega_l(v)|^5 \times d)$. It is obviously infeasible with all current computers. \\ \\
-We propose our solution \textbf{\color{red} Virtual Indexing System} inspired by Virtual Machine idea in Operating Systems. One observation is that these huge tensors are very sparse and easy to compute component-wise. Instead of explictly stacking lower-order tensors into a higher-order one, we only keep the list of pointers pointing to these lower-order tensors. When we want to get a value of the result tensor, we can easily search the corresponding value via the list of pointers. Moreover, instead of explicitly computing the tensor product with the reduced adjacency matrix, we can just store the pointer to the reduce adjacency matrix. When we want the value at position indexed by $(a, b, c, d, e, f)$, we search for the value at position indexed by $(a, b, c, f)$ of the stacked tensor and the value at position indexed by $(d, e)$ of the reduced adjacency matrix, and then multiply these two values. Remark that to access $(a, b, c, f)$ of the stacked tensor, we need to go through the list of pointers as explained above. \\ \\
-The memory gain is significant, we only need $O(1)$ memory space for both tensor stacking and tensor product operations. The running time is proportional to the number of accesses to the result tensor.
+\textbf{\color{red} We cannot directly store these huge tensors in the memory.} We need to emphasize that this problem is very difficult both from the perspective of systems and algorithms. For example, if the receptive field $\Omega_l(v)$ has 10 vertices and the number of channels is $d = 10$, then to store $\phi_l^{first}(v)$ we need $10^3$ floating-point numbers, and to store $\phi_l^{second}(v)$ we need $10^6$ floating-point numbers. Moreover, if the graph has $|V|$ vertices, each vertex $v$ requires that many floating-point numbers. We also have to take into account that the neural network has $T$ levels, and at each level we must construct the representation for each vertex. The approximate amount of memory is $O(T \times |V| \times |\Omega_l(v)|^5 \times d)$. For even very small values this is infeasible on existing machines. \\ \\
+We propose our solution, the \textbf{\color{red} Virtual Indexing System}, inspired by virtual machines in Operating Systems. One observation is that these huge tensors are very sparse and easy to compute component-wise. Instead of explictly stacking lower-order tensors into a higher-order one, we only keep the list of pointers pointing to these lower-order tensors. When we want to get a value of the result tensor, we can easily search the corresponding value via the list of pointers. Moreover, instead of explicitly computing the tensor product with the reduced adjacency matrix, we can just store the pointer to the reduced adjacency matrix. When we want the value at position indexed by $(a, b, c, d, e, f)$, we search for the value at position indexed by $(a, b, c, f)$ of the stacked tensor and the value at position indexed by $(d, e)$ of the reduced adjacency matrix, and then multiply these two values. We should remark that to access index $(a, b, c, f)$ of the stacked tensor, we need to go through the list of pointers as explained above. \\ \\
+The memory gain is significant: we only need $O(1)$ memory space for both tensor stacking and tensor product operations. The running time is proportional to the number of accesses to the result tensor.
 
 \subsubsection{Tensor Contraction}
 
-The tensor contraction operation is defined as a reduction from high-order tensors into low-order tensors that respects symmetry and permutation invariance. Formally, for the first-order, the tensor contraction is defined as a function:
+The tensor contraction operation is a reduction from high-order tensors into low-order tensors that respects symmetry and permutation invariance. Formally, for the first-order, the tensor contraction is defined as a function:
 $$\mathcal{F}: \Re^{|\Omega_l(v)| \times |\Omega_l(v)|} \rightarrow \Re^{|\Omega_l(v)|}$$
 and for the second-order, the tensor contraction is defined as a function:
 $$\mathcal{S}: \Re^{|\Omega_l(v)| \times |\Omega_l(v)| \times|\Omega_l(v)| \times |\Omega_l(v)| \times |\Omega_l(v)|} \rightarrow \Re^{|\Omega_l(v)| \times |\Omega_l(v)|}$$
-Again, we cannot implement the tensor contraction explicitly but via the \textbf{Virtual Indexing System}. We apply the tensor contraction for each of $d$ channels separately and then concatenate the result tensors. By combinatorics, for the first-order, there are 2 unique ways of contractions: sum of all elements, and the trace. In addition, one can introduce the Hadamard-type contraction as taking the diagonal. By combinatorics and symmetry of indices, for the second-order, there are exactly 18 unique ways of contractions. In conclusion, after tensor stacking, tensor product (for the second-order only) and tensor contraction, the first-order representation is:
+Again, we cannot implement the tensor contraction explicitly but only via the \textbf{Virtual Indexing System}. We apply the tensor contraction for each of $d$ channels separately and then concatenate the resulting tensors. Counting the number of distinct tensor contractions, for first-order there are 2 unique ways to contract: sum all elements, or take the trace. In addition, one can introduce a Hadamard-type contraction by taking the diagonal. By the symmetry of indices, for second-order representations, there are exactly 18 unique ways to contract. In conclusion, after tensor stacking, tensor product (for the second-order only) and tensor contraction, the first-order representation is:
 $$\phi_l^{first}(v) \in \Re^{|\Omega_l(v)| \times 2d}$$
 and the second-order representation is:
 $$\phi_l^{second}(v) \in \Re^{|\Omega_l(v)| \times |\Omega_l(v)| \times 18d}$$
-The sizes are very manageable now. We apply the learnable matricies $W_l^{first} \in \Re^{d \times 2d}$ and $W_l^{second} \in \Re^{d \times 18d}$ to avoid exponentially growing number of channels, in detail:
+The sizes are very manageable now. We apply the learnable matricies $W_l^{first} \in \Re^{d \times 2d}$ and $W_l^{second} \in \Re^{d \times 18d}$ to avoid exponentially growth in the number of channels. In detail:
 $$\phi_l^{first}(v) \cdot (W_l^{first})^T \in \Re^{|\Omega_l(v)| \times d}$$
 $$W_l^{second} \otimes \phi_l^{second}(v) \in \Re^{|\Omega_l(v)| \times |\Omega_l(v)| \times d}$$
 
 \subsubsection{Gated Recurrent Unit / Long Short-Term Memory}
 
-Long Short-Term Memory (LSTM), firstly proposed by Schmidhuber and colleagues in 1997, is a special kind of Recurrent Neural Network that was designed for learning sequential and time-series data \cite{Hochreiter}. LSTM is widely applied into many current state-of-the-art Deep Learning models in various aspects of Machine Learning including Natural Language Processing, Speech Recognition and Computer Vision. Gated Recurrent Unit (GRU) was introduced by Bengio and colleagues in their NIPS 2014 paper in the context of sequential modeling \cite{Chung}. GRU can be understood as a simplication of LSTM. \\ \\
-With the spirit of Language Modeling, throughout the neural network, from level $0$ to level $T$, all representations of a vertex $v$ can be represented as a sequence:
+Long Short-Term Memory (LSTM), first proposed by Schmidhuber and colleagues in 1997, is a special kind of Recurrent Neural Network that was designed for learning sequential and time-series data \cite{Hochreiter}. LSTM is widely applied across many current state-of-the-art Deep Learning models in various aspects of machine learning including natural language processing, speech recognition, and computer vision. The Gated Recurrent Unit (GRU) model was introduced by Bengio and colleagues in 2014 in the context of sequential modeling \cite{Chung}. GRU can be understood as a simplication of LSTM. \\ \\
+In the spirit of modeling language, throughout the neural network from level $0$ to level $T$, all representations of a vertex $v$ can be written as a sequence:
 $$f_0(v) \rightarrow f_1(v) \rightarrow .. \rightarrow f_T(v)$$
-in which $f_l(v)$ is more global than $f_{l - 1}(v)$, and $f_{l - 1}(v)$ is more local than $f_l(v)$. One can think of the sequence of representations as a sentence of words as in Natural Language Processing. We can embed GRU / LSTM at each level of our network in the sense that GRU / LSTM at level $l$ will learn to choose whether to select $f_l(v)$ as the final representation or reuse one of the previous level representations $\{f_0(v), .., f_{l - 1}(v)\}$. This idea, inherited from Gated Graph Sequence Neural Networks of Li and colleagues in ICLR 2016 \cite{Li}, is well embeded and perfectly fit for our Covariant Compositional Networks model.
+in which $f_l(v)$ is more global than $f_{l - 1}(v)$, and $f_{l - 1}(v)$ is more local than $f_l(v)$. One can think of the sequence of representations as a sentence of words as in natural language processing. We can embed GRU / LSTM at each level of our network in the sense that GRU / LSTM at level $l$ will learn to choose whether to select $f_l(v)$ as the final representation or reuse one of the previous level representations $\{f_0(v), .., f_{l - 1}(v)\}$. This idea, inherited from Gated Graph Sequence Neural Networks of Li et al\cite{Li}, is captured perfectly inside our Covariant Compositional Network model.
 
 \section{GraphFlow Deep Learning Framework}
 
 \subsection{Motivation}
 
-Many Deep Learing frameworks have been proposed over the last decade. Among them, the most successful ones are TensorFlow \cite{Google-Research}, PyTorch \cite{PyTorch}, Mxnet \cite{Mxnet}, Theano \cite{Theano}. However, none of these frameworks are completely suitable for graph neural networks in the domain of molecular applications with high complexity tensor operations due to the following reasons:
+Many deep learning frameworks have been proposed over the last decade. Among them, the most successful ones are TensorFlow \cite{Google-Research}, PyTorch \cite{PyTorch}, Mxnet \cite{Mxnet}, Theano \cite{Theano}. However, none of these frameworks are completely suitable for graph neural networks in the domain of molecular applications with high complexity tensor operations due to the following reasons:
 \begin{itemize}
-	\item All of these frameworks do not support tensor contractions and other sophisticated tensor operations. Moreover, they are not flexible for an implementation of the Virtual Indexing System for efficient and low-cost tensor operations.
-	\item The most widely used Deep Learning framework - TensorFlow is incapable of constructing dynamic computation graphs during run time that is essential for graph neural networks which are dynamic in size and structure. To get rid of static computation graphs, Google Research has been proposed an extension of TensorFlow that is TensorFlow-fold but has not completely solved the flexibility problem \cite{TF-fold}.
+	\item None of these frameworks support tensor contractions or other sophisticated tensor operations. Moreover, they are not flexible enough for an implementation of the Virtual Indexing System for efficient and low-cost tensor operations.
+	\item The most widely used deep learning framework, TensorFlow, is incapable of constructing dynamic computation graphs during runtime, which are essential for the dynamic size and structure of graph neural networks. To get rid of static computation graphs, Google Research has proposed an extension of TensorFlow called TensorFlow-fold, but TensorFlow-fold has not completely solved the flexibility problem \cite{TF-fold}.
 \end{itemize}
 To address all these drawbacks, we implement from scratch our \textbf{GraphFlow Deep Learning Framework} in C++11 with the following criteria:
 \begin{enumerate}
 	\item Supports symbolic / automatic differentiation that allows users to construct any kind of neural networks without explicitly writing the complicated back-propagation code each time.
-	\item Supports dynamic computation graphs that is fundamental for graph neural networks such that partial computation graph is constructed before training and the rest is constructed during run time depending on the size and structure of the input graphs.
-	\item Supports sophisticated tensor / matrix operations with Virtual Indexing System.
+	\item Supports dynamic computation graphs: a partial computation graph is constructed before training and the rest is constructed during runtime depending on the size and structure of the input graphs.
+	\item Supports sophisticated tensor / matrix operations via the Virtual Indexing System.
 	\item Supports tensor / matrix operations implemented in CUDA for computation acceleration by GPUs.  
 \end{enumerate}
 
@@ -271,55 +285,64 @@ To address all these drawbacks, we implement from scratch our \textbf{GraphFlow 
 
 GraphFlow is designed with the philosophy of Object Oriented Programming (OOP). There are several classes divided into the following groups:
 \begin{enumerate}
-	\item \textbf{Data structures}: \texttt{Entity}, \texttt{Vector}, \texttt{Matrix}, \texttt{Tensor}, etc. Each of these components contain two arrays of floating-point numbers: \texttt{value} for storing the actual values, \texttt{gradient} for storing the gradients (that is the partial derivative of the loss function) for the purpose of automatic differentiation. Also, in each class, there are two functions: \texttt{forward()} and \texttt{backward()} in which \texttt{foward()} to evaluate the network values and \texttt{backward()} to compute the gradients. Based on the OOP philosophy, \texttt{Vector} inherits from \texttt{Entity}, and both \texttt{Matrix} and \texttt{Tensor} inherit from \texttt{Vector}, etc. It is essentially important because polymorphism allows us to construct the computation graph of the neural network as a Directed Acyclic Graph (DAG) of \texttt{Entity} such that \texttt{forward()} and \texttt{backward()} functions of different classes can be called with object casting. 
+	\item \textbf{Data structures}: \texttt{Entity}, \texttt{Vector}, \texttt{Matrix}, \texttt{Tensor}, etc. Each of these components contain two arrays of floating-point numbers: \texttt{value} for storing the actual values, \texttt{gradient} for storing the gradients (that is, the partial derivative of the loss function) for the purpose of automatic differentiation. Also, each class has two functions \texttt{forward()} and \texttt{backward()}. Calling \texttt{forward()} will evaluate the network values and calling\texttt{backward()} will compute the gradients for use in back-propogation. Based on the OOP philosophy, \texttt{Vector} inherits from \texttt{Entity}, and both \texttt{Matrix} and \texttt{Tensor} inherit from \texttt{Vector}, etc. This is of essential importance because polymorphism allows us to construct the computation graph of the neural network as a Directed Acyclic Graph (DAG) of \texttt{Entity} such that \texttt{forward()} and \texttt{backward()} functions of different classes can be called with object casting. 
 	
 	\item \textbf{Operators}: Matrix Multiplication, Tensor Contraction, Convolution, etc. \\ \\
-	For example, the matrix multiplication class \texttt{MatMul} inherits from \texttt{Matrix} class, and has 2 constructor parameters in \texttt{Matrix} type. Suppose that we have an object \texttt{A} of type \texttt{MatMul} that has 2 \texttt{Matrix} inputs \texttt{B} and \texttt{C}. In the \texttt{forward()} pass, \texttt{A} computes its value as \texttt{A = B * C} and stores it into \texttt{value} array. In the \texttt{backward()} pass, \texttt{A} got the gradients into \texttt{gradient} (as flowing from the loss function) and increase the gradients of \texttt{B} and \texttt{C}. \\ \\
-	It is important to note that our computation graph is DAG and we find the topological order to evaluate \texttt{value} and \texttt{gradient} in the correct order. That means \texttt{A -> forward()} is called after both \texttt{B -> forward()} and \texttt{C -> forward()}, and \texttt{A -> backward()} is called before both \texttt{B -> backward()} and \texttt{C -> backward()}.
+	For example, the matrix multiplication class \texttt{MatMul} inherits from \texttt{Matrix} class, and has 2 constructor parameters in \texttt{Matrix} type. Suppose that we have an object \texttt{A} of type \texttt{MatMul} that has 2 \texttt{Matrix} inputs \texttt{B} and \texttt{C}. In the \texttt{forward()} pass, \texttt{A} computes its value as \texttt{A = B * C} and stores it into \texttt{value} array. In the \texttt{backward()} pass, \texttt{A} gets the gradients into \texttt{gradient} (as flowing from the loss function) and increases the gradients of \texttt{B} and \texttt{C}. \\ \\
+	It is important to note that our computation graph is a DAG and we find a topological ordering to evaluate \texttt{value} and \texttt{gradient} in the correct order. That means \texttt{A -> forward()} is called after both \texttt{B -> forward()} and \texttt{C -> forward()}, and \texttt{A -> backward()} is called before both \texttt{B -> backward()} and \texttt{C -> backward()}.
 	
 	\item \textbf{Optimization algorithms}: Stochastic Gradient Descent (SGD), SGD with Momentum, Adam, AdaGrad, AdaMax, AdaDelta, etc. These algorithms are implemented into separate drivers: these drivers get the values and gradients of learnable parameters computed by the computation graph and then optimize the values of learnable parameters algorithmically.
 	
-	\item \textbf{Neural Networks objects}: These are classes of neural network architectures implemented based on the core of GraphFlow including graph neural networks (for example, CCN, NGF and LCNN), convolutional neural networks, recurrent neural networks (for example, GRU and LSTM), multi-layer perceptron, etc. Each class has multiple supporting functions: load the trained learnable parameters from files, save them into files, learning with mini-batch or without mini-batch, using multi-threading or not, etc.
+	\item \textbf{Neural Networks objects}: These are classes of neural network architectures implemented with the core of GraphFlow, including graph neural networks (for example, CCN, NGF and LCNN), convolutional neural networks, recurrent neural networks (for example, GRU and LSTM), multi-layer perceptron, etc. Each class has multiple supporting functions: load the trained learnable parameters from files, save them into files, learning with mini-batch or without mini-batch, using multi-threading or not, etc.
 \end{enumerate}
-The figure of GraphFlow is contained in the Appendix.
+A diagram of the GraphFlow architecture is contained in the Appendix.
 
 \subsection{Parallelization}
 
-\subsubsection{Efficient Matrix Multiplication In GPU}
+\subsubsection{Efficient Matrix Multiplication in GPU}
 
-Multiple operations of a neural network can be expressed as matrix multiplication. Having a fast implementation of matrix multiplication is extremely important for a Deep Learning framework. We have implemented two versions of matrix multiplication in CUDA: one using naive kernel function that accesses matrices directly from the global memory of GPU, one is more sophisticated kernel function that uses shared memory in which the shared memory of each GPU block contains 2 blocks of the 2 input matrices to avoid latency of reading from the GPU global memory. Suppose that each GPU block can execute up to 512 threads concurrently, we select the block size as 22 x 22. The second approach outperforms the first approach in our stress experiments.
+Multiple operations of a neural network can be expressed as matrix multiplication. A fast implementation of matrix multiplication is extremely important for a deep learning framework. We have implemented two versions of matrix multiplication in CUDA: one using naive kernel functions that accesses matrices directly from the global memory of the GPU, and one using a more sophisticated kernel function using shared memory in which the shared memory of each GPU block contains two blocks of the two input matrices. The second approach avoids the latency of reading from the GPU global memory. Suppose that each GPU block can execute up to 512 threads concurrently, we select the block size to be 22 x 22. The second approach outperforms the first approach in our stress experiments.
 
-\subsubsection{Efficient Tensor Contraction In CPU}
+\subsubsection{Efficient Tensor Contraction in CPU}
 
-Tensor stacking, tensor product, tensor contraction play the most important role in the success of Covariant Compositional Networks. Among them, tensor contraction is the most difficult operation to implement efficient due to the complexity of its algorithm. Let consider the second-order tensor product:
+Tensor stacking, tensor product, and tensor contraction play the most important role in the success of Covariant Compositional Networks. Among them, tensor contraction is the most difficult operation to implement efficiently due to the complexity of its algorithm. Let us consider the second-order tensor product:
 $$\phi_l(v) \otimes A_{\Omega_l(v)}$$
 where $\phi_l(v) \in \Re^{|\Omega_l(v)| \times |\Omega_l(v)| \times |\Omega_l(v)| \times d}$ is the result from tensor stacking operation of vertex $v$ at level $l$, and $A_{\Omega_l(v)} \in \{0, 1\}^{|\Omega_l(v)| \times |\Omega_l(v)|}$ is the restricted adjacency matrix to the receptive field $\Omega_l(v)$. With the Virtual Indexing System, we do not compute the full tensor product result, indeed we compute some elements of it when necessary. \\ \\
-The task is to contract / reduce the tensor product $\phi_l(v) \otimes A_{\Omega_l(v)}$ of 6-order into 3-order tensor of size $|\Omega_l(v)| \times |\Omega_l(v)| \times d$. As discussed section 3.3.5., because of symmetry, there are exactly 18 unique ways of contractions in the second-order case. Suppose that our CPU has $N < 18$ cores, assuming that we can run all these cores concurrently, we launch $N$ threads such that each thread processes $\lceil 18 / N \rceil$ contractions. There can be some threads doing more or less contractions. \\ \\
-One challenge is about synchronization: we have to ensure that the updating operations are atomic ones.
+The task is to reduce the tensor product $\phi_l(v) \otimes A_{\Omega_l(v)}$, a 6-order tensor, into a 3-order tensor of size $|\Omega_l(v)| \times |\Omega_l(v)| \times d$. As discussed in Section 3.3.5, because of symmetry, there are exactly 18 unique ways to contract in the second-order case. Suppose that our CPU has $N < 18$ cores; assuming that we can run all these cores concurrently, we launch $N$ threads such that each thread processes $\lceil 18 / N \rceil$ contractions. There can be some threads doing more or fewer contractions. \\ \\
+One challenge is about synchronization: we have to ensure that the updating operations are atomic.
 
-\subsubsection{Efficient Tensor Contraction In GPU}
+\subsubsection{Efficient Tensor Contraction in GPU}
 
-The real improvement in performance comes from GPU. Thus, in practice, we do not use the tensor contraction with multi-threading in CPU. Because we are experimenting on Tesla GPU K80, we have an assumption that each block of GPU can launch 512 threads and a GPU grid can execute 8 concurrent blocks. In GPU global memory, $\phi_l(v)$ is stored as a float array of size $|\Omega_l(v)| \times |\Omega_l(v)| \times |\Omega_l(v)| \times d$, and the reduced adjacency matrix $A_{\Omega_l(v)}$ is stored as a float array of size $|\Omega_l(v)| \times |\Omega_l(v)|$. We divide the job to GPU in such a way that each thread processes a part of $\phi_l(v)$ and a part of $A_{\Omega_l(v)}$. We assign the computation work equally among threads based on the estimated asymptotic complexity. \\ \\
-Again, synchronization is also a real challenge: all the updating operations must be the atomic ones. However, having too many atomic operations can slow down our concurrent algorithm. That is why we have to design our GPU algorithm with the minimum number of atomic operations as possible. We obtain a much better performance with GPU after careful consideration of all factors.
+The real improvement in performance comes from the GPU. Thus, in practice, we do not use the tensor contraction with multi-threading in CPU. Because we are experimenting on Tesla GPU K80, we have an assumption that each block of GPU can launch 512 threads and a GPU grid can execute 8 concurrent blocks. In GPU global memory, $\phi_l(v)$ is stored as a float array of size $|\Omega_l(v)| \times |\Omega_l(v)| \times |\Omega_l(v)| \times d$, and the reduced adjacency matrix $A_{\Omega_l(v)}$ is stored as a float array of size $|\Omega_l(v)| \times |\Omega_l(v)|$. We divide the job to GPU in such a way that each thread processes a part of $\phi_l(v)$ and a part of $A_{\Omega_l(v)}$. We assign the computation work equally among threads based on the estimated asymptotic complexity. This process is depicted pictorially in Figure~\ref{fig:GPU_architecture}.
 
-\subsubsection{CPU Multi-threading In Gradient Computation}
+\begin{figure}[h]
+\caption{Achieving parallelization on GPU}
+\label{fig:GPU_architecture}
+\includegraphics[width=\columnwidth]{GPU_multithreading.png}
+\end{figure}
 
-Given a minibatch of $M$ training examples, it is a natural idea that we can separate the gradient computation jobs into multiple threads such that each thread processes exactly one training example at a time before continuing to process the next example. We have to make sure that there is no overlapping among these threads. After completing the gradient computations from all these $M$ training examples, we sum up all the gradients, average them by $M$ and apply an variant of Stochastic Gradient Descent to optimize the neural networks before moving to the next minibatch. \\ \\
-Technically, suppose that we can execute $T$ threads concurrent at a time for gradient computation jobs. Before every training starts, we initialize exactly $T$ identical dynamic computation graphs by GraphFlow. Given a minibatch of $M$ training examples, we distribute the examples to $T$ thread, each thread uses a different dynamic computation graph for its gradient computation job. By this way, there is absolutely no overlapping and our training is completely synchronous. \\ \\
-The minibatch training with CPU multi-threading is described by the following figure: 
 
-\begin{center}
-Figure 2. CPU multi-threading for gradient computation
-\includegraphics[scale=0.36]{CPU_box_flow}
-\end{center}
+Again, synchronization is also a real challenge: all the updating operations must be atomic. However, having too many atomic operations can slow down our concurrent algorithm. That is why we have to design our GPU algorithm with the minimum possible number of atomic operations. We obtain a much better performance with GPU after careful consideration of all factors.
+
+\subsubsection{CPU Multi-threading in Gradient Computation}
+
+Given a minibatch of $M$ training examples, it is a natural idea to separate the gradient computation jobs into multiple threads such that each thread processes exactly one training example at a time before processing the next example. We must make sure that there is no overlap among these threads. After completing the gradient computations from all these $M$ training examples, we sum up all gradients, average them by $M$, and apply a variant of Stochastic Gradient Descent to optimize the neural networks before moving to the next minibatch. \\ \\
+Technically, suppose that we can execute $T$ threads concurrent at a time for gradient computation jobs. Before every training starts, we initialize exactly $T$ identical dynamic computation graphs by GraphFlow. Given a minibatch of $M$ training examples, we distribute the examples to $T$ threads, each thread uses a different dynamic computation graph for its gradient computation job. By this method, there is absolutely no overlap and our training is completely synchronous. \\ \\
+The minibatch training with CPU multi-threading is described by Figure~\ref{fig:CPU_multithreading}: 
+
+\begin{figure}[h]
+\caption{CPU multi-threading for gradient computation}
+\label{fig:CPU_multithreading}
+\includegraphics[width=\columnwidth]{CPU_box_flow}
+\end{figure}
 
 \section{Experiments and Results}
 
 \subsection{Matrix Multiplication}
 
-To show the efficiency of our GPU matrix multiplication, we establish several performance tests and measure the running time to compare with an $O(N^3)$ CPU matrix multiplication. The sizes are the matrices are $N \in \{128, 256, 512, 1024\}$. In the largest case, we observe that GPU gives a factor of 200x improvement. The following table shows the detail:
+To demonstrate the efficiency of our GPU matrix multiplication, we establish several performance tests and measure the running time against an $O(N^3)$ CPU matrix multiplication. The sizes of the test matrices are $N \in \{128, 256, 512, 1024\}$. In the largest case, we observe that GPU gives a factor of 200x improvement. Table~\ref{tab:matrix_mult} gives the details.
 
-\begin{center}
+\begin{table}[h]
 \begin{tabular}{||c | c | c | c | c ||}
 	\hline
 	Method & N = 128 & N = 256 & N = 512 & N = 1024 \\
@@ -329,25 +352,21 @@ To show the efficiency of our GPU matrix multiplication, we establish several pe
 	GPU & $<$ 1 ms & 4 ms & 15 ms & 70 ms \\
 	\hline
 \end{tabular}
-Table 1. GPU vs CPU matrix multiplication
-\end{center}
+\caption{GPU vs CPU matrix multiplication}\label{tab:matrix_mult}
+\end{table}
 
-\begin{center}
-\includegraphics[scale=0.28]{Matrix_Multiplication}
-Figure 3. GPU vs CPU matrix multiplication running time (milliseconds) in $\log_{10}$ scale
-\end{center}
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{Matrix_Multiplication}
+\caption{GPU vs CPU matrix multiplication running time (milliseconds) in $\log_{10}$ scale}
+\label{fig:matrix_mult}
+\end{figure}
 
 \subsection{Tensor Contraction}
 
-We also compare the GPU implementation of tensor contraction with the CPU one. We want to remark that the tensor contraction complexity is $O(18 \times |\Omega_l(v)|^5 \times d)$ that grows exponentially with the size of receptive field $|\Omega_l(v)|$ and grows linearly with the number of channels. We have a constant 18 as the number of unique contractions in the second-order case. We have several tests with the size of receptive field $|\Omega_l(v)|$ ranging in $\{5, 10, 20, 35\}$ and the number of channels $d$ ranging in $\{10, 20\}$. In the largest case with $|\Omega_l(v)| = 35$ and $d = 20$, we observe that GPU gives a factor of approximately 62x speedup. The following table shows the detail:
- 
-\begin{center}
-Figure 4. GPU vs CPU tensor contraction running time (milliseconds) in $\log_{10}$ scale
-\includegraphics[scale=0.26]{Tensor_Contraction}
-\end{center} 
- 
-\begin{center}
-Table 2. GPU and CPU tensor contraction
+We also compare the GPU implementation of tensor contraction with the CPU implementation. We must remark that the complexity of tensor contraction is $O(18 \times |\Omega_l(v)|^5 \times d)$, which grows exponentially with the size of receptive field $|\Omega_l(v)|$ and grows linearly with the number of channels. We have a constant 18 as the number of unique contractions in the second-order case. We have several tests with the size of the receptive field $|\Omega_l(v)|$ ranging across $\{5, 10, 20, 35\}$ and the number of channels $d$ ranging across $\{10, 20\}$. In the largest case with $|\Omega_l(v)| = 35$ and $d = 20$, we observe that GPU gives a factor of approximately 62x speedup. Table~\ref{tab:tensor_contraction} gives the details.
+  
+\begin{table}
+\caption{GPU and CPU tensor contraction}\label{tab:tensor_contraction}
 \begin{tabular}{|| c | c | c | c | c ||}
 	\hline
 	$|\Omega_l(v)|$ & $d$ & Floating-points & CPU & GPU \\
@@ -369,14 +388,20 @@ Table 2. GPU and CPU tensor contraction
 	35 & 20 & 18,907,875,000 & 25,949 ms & 419 ms \\
 	\hline
 \end{tabular}
-\end{center}
+\end{table}
+
+\begin{figure}
+\caption{GPU vs CPU tensor contraction running time (milliseconds) in $\log_{10}$ scale}\label{fig:tensor_contraction}
+\includegraphics[width=\columnwidth]{Tensor_Contraction}
+\end{figure} 
+
 
 \subsection{Putting all operations together}
 
-In this experiment, we generate synthetic random input graphs by Erdos-Renyi $p = 0.5$ model. The number of vertices $|V| \in \{10, 15, 20, 25\}$. We fix the maximum size of receptive field $|\Omega_l(v)|$ as 10 and 15, the number of channels $d$ as 10, and the number of levels / layers of the neural network $L$ as 6. In the largest case of the graph with 25 vertices, GPU gives a factor of approximately 6x speedup. The following table shows the detail: 
+In this experiment, we generate synthetic random input graphs by the Erdos-Renyi $p = 0.5$ model. The number of vertices $|V|$ ranges across $\{10, 15, 20, 25\}$. We fix the maximum size of the receptive field $|\Omega_l(v)|$ as 10 and 15, the number of channels $d$ as 10, and the number of layers of the neural network $L$ as 6. In the largest case of the graph with 25 vertices, GPU gives a factor of approximately 6x speedup. Table~\ref{tab:erdos_renyi} gives the details. 
 
-\begin{center}
-Table 3. GPU and CPU network evaluation
+\begin{table}[h]
+\caption{GPU and CPU network evaluation}\label{tab:erdos_renyi}
 \begin{tabular}{|| c | c | c | c | c | c ||}
 	\hline
 	$|V|$ & Max $|\Omega_l(v)|$ & $d$ & $L$ & CPU & GPU \\
@@ -390,14 +415,14 @@ Table 3. GPU and CPU network evaluation
 	25 & 15 & 10 & 6 & 11,777 ms & 1,939 ms \\
 	\hline
 \end{tabular}
-\end{center}
+\end{table}
 
 \subsection{Small Molecular Dataset}
 
-This is the total training and testing time on a small dataset of 4 molecules $CH_4$, $NH_3$, $H_20$, $C_2H_4$ with 1,024 epochs. After each epoch, we evaluate the neural network immediately. CCN 1D denotes the Covariant Compositional Networks with the first-order representation, the number of layers / levels is in $\{1, 2, 4, 8, 16\}$. CCN 2D denotes the Covariant Compositional Networks with the second-order representation, the number of layers / levels is in $\{1, 2\}$. The number of channels $d = 10$ in all settings. In this experiment, we use 4 threads for the training minibatches of 4 molecules and compare the running time with the single thread case. All models are fully converged.
+This is the total training and testing time on a small dataset of 4 molecules $CH_4$, $NH_3$, $H_20$, $C_2H_4$ with 1,024 epochs. After each epoch, we evaluate the neural network immediately. CCN 1D denotes the Covariant Compositional Networks with the first-order representation and the number of layers ranging across $\{1, 2, 4, 8, 16\}$. CCN 2D denotes the Covariant Compositional Networks using a second-order representation and the number of layers ranging across $\{1, 2\}$. The number of channels is $d = 10$ in all settings. In this experiment, we use 4 threads for the training minibatches of 4 molecules and compare the running time with the single thread case. All models are fully converged.
 
-\begin{center}
-Table 4. Single thread vs Multiple threads
+\begin{table}[h]
+\caption{Single thread vs Multiple threads}\label{tab:basic_molecules}
 \begin{tabular}{|| c | c | c | c ||}	
 	\hline
 	Model & Layers & Single-thread & Multi-thread \\
@@ -417,51 +442,45 @@ Table 4. Single thread vs Multiple threads
 	CCN 2D & 2 & 161 seconds & 49 seconds \\
 	\hline
 \end{tabular}
-\end{center}
+\end{table}
 
 \subsection{HCEP Dataset}
 
-The Harvard Clean Energy Project (HCEP) dataset \cite{Johannes} contains 2.3 million molecules that are potential future solar energy materials. By expensive Density Functional Theory, the authors of HCEP computed the Power Conversion Energy (PCE) for each molecule. PCE values are continuous ranging from 0 to 11. For our experiments, we extract 50,000 molecules and set 30,000 molecules for training, 10,000 molecules for validating, and 10,000 molecules for testing. Each molecule is represented by a SMILES code. We transform the SMILES codes into adjacancy matrices where each atom is a vertex and the atom type is the input vertex label. \\ \\
-For the Dictionary Weisfeiler-Lehman graph kernel, we did an investigation on the number of different receptive fields. In the set of 50,000 molecules that we selected, there are in total 11,172 different receptive fields of level 3. This number is very manageable as the size of the dictionary. We also applied \textit{sparse} Support Vector Regression to these sparse feature vectors and obtained good results.
+The Harvard Clean Energy Project (HCEP) dataset \cite{Johannes} contains 2.3 million molecules that are potential future solar energy materials. By the computationally expensive Density Functional Theory (which should be less computationally expensive once efficient quantum computers hit the market), the authors of HCEP computed the Power Conversion Energy (PCE) for each molecule. PCE values are continuous ranging from 0 to 11. For our experiments, we extract 50,000 molecules and allocate 30,000 molecules for training, 10,000 molecules for validation, and 10,000 molecules for testing. Each molecule is given by a SMILES code. We transform the SMILES codes into adjacancy matrices where each atom is a vertex and the atom type is the input vertex label. \\ \\
+When using the Dictionary Weisfeiler-Lehman graph kernel, we investigated the number of non-isomorphic receptive fields across this dataset. In the set of 50,000 molecules that we selected, there are in total 11,172 different receptive fields of level 3. This number is very manageable as the size of the dictionary. We also applied \textit{sparse} Support Vector Regression to these sparse feature vectors and obtained good results.
 
 \subsubsection{Visualization}
 
-For the purpose of visualization, we rounded PCE values into the nearest integers. We applied Principal Component Analysis (PCA) and t-Distributed Stochastic Neighbor Embedding (t-SNE) \cite{Maaten} on the feature vectors produced by both Weisfeiler-Lehman (WL) graph kernel and our Covariant Compositional Networks.
+For the purpose of visualization, we rounded PCE values to the nearest integer. We applied Principal Component Analysis (PCA) and t-Distributed Stochastic Neighbor Embedding (t-SNE) \cite{Maaten} on the feature vectors produced by both Weisfeiler-Lehman (WL) graph kernel and our Covariant Compositional Networks.
 
-\begin{center}
-Figure 5. WL feature vectors with PCA and t-SNE
-\end{center}
-\begin{center}
-\includegraphics[scale=0.25]{PCA_WL}
-\includegraphics[scale=0.25]{tSNE_WL}
-\end{center}
+\begin{figure}[h]
+\caption{WL feature vectors with PCA and t-SNE}\label{fig:WL_features}
+\includegraphics[width=0.49\columnwidth]{PCA_WL}
+\includegraphics[width=0.49\columnwidth]{tSNE_WL}
+\end{figure}
 
-\begin{center}
-Figure 6. CCN 1D feature vectors with PCA and t-SNE
-\end{center}
-\begin{center}
-\includegraphics[scale=0.25]{PCA_CCN_1D}
-\includegraphics[scale=0.25]{tSNE_CCN_1D}
-\end{center}
+\begin{figure}[h]
+\caption{CCN 1D feature vectors with PCA and t-SNE}\label{fig:CCN_1D_features}
+\includegraphics[width=0.49\columnwidth]{PCA_CCN_1D}
+\includegraphics[width=0.49\columnwidth]{tSNE_CCN_1D}
+\end{figure}
 
-\begin{center}
-Figure 7. CCN 2D feature vectors with PCA and t-SNE
-\end{center}
-\begin{center}
-\includegraphics[scale=0.25]{PCA_CCN_2D}
-\includegraphics[scale=0.25]{tSNE_CCN_2D}
-\end{center}
-We observed that our CCN models give a much better visualization in 2-dimensional visualization. We can see the separations among the clusters where each cluster is associated with a rounded integer PCE value.
+\begin{figure}[h]
+\caption{CCN 2D feature vectors with PCA and t-SNE}\label{fig:CCN_2D_features}
+\includegraphics[width=0.49\columnwidth]{PCA_CCN_2D}
+\includegraphics[width=0.49\columnwidth]{tSNE_CCN_2D}
+\end{figure}
+We observe that our CCN models give a much better visualization in the 2-dimensional visualization. We can see the separations among the clusters where each cluster is associated with a (rounded integer) PCE value.
 
 \subsubsection{Regression tasks}
 
-Regarding Weisfeiler-Lehman (WL) graph kernel, we apply Linear regression, Gaussian Process and SVM for the task of regressing PCE values. We find the optimal hyperparameters in the validation set. For linear regression, the regularization parameter $C \in \{0, 10^{-4}, 10^{-3}, 10^{-2}, 10^{-1}, 1, 10, 100\}$. For Gaussian Process, we choose Radial Basis Function (RBF) kernel with the optimal $\sigma = 2$, the noise parameter is selected from the range from $0$ to $100$. For SVM, the RBF kernel is chosen with $\sigma = 0.01$, and regualarization parameter $C = 100$. \\ \\
-Regarding training our Covariant Compositional Networks, for the first-order representation (CCN 1D), we select the best architecture among the number of levels / layers 1, 2, 3, 4, 5, 6, and 7. CCN 1D gives the best result with 7 levels. For the second-order representation (CCN 2D), the number of levels / layers is 1 and 2. CCN 2D gives the best result with a single level. The number of channels is fixed as 10. We employ Stochastic Gradient Descent with Adam optimization. The learning rate is initially $10^{-3}$ and linearly decayed to $10^{-6}$ in $10^6$ iterations. The batch size is fixed as 64. The maximum number of epochs is 1024 in all settings. \\ \\
+Using the Weisfeiler-Lehman (WL) graph kernel, we apply Linear regression, Gaussian Process and SVM for the task of regressing PCE values. We find the optimal hyperparameters in the validation set. For linear regression, the regularization parameter $C \in \{0, 10^{-4}, 10^{-3}, 10^{-2}, 10^{-1}, 1, 10, 100\}$. For Gaussian Process, we choose a Radial Basis Function (RBF) kernel with the optimal $\sigma = 2$, with the noise parameter selected from the range from $0$ to $100$. For SVM, the RBF kernel is chosen with $\sigma = 0.01$, and regualarization parameter $C = 100$. \\ \\
+Regarding training our Covariant Compositional Networks, for the first-order representation (CCN 1D), we selected the best architecture among setups with the number of layers as 1, 2, 3, 4, 5, 6, and 7. CCN 1D gives the best result with 7 levels. For the second-order representation (CCN 2D), the number of layers is 1 and 2. CCN 2D gives the best result with a single level. The number of channels is fixed as 10. We employ Stochastic Gradient Descent with Adam optimization. The learning rate is initially $10^{-3}$ and linearly decayed to $10^{-6}$ in $10^6$ iterations. The batch size is fixed as 64. The maximum number of epochs is 1024 in all settings. \\ \\
 We also compare with two other state-of-the-art graph neural networks: Neural Graph Fingerprint (NGF) and Learning Convolutional Neural Networks (LCNN). NGF has the maximum of 3 levels and the number of hidden states is 10. LCNN has 2 convolutional layers. In all graph neural networks settings, we always have a linear regression on top of the network. \\ \\
-We estimate the performance of our models in both Mean Average Error (MAE) and Root Mean Square Error (RMSE). In both metrics, Covariant Compositional Networks outperform Weisfeiler-Lehman graph kernel, Neural Graph Fingerprint and Learning Convolutional Neural Networks. We observe that trainings for higher-order representations are increasingly harder since the size of representation grows exponentially. Some techniques have been used to solve this problem, for example thresholding the maximum size of receptive fields. More training is probably required to obtain the full potential of higher-order representations.
+We estimate the performance of our models in both Mean Average Error (MAE) and Root Mean Square Error (RMSE). In both metrics, Covariant Compositional Networks outperform Weisfeiler-Lehman graph kernel, Neural Graph Fingerprint and Learning Convolutional Neural Networks. We observe that training for higher-order representations is increasingly more difficult since the size of the representation grows exponentially. Some techniques have been used to solve this problem, for example thresholding the maximum size of receptive fields. More training is probably required to obtain the full potential of higher-order representations.
 
-\begin{center}
-Table 5. HCEP dataset
+\begin{table}[h]
+\caption{HCEP dataset}\label{tab:HCEP}
 \begin{tabular}{|| c | c | c ||} 
 \hline
 Model & Test MAE & Test RMSE \\
@@ -482,28 +501,24 @@ CCN 1D & {\color{red} 0.216} & {\color{red} 0.291} \\
 CCN 2D & {\color{red} 0.340} & {\color{red} 0.449} \\
 \hline
 \end{tabular}
-\end{center}
+\end{table}
 
-\begin{center}
-Figure 8. Testing errors vs Number of training epochs. Top: MAE. Down: RMSE
-\end{center}
-\begin{center}
-\includegraphics[scale=0.4]{MAE}
-\includegraphics[scale=0.4]{RMSE}
-\end{center}
+\begin{figure}[h]
+\caption{Testing errors vs Number of training epochs. Top: MAE. Bottom: RMSE}\label{fig:error_vs_epoch}
+\includegraphics[width=\columnwidth]{MAE}
+\includegraphics[width=\columnwidth]{RMSE}
+\end{figure}
 
-\begin{center}
-Figure 9. Distributions of the predicted PCE values and the expected ones. Top: CCN 1D. Down: CCN 2D
-\end{center}
-\begin{center}
-\includegraphics[scale=0.4]{Result_CCN_1D}
-\includegraphics[scale=0.4]{Result_CCN_2D}
-\end{center}
+\begin{figure}[h]
+\caption{Distributions of the predicted PCE values and the expected PCE values. Top: CCN 1D. Bottom: CCN 2D}\label{fig:predict_vs_actual}
+\includegraphics[width=\columnwidth]{Result_CCN_1D}
+\includegraphics[width=\columnwidth]{Result_CCN_2D}
+\end{figure}
 
 \section{Conclusion and Future Research}
 
-We extended the state-of-the-art Weisfeiler-Lehman graph kernel and generalized convolution operation for Covariant Compositional Networks by higher-order representations in order to approximate Density Functional Theory. We obtained very promising results and outperformed two other current state-of-ther-art graph neural networks such as Neural Graph Fingerprint and Learning Convolutional Neural Networks on a subset the Harvard Clean Energy Project dataset. Thanks to parallelization, we significantly improved our empirical results. \\ \\
-We are developing our custom Deep Learning framework in C++ named \textbf{GraphFlow} which supports automatic and symbolic differentitation, dynamic computation graph as well as complex tensor / matrix operations in CUDA with GPU computation acceleration. We expect that this framework will enable us to design more flexible, efficient graph neural networks with molecular applications at a large scale in the future.
+We extended the state-of-the-art Weisfeiler-Lehman graph kernel and generalized convolution operation for Covariant Compositional Networks using higher-order representations. We obtained very promising results and outperformed two other current state-of-the-art graph neural networks, Neural Graph Fingerprint and Learning Convolutional Neural Networks, on a subset the Harvard Clean Energy Project dataset. Thanks to parallelization, we significantly improved our empirical results. \\ \\
+We are developing our custom Deep Learning framework in C++, \textbf{GraphFlow}, which supports automatic and symbolic differentitation, dynamic computation graph as well as complex tensor / matrix operations in CUDA with GPU computation acceleration. We expect that this framework will enable us to design more flexible, efficient graph neural networks with molecular applications at a large scale in the future.
 
 \section{Acknowledgements}
 
